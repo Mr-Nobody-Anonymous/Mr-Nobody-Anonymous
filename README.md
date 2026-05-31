@@ -127,22 +127,24 @@ Here are some repositories I’ve worked on:
 
 ## GitHub stats
 
+> If you see broken images: GitHub sometimes blocks these services temporarily. Refresh after a minute.
+
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true&langs_count=10" alt="top langs" />
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous?tab=repositories"><img height="165" alt="Top languages card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true&langs_count=10" /></a>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=radical&hide_border=true" alt="streak" />
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub streak card" src="https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=radical&hide_border=true" /></a>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=radical" alt="profile details" />
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=radical" /></a>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous&theme=radical" alt="repos per language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous&theme=radical" alt="most commit language" />
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous&theme=radical" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Most commit language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous&theme=radical" /></a>
 </p>
 
 ---
