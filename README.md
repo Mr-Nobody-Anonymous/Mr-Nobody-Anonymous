@@ -123,13 +123,12 @@ Top repositories (ranked by repository size and popularity signals like stars/wa
 
 1. **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
 
-> Note: GitHub does not expose repository “views/traffic” publicly. If you share your Insights → Traffic numbers, I can rank by real views.
 
----
+
 
 ## GitHub stats
 
-> If you see broken images: GitHub sometimes blocks these services temporarily. Refresh after a minute.
+> If you see broken images: GitHub sometimes blocks these services temporarily.
 
 <p align="center">
   <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" /></a>
