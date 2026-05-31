@@ -4,24 +4,21 @@ Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
 <h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=36&duration=2500&pause=999999&color=3B82F6&center=true&vCenter=true&repeat=false&width=600&lines=Hi,+I'm+Beamlak+Sintayehu" alt="Beamlak Sintayehu" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=36&duration=2500&pause=999999&color=4F46E5&center=true&vCenter=true&repeat=false&width=600&lines=Hi,+I'm+Beamlak+Sintayehu" />
 </h2>
-
 
 
 
 <<div align="center">
 
-  <span style="font-size:34px;"><b>🔐 Cybersecurity</b></span>
-  <br><br>
-
+   <h2>🔐 Cybersecurity</h2>
+  <br>
   <b>⚡ && ⚡</b>
-  <br><br>
-
+   <br>
   <b>🤖 AI • 🌐 Web Development</b>
   <br><br>
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=Python+Enthusiast;Linux+Learner;AI+Developer;Web+Developer;" />
 
 </div>
 
@@ -42,7 +39,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&style=for-the-badge&color=7c3aed" alt="profile views" />
+  <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&style=for-the-badge&color=7c3aed" alt="profile views" /> <br>
   <img src="https://github-profile-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
 </p>
 
