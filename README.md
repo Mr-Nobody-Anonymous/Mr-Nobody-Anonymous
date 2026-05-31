@@ -9,12 +9,13 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <p align="center">
   <span style="font-size:34px;"><b>🔐 Cybersecurity</b></span><br><br>
-  <b>⚡ && ⚡</b><br>
-  <b>🤖 AI • 🌐 Web Development</b><br>
+
+  <b>⚡ && ⚡</b><br><br>
+
+  <b>🤖 AI • 🌐 Web Development</b><br><br>
 
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" />
 </p>
-
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&text=Beamlak%20Sintayehu&fontSize=38&fontColor=ffffff&animation=fadeIn" alt="banner" />
