@@ -160,6 +160,23 @@ Top repositories (ranked by repository size and popularity signals like stars/wa
 
 ## Contact
 
-- Email: bmx310712@gmail.com
-- Email: bam310712@gmail.com
-- LinkedIn: https://www.linkedin.com/in/bam-sintu-a47b4b281/
+<h2 align="center">📬 Contact Me</h2>
+
+<p align="center">
+  <a href="mailto:bmx310712@gmail.com">
+    <img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 1" />
+  </a>
+  <a href="mailto:bam310712@gmail.com">
+    <img src="https://img.shields.io/badge/Email-bam310712%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 2" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Bam%20Sintu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</p>
+
+<p align="center">
+  💡 Feel free to reach out for collaborations, projects, or just to connect!
+</p>
