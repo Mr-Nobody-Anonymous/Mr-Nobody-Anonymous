@@ -13,6 +13,14 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </p>
 
 <p align="center">
+  <!-- Focus badges (as requested: Cybersecurity / AI / Web Development) -->
+  <img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=for-the-badge&logo=protonvpn&logoColor=white">
+  <img alt="AI & ML" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=for-the-badge&logo=openai&logoColor=white">
+  <img alt="Web Development" src="https://img.shields.io/badge/Web%20Development-22c55e?style=for-the-badge&logo=vercel&logoColor=white">
+</p>
+
+<p align="center">
+  <!-- Links row -->
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -106,8 +114,6 @@ Here are some repositories I’ve worked on:
 
 - **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
 - **anonymous** — My profile / experiments hub: https://github.com/Mr-Nobody-Anonymous/anonymous
-
-
 
 ---
 
