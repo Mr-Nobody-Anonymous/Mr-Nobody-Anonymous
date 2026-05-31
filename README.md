@@ -9,7 +9,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 
 
-<<div align="center">
+<div align="center">
 
   <h1>🔐 Cybersecurity professional</h1>
   <b>⚡ && ⚡</b>
