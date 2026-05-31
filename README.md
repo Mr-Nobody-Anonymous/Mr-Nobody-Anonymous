@@ -122,13 +122,12 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
 Here are some repositories I’ve worked on:
 
 - **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
-- **anonymous** — My profile / experiments hub: https://github.com/Mr-Nobody-Anonymous/anonymous
 
 ---
 
 ## GitHub stats
 
-> If you see broken images: GitHub sometimes blocks these services temporarily. Refresh after a minute.
+> If you see broken images: GitHub sometimes blocks these services temporarily.
 
 <p align="center">
   <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" /></a>
