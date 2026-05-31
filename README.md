@@ -9,7 +9,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:7c3aed&height=160&section=header&text=Beamlak%20Sintayehu%20Abebe&fontSize=38&fontColor=ffffff&animation=fadeIn" alt="banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:7c3aed&height=160&section=header&text=Beamlak%20Sintayehu%20&fontSize=38&fontColor=ffffff&animation=fadeIn" alt="banner" />
 </p>
 
 <p align="center">
