@@ -7,19 +7,23 @@ Repo: Mr-Nobody-Anonymous/anonymous
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=36&duration=2500&pause=999999&color=3B82F6&center=true&vCenter=true&repeat=false&width=600&lines=Hi,+I'm+Beamlak+Sintayehu" alt="Beamlak Sintayehu" />
 </h2>
 
-<p align="center">
-  <span style="font-size:34px;"><b>🔐 Cybersecurity</b></span><br><br>
 
-  <b>⚡ && ⚡</b><br><br>
 
-  <b>🤖 AI • 🌐 Web Development</b><br><br>
+
+<<div align="center">
+
+  <span style="font-size:34px;"><b>🔐 Cybersecurity</b></span>
+  <br><br>
+
+  <b>⚡ && ⚡</b>
+  <br><br>
+
+  <b>🤖 AI • 🌐 Web Development</b>
+  <br><br>
 
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" />
-</p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&text=Beamlak%20Sintayehu&fontSize=38&fontColor=ffffff&animation=fadeIn" alt="banner" />
-</p>
+</div>
 
 
 <p align="center">
