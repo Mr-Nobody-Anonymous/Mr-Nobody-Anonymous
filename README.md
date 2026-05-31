@@ -10,7 +10,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 <p align="center">
   <b>🔐 Cybersecurity</b><br>
   <b>⚡ && ⚡</b><br>
-  <b>🤖 AI • 🌐 Web Development</b>
+  <b>🤖 AI • 🌐 Web Development</b><br>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" alt="Typing SVG" />
 </p>
 
