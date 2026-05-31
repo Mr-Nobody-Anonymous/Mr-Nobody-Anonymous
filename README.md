@@ -128,12 +128,21 @@ Here are some repositories I’ve worked on:
 ## GitHub stats
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true" alt="top langs" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true&langs_count=10" alt="top langs" />
 </p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=radical&hide_border=true" alt="streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=radical" alt="profile details" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous&theme=radical" alt="repos per language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous&theme=radical" alt="most commit language" />
 </p>
 
 ---
