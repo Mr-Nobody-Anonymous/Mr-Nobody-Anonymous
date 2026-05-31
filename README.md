@@ -3,7 +3,7 @@ Profile README for: Mr-Nobody-Anonymous
 Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
-<h1 align="center">Hi, I'm Beamlak Sintayehu Abebe</h1>
+<h1 align="center">Hi, I'm Beamlak Sintayehu</h1>
 <p align="center">
   <b>Cybersecurity • AI • Web Development</b>
 </p>
@@ -55,7 +55,7 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
 
 ## Toolbox (tech & tools)
 
-> These are common tools in my workflow — customize anytime.
+> These are common tools in my workflow.
 
 ### Security
 
