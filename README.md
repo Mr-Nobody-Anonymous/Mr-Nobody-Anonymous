@@ -11,15 +11,13 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <<div align="center">
 
-   <h2>🔐 Cybersecurity</h2>
-  <br>
+  <h1>🔐 Cybersecurity professional</h1>
   <b>⚡ && ⚡</b>
    <br>
   <b>🤖 AI • 🌐 Web Development</b>
   <br><br>
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=Python+Enthusiast;Linux+Learner;AI+Developer;Web+Developer;" />
-
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=Penetration+Tester;Network+Security+Explorer;Ethical+Hacking+Practitioner;Cybersecurity+Analyst;Python+Enthusiast;Linux+Learner;Cybersecurity+Learner;AI+Developer;Web+Developer" />
 </div>
 
 
