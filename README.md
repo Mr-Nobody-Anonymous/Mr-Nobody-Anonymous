@@ -121,8 +121,7 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
 
 Top repositories (ranked by repository size and popularity signals like stars/watchers):
 
-1. **Mr-Nobody-Anonymous** — Profile README / landing page: https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
-2. **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
+1. **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
 
 > Note: GitHub does not expose repository “views/traffic” publicly. If you share your Insights → Traffic numbers, I can rank by real views.
 
