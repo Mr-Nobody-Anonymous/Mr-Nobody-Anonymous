@@ -3,12 +3,12 @@ Profile README for: Mr-Nobody-Anonymous
 Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
-<h1 align="center">
+<h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=36&duration=2500&pause=999999&color=3B82F6&center=true&vCenter=true&repeat=false&width=600&lines=Hi,+I'm+Beamlak+Sintayehu" alt="Beamlak Sintayehu" />
-</h1>
+</h2>
 
 <p align="center">
-  <b>🔐 Cybersecurity</b><br>
+  <h1><b>🔐 Cybersecurity</b><h1><br>
   <b>⚡ && ⚡</b><br>
   <b>🤖 AI • 🌐 Web Development</b><br>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" alt="Typing SVG" />
