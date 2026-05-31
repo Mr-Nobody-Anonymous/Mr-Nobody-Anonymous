@@ -8,12 +8,12 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </h2>
 
 <p align="center">
-  <h1><b>🔐 Cybersecurity</b><h1><br>
+  <span style="font-size:34px;"><b>🔐 Cybersecurity</b></span><br><br>
   <b>⚡ && ⚡</b><br>
   <b>🤖 AI • 🌐 Web Development</b><br>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" alt="Typing SVG" />
-</p>
 
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=450&lines=AI+Developer;Web+Developer;Python+Enthusiast;Linux+Learner" />
+</p>
 
 
 <p align="center">
