@@ -107,7 +107,7 @@ Here are some repositories I’ve worked on:
 - **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
 - **anonymous** — My profile / experiments hub: https://github.com/Mr-Nobody-Anonymous/anonymous
 
-> If you want, tell me any other repos you want featured and I’ll add them here.
+
 
 ---
 
