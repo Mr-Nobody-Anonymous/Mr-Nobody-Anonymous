@@ -3,26 +3,24 @@ Profile README for: Mr-Nobody-Anonymous
 Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
-<h1 align="center">Hi, I'm Mr-Nobody-Anonymous</h1>
+<h1 align="center">Hi, I'm Beamlak Sintayehu Abebe</h1>
 <p align="center">
   <b>Cybersecurity • AI • Web Development</b>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:7c3aed&height=160&section=header&text=Mr-Nobody-Anonymous&fontSize=42&fontColor=ffffff&animation=fadeIn" alt="banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:7c3aed&height=160&section=header&text=Beamlak%20Sintayehu%20Abebe&fontSize=38&fontColor=ffffff&animation=fadeIn" alt="banner" />
 </p>
 
 <p align="center">
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="#"><img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=for-the-badge&logo=protonvpn&logoColor=white"></a>
-  <a href="#"><img alt="AI" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=for-the-badge&logo=openai&logoColor=white"></a>
-  <a href="#"><img alt="Web Dev" src="https://img.shields.io/badge/Web%20Development-22c55e?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="mailto:bam310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bam310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </p>
 
 <p align="center">
-  <!-- Profile views counter -->
   <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&style=for-the-badge&color=7c3aed" alt="profile views" />
-  <!-- Trophies -->
   <img src="https://github-profile-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
 </p>
 
@@ -102,13 +100,14 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
 
 ---
 
-## Featured work (template)
+## My repositories / work
 
-When you pin repositories to your GitHub profile, they’ll show up automatically. If you want a manual section, copy/paste a few items here:
+Here are some repositories I’ve worked on:
 
-- **Project Name** — short, 1-line description (link)
-- **Project Name** — short, 1-line description (link)
-- **Project Name** — short, 1-line description (link)
+- **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
+- **anonymous** — My profile / experiments hub: https://github.com/Mr-Nobody-Anonymous/anonymous
+
+> If you want, tell me any other repos you want featured and I’ll add them here.
 
 ---
 
@@ -127,4 +126,6 @@ When you pin repositories to your GitHub profile, they’ll show up automaticall
 
 ## Contact
 
-If you’d like, add contact links later (email / LinkedIn / portfolio). For now, I’m keeping this section minimal.
+- Email: bmx310712@gmail.com
+- Email: bam310712@gmail.com
+- LinkedIn: https://www.linkedin.com/in/bam-sintu-a47b4b281/
