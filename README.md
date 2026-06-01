@@ -256,10 +256,12 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
 
 ## My repositories / work
 
-Top repositories (ranked by repository size and popularity signals like stars/watchers):
 
-1. **fkali** — Ultimate Kali Linux self-healing & maintenance script: https://github.com/Mr-Nobody-Anonymous/fkali
+Top repositories ranked automatically:
 
+<!-- TOP-REPOS:START -->
+Loading...
+<!-- TOP-REPOS:END -->
 
 
 
