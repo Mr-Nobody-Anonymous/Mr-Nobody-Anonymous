@@ -1,0 +1,108 @@
+name: Update README with Top Repositories
+
+on:
+  schedule:
+    # Run every day at 2 AM UTC
+    - cron: '0 2 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Update README with top repositories
+        run: |
+          node -e "
+          const fs = require('fs');
+          const https = require('https');
+          
+          const username = 'Mr-Nobody-Anonymous';
+          
+          function fetchRepos() {
+            return new Promise((resolve, reject) => {
+              https.get('https://api.github.com/users/$username/repos?sort=stars&direction=desc&per_page=5&type=public', {
+                headers: {
+                  'User-Agent': 'GitHub-Actions-Workflow'
+                }
+              }, (res) => {
+                let data = '';
+                res.on('data', chunk => data += chunk);
+                res.on('end', () => {
+                  try {
+                    resolve(JSON.parse(data));
+                  } catch (e) {
+                    reject(e);
+                  }
+                });
+              }).on('error', reject);
+            });
+          }
+          
+          async function updateReadme() {
+            try {
+              const repos = await fetchRepos();
+              let readme = fs.readFileSync('README.md', 'utf8');
+              
+              // Build repositories table
+              let tableRows = '';
+              if (repos.length > 0) {
+                repos.forEach(repo => {
+                  const stars = repo.stargazers_count;
+                  const desc = repo.description || 'No description';
+                  tableRows += \`| [\${repo.name}](https://github.com/\${repo.full_name}) | \${repo.language || 'N/A'} | ⭐ \${stars} | \${desc} |\n\`;
+                });
+              } else {
+                tableRows = '| No repositories yet | - | - | Start creating! |\n';
+              }
+              
+              // Create the full table
+              const table = \`Top 5 public repositories ranked by stars:
+
+| Repository | Language | Stars | Description |
+|-----------|----------|-------|-------------|
+\${tableRows}\`;
+              
+              // Replace content between markers
+              const startMarker = '## My repositories / work\n\n';
+              const endMarker = '\n\n<!-- TOP-REPOS:START -->';
+              
+              const startIdx = readme.indexOf(startMarker);
+              const endIdx = readme.indexOf(endMarker, startIdx);
+              
+              if (startIdx !== -1 && endIdx !== -1) {
+                const before = readme.substring(0, startIdx + startMarker.length);
+                const after = readme.substring(endIdx);
+                readme = before + table + after;
+                
+                fs.writeFileSync('README.md', readme, 'utf8');
+                console.log('✅ README updated successfully!');
+              } else {
+                console.log('⚠️ Could not find markers in README');
+              }
+            } catch (error) {
+              console.error('Error:', error);
+              process.exit(1);
+            }
+          }
+          
+          updateReadme();
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff-index --quiet HEAD || (git commit -m "📝 Update README with latest repositories" && git push)
