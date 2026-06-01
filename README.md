@@ -250,12 +250,12 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 ## My repositories / work
 
-Top 5 public repositories ranked by stars:
+Top 5 public repositories ranked by views:
 
-| Repository | Language | Stars | Description |
-|-----------|----------|-------|-------------|
-| [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | Fast Kali Linux setup and automation |
-| [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | Profile repository |
+| Repository | Language | Stars | Views | Description |
+|-----------|----------|-------|-------|-------------|
+| [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | 👁️ 0 | Fast Kali Linux setup and automation |
+| [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | 👁️ 0 | Profile repository |
 
 <!-- TOP-REPOS:START -->
 *More repositories coming soon. Create exciting projects to showcase your work!*
