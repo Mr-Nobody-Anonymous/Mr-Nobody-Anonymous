@@ -239,14 +239,38 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <a href="https://github.com/features/actions" target="_blank"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /></a>
 </p>
 
----
 
-## Certifications & learning
 
-- 📚 Currently learning: **secure API design**, **web exploitation**, and **AI-assisted automation**
-- 🧾 Certifications: *(add yours here when ready)*
 
 ---
+
+<h2>📚 Certifications & Learning</h2>
+
+<p>
+  🔭 Currently learning:
+  <strong>Penetration Testing</strong> •
+  <strong>Web Exploitation</strong> •
+  <strong>Web development</strong></strong>
+</p>
+
+<p>
+  <a href="https://tryhackme.com/p/Mr.nobody">
+    <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody-red?style=for-the-badge&logo=tryhackme" />
+  </a>
+
+  <a href="https://app.hackthebox.com/users/2355243">
+    <img src="https://img.shields.io/badge/HackTheBox-Profile-green?style=for-the-badge&logo=hackthebox" />
+  </a>
+</p>
+
+<h3>🧾 Certifications</h3>
+
+<ul>
+  <li>🏆 certifications will be added in the future here</li>
+</ul>
+
+
+
 
 ## My repositories / work
 
