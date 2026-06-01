@@ -4,7 +4,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Beamlak%20Sintayehu" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Beamlak%20Sintu" alt="Header" />
 </p>
 
 
@@ -17,7 +17,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
   <b>🤖 AI • 🌐 Web Development</b>
   <br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=Penetration+Tester;Network+Security+Explorer;Ethical+Hacking+Practitioner;Cybersecurity+Analyst;Python+Enthusiast;Linux+Learner;Cybersecurity+Learner;AI+Developer;Web+Developer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=Penetration+Tester;Network+Security+Explorer;Ethical+Hacking;Bug+Bounty+Hunter;Security+Researcher" alt="Typing animation" />
 </div>
 
 
@@ -45,7 +45,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 ## About me
 
-I’m a cybersecurity-focused technologist who enjoys building secure systems and learning how modern attacks work so I can defend against them. I also explore AI (especially applied automation) and build web applications with a focus on performance, reliability, and secure-by-design practices.
+I'm a cybersecurity-focused technologist who enjoys building secure systems and learning how modern attacks work so I can defend against them. I also explore AI (especially applied automation) and love creating web applications with security-first thinking.
 
 - 🔐 Security mindset: *threat modeling, least privilege, secure coding, and continuous hardening*
 - 🧠 Curious by default: *CTFs, labs, reversing, and practical experimentation*
@@ -137,10 +137,6 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg" alt="Django" title="Django" width="36" height="36" />
   </a>
   
-  <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker" title="Docker" width="36" height="36" />
-  </a>
-  
   <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tensorflow-colored.svg" alt="TensorFlow" title="TensorFlow" width="36" height="36" />
   </a>
@@ -162,7 +158,10 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
   </a>
 
 <a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="32" height="32" alt="GitLab" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" />
+    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="32" height="32" alt="GitLab" />
   </picture>
 </a>
 
@@ -183,7 +182,6 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
   </a>
 
 </p>
-
 
 
 
@@ -214,7 +212,7 @@ I’m a cybersecurity-focused technologist who enjoys building secure systems an
   <a href="https://isocpp.org/" target="_blank"><img alt="C%2B%2B" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" /></a>
   <a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank"><img alt="C%23" src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" /></a>
   <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank"><img alt="Assembly" src="https://img.shields.io/badge/Assembly-6E4C13?style=for-the-badge&logoColor=white" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /></a>
   <a href="https://www.typescriptlang.org/" target="_blank"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" /></a>
   <a href="https://go.dev/" target="_blank"><img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /></a>
   <a href="https://www.rust-lang.org/" target="_blank"><img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" /></a>
@@ -270,8 +268,8 @@ Loading...
 <!-- If you see broken images: GitHub sometimes blocks these services temporarily. -->
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous?tab=repositories"><img height="165" alt="Top languages card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true&langs_count=10" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous?tab=repositories"><img height="165" alt="Top languages card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true" /></a>
 </p>
 
 <p align="center">
