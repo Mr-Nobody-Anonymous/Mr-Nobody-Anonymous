@@ -157,13 +157,9 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
     </picture>
   </a>
 
-<a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" />
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="32" height="32" alt="GitLab" />
-  </picture>
-</a>
+  <a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/GitLab-FC6D26?style=social&logo=gitlab&logoColor=white" width="32" height="32" alt="GitLab" title="GitLab" />
+  </a>
 
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noreferrer">
     <picture>
@@ -254,11 +250,15 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 ## My repositories / work
 
+Top 5 public repositories ranked by stars:
 
-Top repositories ranked automatically:
+| Repository | Language | Stars | Description |
+|-----------|----------|-------|-------------|
+| [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | Fast Kali Linux setup and automation |
+| [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | Profile repository |
 
 <!-- TOP-REPOS:START -->
-Loading...
+*More repositories coming soon. Create exciting projects to showcase your work!*
 <!-- TOP-REPOS:END -->
 
 
