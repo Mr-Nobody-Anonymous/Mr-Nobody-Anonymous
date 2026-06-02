@@ -282,7 +282,16 @@ Top 5 public repositories ranked by views:
 | [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | 👁️ 0 | Profile repository |
 
 <!-- TOP-REPOS:START -->
-*More repositories coming soon.*
+
+1. **[fkali](https://github.com/Mr-Nobody-Anonymous/fkali)**
+   - No description
+   - ⭐ 0
+
+
+2. **[Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous)**
+   - No description
+   - ⭐ 0
+
 <!-- TOP-REPOS:END -->
 
 
