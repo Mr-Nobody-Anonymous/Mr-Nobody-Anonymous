@@ -254,7 +254,7 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 </p>
 
 <p>
-  <a href="https://tryhackme.com/p/Mr.nobody">
+  <a href="https://tryhackme.com/p/Mr.nobody.">
     <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody-red?style=for-the-badge&logo=tryhackme" />
   </a>
 
