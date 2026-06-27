@@ -4,7 +4,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Beamlak%20Sintuayehu" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Mr.nobody%20" alt="Header" />
 </p>
 
 
