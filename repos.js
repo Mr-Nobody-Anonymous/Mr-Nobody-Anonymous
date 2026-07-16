@@ -17,6 +17,8 @@ async function main() {
                 name: repo.name,
                 url: repo.html_url,
                 desc: repo.description || "No description",
+                stars: repo.stargazers_count,
+                forks: repo.forks_count,
                 score: repo.stargazers_count + repo.forks_count,
             }))
             .sort((a, b) => b.score - a.score)
@@ -27,7 +29,7 @@ async function main() {
                 (repo, index) => `
 ${index + 1}. **[${repo.name}](${repo.url})**
    - ${repo.desc}
-   - ⭐ ${repo.score}
+   - ⭐ ${repo.stars} | 🍴 ${repo.forks}
 `
             )
             .join("\n");
