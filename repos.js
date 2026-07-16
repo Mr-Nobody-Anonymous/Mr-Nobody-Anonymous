@@ -41,7 +41,9 @@ ${index + 1}. **[${repo.name}](${repo.url})**
 
         fs.writeFileSync("README.md", newReadme);
     } catch (error) {
-        console.error(`Failed to update top repositories: ${error.message}`);
+        console.error(
+            `Failed to update top repositories: ${error instanceof Error ? error.message : String(error)}`
+        );
         process.exitCode = 1;
     }
 }
