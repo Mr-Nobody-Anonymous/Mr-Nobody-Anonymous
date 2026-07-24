@@ -2,32 +2,37 @@ name: Update Top Repositories
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Runs every 24 hours at 06:00 UTC
+    - cron: "0 6 */1 * *"
   workflow_dispatch:
-
-permissions:
-  contents: write
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  update-readme:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - name: Run repos script
+      - name: Install dependencies (none needed, uses built-in fetch)
+        run: npm install node-fetch@2 2>/dev/null || true
+
+      - name: Fetch and rank repositories
         run: node repos.js
 
-      - name: Commit changes
+      - name: Commit and push changes (if any)
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update top repos"
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto-update top repositories [skip ci]"
           git push
+

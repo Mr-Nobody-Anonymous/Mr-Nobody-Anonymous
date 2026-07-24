@@ -7,19 +7,16 @@ Repo: Mr-Nobody-Anonymous/anonymous
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Mr.nobody%20" alt="Header" />
 </p>
 
-
-
 <div align="center">
 
   <h1>🔐 Cybersecurity professional</h1>
   <b>⚡ && ⚡</b>
    <br>
   <b>🤖 AI • 🌐 Web Development</b>
-  <br><br>
+  <br>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=Penetration+Tester;Network+Security+Explorer;Ethical+Hacking;Bug+Bounty+Hunter;Security+Researcher" alt="Typing animation" />
 </div>
-
 
 <p align="center">
   <!-- Focus badges -->
@@ -63,7 +60,6 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ---
 
 ### Skills
-
 
   <a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="36" height="36" />
@@ -122,7 +118,6 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker" title="Docker" width="36" height="36" />
   </a>
-  
   <a href="https://www.raspberrypi.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/raspberrypi-colored.svg" alt="Raspberry Pi" title="Raspberry Pi" width="36" height="36" />
   </a>
@@ -132,18 +127,12 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <a href="https://ubuntu.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ubuntu-colored.svg" alt="Ubuntu" title="Ubuntu" width="36" height="36" />
   </a>
-  
   <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg" alt="Django" title="Django" width="36" height="36" />
   </a>
-  
   <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tensorflow-colored.svg" alt="TensorFlow" title="TensorFlow" width="36" height="36" />
   </a>
-</p>
-
-
-
 
 ### Socials
 
@@ -156,11 +145,9 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
       <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" title="GitHub" />
     </picture>
   </a>
-
   <a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/GitLab-FC6D26?style=social&logo=gitlab&logoColor=white" width="32" height="32" alt="GitLab" title="GitLab" />
   </a>
-
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" />
@@ -168,7 +155,6 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
       <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" alt="LinkedIn" title="LinkedIn" />
     </picture>
   </a>
-
   <a href="https://discord.com/users/mr.nobody.137" target="_blank" rel="noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord-dark.svg" />
@@ -179,11 +165,7 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 </p>
 
-
-
-
 <br>
-
 
 ## Toolbox (tech & tools)
 
@@ -239,9 +221,6 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <a href="https://github.com/features/actions" target="_blank"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /></a>
 </p>
 
-
-
-
 ---
 
 <h2>📚 Certifications & Learning</h2>
@@ -250,14 +229,13 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   🔭 Currently learning:
   <strong>Penetration Testing</strong> •
   <strong>Web Exploitation</strong> •
-  <strong>Web development</strong></strong>
+  <strong>Web development</strong>
 </p>
 
 <p>
   <a href="https://tryhackme.com/p/Mr.nobody.">
     <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody-red?style=for-the-badge&logo=tryhackme" />
   </a>
-
   <a href="https://app.hackthebox.com/users/2355243">
     <img src="https://img.shields.io/badge/HackTheBox-Profile-green?style=for-the-badge&logo=hackthebox" />
   </a>
@@ -269,69 +247,43 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <li>🏆 certifications will be added in the future here</li>
 </ul>
 
-
-
-
 ## My repositories / work
 
-Top 5 public repositories ranked by views:
-
-| Repository | Language | Stars | Views | Description |
-|-----------|----------|-------|-------|-------------|
-| [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | 👁️ 0 | Fast Kali Linux setup and automation |
-| [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | 👁️ 0 | Profile repository |
-
 <!-- TOP-REPOS:START -->
+### 🔥 Top Repositories
 
-1. **[Argus](https://github.com/Mr-Nobody-Anonymous/Argus)**
-   - No description
-   - ⭐ 0
+| # | Repository | Language | Stars | Forks | Description |
+|---|-----------|----------|-------|-------|-------------|
+| 1 | [Argus](https://github.com/Mr-Nobody-Anonymous/Argus) | Python | ⭐ 1 | 🍴 0 | SentinelSight AI Video Analytics Platform |
+| 2 | [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | 🍴 0 | Mr-Nobody-Anonymous |
+| 3 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | Python | ⭐ 0 | 🍴 0 | ultrone |
+| 4 | [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | 🍴 0 | fkali |
+| 5 | [Capture-Writeup](https://github.com/Mr-Nobody-Anonymous/Capture-Writeup) | Python | ⭐ 0 | 🍴 0 | Capture-Writeup |
 
-
-2. **[Capture-Writeup](https://github.com/Mr-Nobody-Anonymous/Capture-Writeup)**
-   - No description
-   - ⭐ 0
-
-
-3. **[fkali](https://github.com/Mr-Nobody-Anonymous/fkali)**
-   - No description
-   - ⭐ 0
-
-
-4. **[Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous)**
-   - No description
-   - ⭐ 0
-
+<sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
 <!-- TOP-REPOS:END -->
 
-
-
-## GitHub stats
-
-<!-- If you see broken images: GitHub sometimes blocks these services temporarily. -->
+## 📊 GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img height="165" alt="GitHub stats card" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&theme=radical&hide_border=true" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous?tab=repositories"><img height="165" alt="Top languages card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&theme=radical&hide_border=true" /></a>
+  <img src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub streak card" src="https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=radical&hide_border=true" /></a>
+  <img src="https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=radical&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=radical" /></a>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=radical" alt="Profile Summary" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous&theme=radical" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="Most commit language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous&theme=radical" /></a>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous&theme=radical" alt="Repos per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous&theme=radical" alt="Most Commit Language" />
 </p>
 
 ---
-
-
-
 
 <h2 align="center">📬 Contact Me</h2>
 
