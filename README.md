@@ -27,6 +27,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <p align="center">
   <!-- Links row -->
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio Website" src="https://img.shields.io/badge/🌐_Portfolio_Website-00ff88?style=for-the-badge&logoColor=black&labelColor=0c142b"></a>
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -35,7 +36,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&style=for-the-badge&color=7c3aed" alt="profile views" /> <br>
-  <img src="https://github-profile-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
+  <img src="https://trophies.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
 </p>
 
 ---
@@ -255,10 +256,11 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 | # | Repository | Language | Stars | Forks | Description |
 |---|-----------|----------|-------|-------|-------------|
 | 1 | [Argus](https://github.com/Mr-Nobody-Anonymous/Argus) | Python | ⭐ 1 | 🍴 0 | SentinelSight AI Video Analytics Platform |
-| 2 | [Mr-Nobody-Anonymous](https://github.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous) | JavaScript | ⭐ 0 | 🍴 0 | Mr-Nobody-Anonymous |
-| 3 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | Python | ⭐ 0 | 🍴 0 | ultrone |
-| 4 | [fkali](https://github.com/Mr-Nobody-Anonymous/fkali) | Shell | ⭐ 0 | 🍴 0 | fkali |
-| 5 | [Capture-Writeup](https://github.com/Mr-Nobody-Anonymous/Capture-Writeup) | Python | ⭐ 0 | 🍴 0 | Capture-Writeup |
+| 2 | [Orion](https://github.com/Mr-Nobody-Anonymous/Orion) | Python | ⭐ 0 | 🍴 0 | Institutional intelligence and architectural security platform |
+| 3 | [Cerberus](https://github.com/Mr-Nobody-Anonymous/Cerberus) | Python | ⭐ 0 | 🍴 0 | Multi-vector security auditing & threat intelligence framework |
+| 4 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | Python | ⭐ 0 | 🍴 0 | Autonomous AI agent architecture and task execution framework |
+| 5 | [civiclens](https://github.com/Mr-Nobody-Anonymous/civiclens) | Python | ⭐ 0 | 🍴 0 | Civic monitoring and data analysis platform |
+| 6 | [All-skills](https://github.com/Mr-Nobody-Anonymous/All-skills) | Python | ⭐ 0 | 🍴 0 | Cybersecurity and technical skills reference repository |
 
 <sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
 <!-- TOP-REPOS:END -->
@@ -266,8 +268,8 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
 </p>
 
 <p align="center">

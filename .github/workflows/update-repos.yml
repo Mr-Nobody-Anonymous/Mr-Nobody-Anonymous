@@ -3,11 +3,14 @@ name: Update Top Repositories
 on:
   schedule:
     # Runs every 24 hours at 06:00 UTC
-    - cron: "0 6 */1 * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   update-readme:
@@ -26,6 +29,8 @@ jobs:
         run: npm install node-fetch@2 2>/dev/null || true
 
       - name: Fetch and rank repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node repos.js
 
       - name: Commit and push changes (if any)

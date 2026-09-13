@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mr. Nobody | Cybersecurity Professional & AI Explorer</title>
+  
+  <meta name="description" content="Portfolio of Mr. Nobody (Bam Sintu) - Cybersecurity practitioner, offensive security researcher, autonomous AI agent architect, and web application hardening engineer." />
+  <meta name="keywords" content="Mr Nobody, Bam Sintu, Cybersecurity, Penetration Testing, Ethical Hacking, Bug Bounty, Threat Modeling, AI Agents, Python, Kali Linux, Web Security" />
+  <meta name="author" content="Bam Sintu (Mr. Nobody)" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#040711" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:site_name" content="Mr. Nobody Portfolio" />
+  <meta property="og:title" content="Mr. Nobody | Cybersecurity Professional & AI Explorer" />
+  <meta property="og:description" content="Offensive security exploration, autonomous AI architectures, threat modeling, and web application hardening." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mr. Nobody | Cybersecurity Professional & AI Explorer" />
+  <meta name="twitter:description" content="Offensive security exploration, autonomous AI architectures, threat modeling, and web application hardening." />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Matrix Digital Rain Canvas -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="cyber-overlay" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header class="cyber-nav" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Mr Nobody Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <span>Mr.Nobody<span class="brand-cursor">_</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#credentials" class="nav-link">Credentials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <!-- Palette Switcher -->
+        <div class="theme-selector" role="group" aria-label="Color Palette Switcher" title="Switch HUD Color Theme">
+          <button class="theme-dot green active" data-theme="green" aria-label="Emerald Green Theme"></button>
+          <button class="theme-dot cyan" data-theme="cyan" aria-label="Cyber Cyan Theme"></button>
+          <button class="theme-dot crimson" data-theme="crimson" aria-label="Crimson Alert Theme"></button>
+        </div>
+
+        <!-- Matrix Toggle -->
+        <button class="cyber-btn-icon" id="matrix-toggle-btn" title="Toggle Matrix Rain" aria-label="Toggle Matrix Canvas Animation">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+
+        <!-- Audio FX Toggle -->
+        <button class="cyber-btn-icon" id="audio-toggle-btn" title="Toggle Cyber Audio FX" aria-label="Toggle Audio Effects">
+          <svg id="audio-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="cyber-btn-icon mobile-toggle" id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home" aria-labelledby="hero-heading">
+      <div class="container">
+
+        <!-- Live Telemetry Status Bar -->
+        <div class="hud-status-bar" aria-label="System Telemetry">
+          <div class="hud-item">
+            <div class="status-beacon" aria-hidden="true"></div>
+            <span>STATUS: <b style="color:var(--accent-primary)">OPERATIONAL</b></span>
+          </div>
+          <div class="hud-item">
+            <span>ENVIRONMENT: <b>KALI LINUX / UNIX</b></span>
+          </div>
+          <div class="hud-item">
+            <span>OPERATOR: <b>BAM SINTU (MR. NOBODY)</b></span>
+          </div>
+          <div class="hud-item">
+            <span>PROTOCOL: <b style="color:var(--accent-secondary)">ZERO-TRUST BASELINE</b></span>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>SECURITY RESEARCH & OFFENSIVE EXPLORATION</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-heading">
+              Defending Systems.<br />
+              <span class="glitch-text">Exploiting Boundaries.</span>
+            </h1>
+
+            <div class="hero-typing-wrap" aria-live="polite">
+              <span style="color:var(--accent-primary); margin-right: 8px;">&gt;</span>
+              <span id="typing-text">Penetration Testing & Offensive Security</span>
+              <span class="typed-cursor" aria-hidden="true">|</span>
+            </div>
+
+            <p class="hero-description">
+              Cybersecurity practitioner building resilient defenses through hands-on adversary analysis. Focused on penetration testing, threat modeling, autonomous security AI agent engineering, and web infrastructure hardening.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="cyber-btn cyber-btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                Inspect Toolsets
+              </a>
+              <a href="#terminal" class="cyber-btn cyber-btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                Launch Terminal
+              </a>
+              <a href="#contact" class="cyber-btn cyber-btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Secure Contact
+              </a>
+            </div>
+
+            <div class="hero-socials" aria-label="Social and Security Profiles">
+              <a href="https://github.com/Mr-Nobody-Anonymous" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://tryhackme.com/p/Mr.nobody." target="_blank" rel="noopener noreferrer" class="hero-social-link" title="TryHackMe Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm0 2.25l8.25 4.83v9.84L12 21.75l-8.25-4.83V7.08L12 2.25z"/>
+                </svg>
+              </a>
+              <a href="https://app.hackthebox.com/users/2355243" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="HackTheBox Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M11.996 0a1.12 1.12 0 0 0-.555.148L1.65 5.803a1.13 1.13 0 0 0-.565.979v10.436c0 .404.218.78.565.98l9.791 5.654c.174.1.365.148.555.148.19 0 .381-.049.555-.148l9.791-5.654a1.13 1.13 0 0 0 .565-.98V6.782a1.13 1.13 0 0 0-.565-.98L12.551.148A1.12 1.12 0 0 0 11.996 0z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Network Radar Visual Card -->
+          <div class="radar-card" aria-label="Reconnaissance Radar Simulation">
+            <div class="radar-header">
+              <span class="radar-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                NETWORK TELEMETRY HUD
+              </span>
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-primary)">MONITORING</span>
+            </div>
+
+            <div class="radar-display" aria-hidden="true">
+              <div class="radar-ring radar-ring-1"></div>
+              <div class="radar-ring radar-ring-2"></div>
+              <div class="radar-axis-x"></div>
+              <div class="radar-axis-y"></div>
+              <div class="radar-sweep"></div>
+              <div class="radar-blip radar-blip-1"></div>
+              <div class="radar-blip radar-blip-2"></div>
+              <div class="radar-blip radar-blip-3"></div>
+            </div>
+
+            <div class="radar-stats-grid">
+              <div class="radar-stat-item">
+                <div class="radar-stat-label">PRIMARY OS</div>
+                <div class="radar-stat-value">Kali / Linux</div>
+              </div>
+              <div class="radar-stat-item">
+                <div class="radar-stat-label">SECURITY BASELINE</div>
+                <div class="radar-stat-value">Zero Trust</div>
+              </div>
+              <div class="radar-stat-item">
+                <div class="radar-stat-label">INGRESS PROTOCOL</div>
+                <div class="radar-stat-value">TLS 1.3 / HTTPS</div>
+              </div>
+              <div class="radar-stat-item">
+                <div class="radar-stat-label">PUBLIC CODEBASES</div>
+                <div class="radar-stat-value">11 Repos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Stats Section -->
+    <section class="metrics-section" aria-label="Verified Statistics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">💻</div>
+            <div class="metric-value counter-val" data-target="11" data-suffix=" Repos">11 Repos</div>
+            <div class="metric-title">Public Open-Source Repositories</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">🛡️</div>
+            <div class="metric-value counter-val" data-target="2" data-suffix=" Labs">2 Labs</div>
+            <div class="metric-title">Active Platforms (THM & HTB)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">⚡</div>
+            <div class="metric-value counter-val" data-target="6" data-suffix=" Techs">6 Techs</div>
+            <div class="metric-title">Primary Languages (Py, C, Bash, TS, SQL)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon" aria-hidden="true">🎯</div>
+            <div class="metric-value counter-val" data-target="100" data-suffix="%">100%</div>
+            <div class="metric-title">Verifiable Open Source Tooling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span style="color:var(--accent-primary)">//</span>
+            <span>Profile & Methodology</span>
+          </div>
+          <h2 class="section-title" id="about-heading">Security Mindset & Mission</h2>
+          <p class="section-desc">
+            Hardening systems against attacks by understanding adversary reconnaissance, weaponization, and exploitation mechanics.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a security-focused developer and ethical hacker dedicated to bridging practical exploitation and proactive system architecture. My work revolves around analyzing attack surfaces, building custom automation tooling, and developing resilient systems built on least-privilege principles.
+            </p>
+            <p>
+              From network mapping and web application security testing to cryptographic analysis and autonomous agent automation, I prioritize verifiable code, rigorous testing, and continuous learning in cyber ranges.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <div class="highlight-title">
+                  <span aria-hidden="true">🔐</span> Least Privilege Architecture
+                </div>
+                <div class="highlight-desc">Strict perimeter definitions, access boundaries, and continuous posture verification.</div>
+              </div>
+              <div class="highlight-box">
+                <div class="highlight-title">
+                  <span aria-hidden="true">⚡</span> Offensive Exploration
+                </div>
+                <div class="highlight-desc">Hands-on penetration testing labs, vulnerability analysis, and CTF challenges.</div>
+              </div>
+              <div class="highlight-box">
+                <div class="highlight-title">
+                  <span aria-hidden="true">🤖</span> Autonomous Tool Engineering
+                </div>
+                <div class="highlight-desc">Agent architectures, workflow helpers, and intelligent video/data analytics.</div>
+              </div>
+              <div class="highlight-box">
+                <div class="highlight-title">
+                  <span aria-hidden="true">🛠️</span> Multi-Language Engineering
+                </div>
+                <div class="highlight-desc">Core systems built in Python, C/C++, Bash, TypeScript, and modern web frameworks.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terminal Dossier Card -->
+          <div class="terminal-card" aria-label="Profile Terminal Dossier">
+            <div class="terminal-topbar">
+              <div class="terminal-buttons" aria-hidden="true">
+                <div class="term-btn red"></div>
+                <div class="term-btn yellow"></div>
+                <div class="term-btn green"></div>
+              </div>
+              <div class="terminal-title">operator@mr-nobody:~</div>
+              <div style="width: 36px;"></div>
+            </div>
+            <div class="terminal-body" style="height: 330px;">
+              <div class="terminal-line">
+                <span class="term-prompt">operator@sec-ops:~$</span> <span class="term-cmd">cat profile.json</span>
+              </div>
+              <div class="terminal-line term-output">
+                {<br>
+                &nbsp;&nbsp;<span style="color:#00f0ff">"operator"</span>: <span style="color:#fcd34d">"Bam Sintu (Mr. Nobody)"</span>,<br>
+                &nbsp;&nbsp;<span style="color:#00f0ff">"disciplines"</span>: [<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fcd34d">"Offensive Security & Pentesting"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fcd34d">"Autonomous AI Agent Architectures"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fcd34d">"Web Application Security"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fcd34d">"Threat Modeling & Hardening"</span><br>
+                &nbsp;&nbsp;],<br>
+                &nbsp;&nbsp;<span style="color:#00f0ff">"active_labs"</span>: [<span style="color:#fcd34d">"TryHackMe"</span>, <span style="color:#fcd34d">"HackTheBox"</span>],<br>
+                &nbsp;&nbsp;<span style="color:#00f0ff">"status"</span>: <span style="color:#00ff88">"Available for Projects & Research Collaboration"</span><br>
+                }
+              </div>
+              <div class="terminal-line" style="margin-top: 15px;">
+                <span class="term-prompt">operator@sec-ops:~$</span> <span class="term-cmd">git status</span>
+              </div>
+              <div class="terminal-line term-output">
+                On branch main | 11 repositories active | All work verifiable
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span style="color:var(--accent-primary)">//</span>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="section-title" id="skills-heading">Skills & Tool Arsenal</h2>
+          <p class="section-desc">
+            Core competencies across offensive penetration testing frameworks, defensive system hardening, and modern software development.
+          </p>
+        </div>
+
+        <div class="skills-tabs" role="tablist" aria-label="Skills Disciplines">
+          <button class="skill-tab-btn active" role="tab" aria-selected="true" data-skill-tab="all">All Disciplines</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-skill-tab="offensive">Offensive Security</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-skill-tab="defensive">Defensive & Systems</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-skill-tab="languages">Languages & Code</button>
+          <button class="skill-tab-btn" role="tab" aria-selected="false" data-skill-tab="ai">AI & Automation</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Offensive Card -->
+          <div class="skill-card" data-skill-cat="offensive">
+            <div class="skill-card-header">
+              <div class="skill-card-icon" aria-hidden="true">⚔️</div>
+              <div>
+                <h3 class="skill-card-title">Offensive Security & Pentesting</h3>
+                <div style="font-size:0.75rem; color:var(--text-muted)">Recon, Exploitation & Auditing</div>
+              </div>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Web Application Testing (OWASP Top 10)</span>
+                  <span class="skill-pct">Proficient</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Network Reconnaissance & Enumeration</span>
+                  <span class="skill-pct">Proficient</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Traffic Interception & Analysis (Burp, Wireshark)</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-badge">Kali Linux</span>
+              <span class="skill-badge">Burp Suite</span>
+              <span class="skill-badge">Nmap</span>
+              <span class="skill-badge">Metasploit</span>
+              <span class="skill-badge">Wireshark</span>
+              <span class="skill-badge">Hydra</span>
+            </div>
+          </div>
+
+          <!-- Defensive Card -->
+          <div class="skill-card" data-skill-cat="defensive">
+            <div class="skill-card-header">
+              <div class="skill-card-icon" aria-hidden="true">🛡️</div>
+              <div>
+                <h3 class="skill-card-title">Defensive Systems & Hardening</h3>
+                <div style="font-size:0.75rem; color:var(--text-muted)">Threat Modeling & Infrastructure</div>
+              </div>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Linux System Administration & Hardening</span>
+                  <span class="skill-pct">Proficient</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Threat Modeling & Attack Surface Review</span>
+                  <span class="skill-pct">Proficient</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 86%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Access Control, SSH & Least Privilege</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-badge">Ubuntu / Debian</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">OpenSSH</span>
+              <span class="skill-badge">iptables</span>
+              <span class="skill-badge">TLS / SSL</span>
+            </div>
+          </div>
+
+          <!-- Languages Card -->
+          <div class="skill-card" data-skill-cat="languages">
+            <div class="skill-card-header">
+              <div class="skill-card-icon" aria-hidden="true">💻</div>
+              <div>
+                <h3 class="skill-card-title">Programming & Tool Development</h3>
+                <div style="font-size:0.75rem; color:var(--text-muted)">Security Scripting & Fullstack</div>
+              </div>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Python (Automation, Scanners & Analytics)</span>
+                  <span class="skill-pct">Advanced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 94%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Bash & Shell Automation</span>
+                  <span class="skill-pct">Proficient</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">C & Low-Level Cryptography</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 80%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Bash</span>
+              <span class="skill-badge">C</span>
+              <span class="skill-badge">C++</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- AI Card -->
+          <div class="skill-card" data-skill-cat="ai">
+            <div class="skill-card-header">
+              <div class="skill-card-icon" aria-hidden="true">🤖</div>
+              <div>
+                <h3 class="skill-card-title">AI & Autonomous Architectures</h3>
+                <div style="font-size:0.75rem; color:var(--text-muted)">Agent Frameworks & Analytics</div>
+              </div>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Multi-Agent Task Orchestration</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Computer Vision & Visual Telemetry</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 82%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-info">
+                  <span class="skill-name">Security Automation Pipelines</span>
+                  <span class="skill-pct">Experienced</span>
+                </div>
+                <div class="skill-bar" aria-hidden="true"><div class="skill-bar-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-badge">Agent Design</span>
+              <span class="skill-badge">OpenCV</span>
+              <span class="skill-badge">Automation</span>
+              <span class="skill-badge">Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Section -->
+    <section class="section" id="terminal" aria-labelledby="terminal-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span style="color:var(--accent-primary)">//</span>
+            <span>CLI Diagnostic Interface</span>
+          </div>
+          <h2 class="section-title" id="terminal-heading">Interactive Cyber Terminal</h2>
+          <p class="section-desc">
+            Type directives to query background information, run simulated network recon, inspect repositories, or toggle theme and matrix canvas.
+          </p>
+        </div>
+
+        <div class="terminal-card" style="max-width: 880px; margin: 0 auto;">
+          <div class="terminal-topbar">
+            <div class="terminal-buttons" aria-hidden="true">
+              <div class="term-btn red"></div>
+              <div class="term-btn yellow"></div>
+              <div class="term-btn green"></div>
+            </div>
+            <div class="terminal-title">guest@mr-nobody-terminal:~ (Type &apos;help&apos; for commands)</div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-primary)">READY</div>
+          </div>
+          <div class="terminal-body" id="terminal-body" role="log" aria-live="polite">
+            <div class="terminal-line term-output">
+              <b>[MR. NOBODY INTERACTIVE CLI v2.5.0 (Linux x86_64)]</b><br>
+              Terminal environment initialized. Input is safely sanitized.<br>
+              Type <span style="color:var(--accent-primary); font-weight:600;">help</span> for directives, <span style="color:var(--accent-primary); font-weight:600;">projects</span> to list repositories, or <span style="color:var(--accent-primary); font-weight:600;">scan</span> for simulated network recon.<br>
+            </div>
+          </div>
+          <div class="term-input-row" style="padding: 0.75rem 1.25rem; background: #070d1d; border-top: 1px solid var(--border-subtle);">
+            <label for="terminal-input" class="term-prompt">guest@mr-nobody:~$</label>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. help, whoami, projects, scan)..." autocomplete="off" spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span style="color:var(--accent-primary)">//</span>
+            <span>Production Repositories</span>
+          </div>
+          <h2 class="section-title" id="projects-heading">Featured Toolsets & Codebases</h2>
+          <p class="section-desc">
+            Verified, real public repositories developed by Mr. Nobody. Inspect the source directly on GitHub.
+          </p>
+        </div>
+
+        <div class="projects-filter" role="group" aria-label="Project Categories">
+          <button class="filter-btn active" aria-pressed="true" data-filter="all">All Projects</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="security">Offensive Security</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="ai">AI & Agents</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="crypto">Cryptography & Tools</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Argus -->
+          <article class="project-card" data-category="security ai">
+            <div class="project-top">
+              <span class="project-badge">AI / SECURITY</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/Argus" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Argus on GitHub" aria-label="View Argus on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Argus</h3>
+            <p class="project-desc">
+              SentinelSight AI Video Analytics Platform. Implements intelligent computer vision pipelines for real-time video stream monitoring and anomaly detection.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">AI Analytics</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/Argus" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Cerberus -->
+          <article class="project-card" data-category="security ai">
+            <div class="project-top">
+              <span class="project-badge">SECURITY ARCHITECTURE</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/Cerberus" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Cerberus on GitHub" aria-label="View Cerberus on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Cerberus</h3>
+            <p class="project-desc">
+              Multi-vector security auditing and threat intelligence framework. Features modular adapters, vulnerability diagnostic routines, and isolated testing labs.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Threat Intel</span>
+                <span class="tech-tag">Security Labs</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/Cerberus" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Orion -->
+          <article class="project-card" data-category="security ai">
+            <div class="project-top">
+              <span class="project-badge">SYSTEM ARCHITECTURE</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/Orion" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Orion on GitHub" aria-label="View Orion on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Orion</h3>
+            <p class="project-desc">
+              Institutional intelligence and architectural security platform with modular backtesting engines, backend services, and structured threat telemetry.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Engines</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/Orion" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: ultrone -->
+          <article class="project-card" data-category="ai">
+            <div class="project-top">
+              <span class="project-badge">AI AGENT ARCHITECTURE</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/ultrone" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View ultrone on GitHub" aria-label="View ultrone on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">ultrone</h3>
+            <p class="project-desc">
+              Autonomous AI agent architecture and task execution framework. Built for coordinated multi-agent task resolution, automated simulation, and workflow optimization.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Autonomous Agents</span>
+                <span class="tech-tag">Simulation</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/ultrone" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: civiclens -->
+          <article class="project-card" data-category="ai security">
+            <div class="project-top">
+              <span class="project-badge">FULLSTACK & DATA</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/civiclens" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View civiclens on GitHub" aria-label="View civiclens on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">civiclens</h3>
+            <p class="project-desc">
+              Civic monitoring and public data intelligence platform. Features decoupled AI services, containerized backend services, and production deployment configs.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Fullstack</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/civiclens" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: fkali -->
+          <article class="project-card" data-category="security">
+            <div class="project-top">
+              <span class="project-badge">OFFENSIVE TOOLKIT</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/fkali" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View fkali on GitHub" aria-label="View fkali on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">fkali</h3>
+            <p class="project-desc">
+              Automated Kali Linux penetration testing and reconnaissance automation suite. Configures offensive environments, automates toolchains, and executes initial recon sweeps.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Shell / Bash</span>
+                <span class="tech-tag">Kali Linux</span>
+                <span class="tech-tag">Automation</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Shell</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/fkali" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: rc4 -->
+          <article class="project-card" data-category="crypto">
+            <div class="project-top">
+              <span class="project-badge">CRYPTOGRAPHY</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/rc4" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View rc4 on GitHub" aria-label="View rc4 on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">rc4</h3>
+            <p class="project-desc">
+              Stream cipher implementation and cryptographic analysis. Dissects the key-scheduling algorithm (KSA) and pseudorandom generation algorithm (PRGA) in both C and Python.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Cryptography</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Languages: C & Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/rc4" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: Capture-Writeup -->
+          <article class="project-card" data-category="security">
+            <div class="project-top">
+              <span class="project-badge">CTF & EXPLOITATION</span>
+              <div class="project-links">
+                <a href="https://github.com/Mr-Nobody-Anonymous/Capture-Writeup" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Capture-Writeup on GitHub" aria-label="View Capture-Writeup on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Capture-Writeup</h3>
+            <p class="project-desc">
+              Hands-on Capture The Flag challenge writeups and custom exploitation scripts, documenting vulnerability discovery and attack chains.
+            </p>
+            <div class="project-footer">
+              <div class="project-techs">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Exploitation</span>
+                <span class="tech-tag">CTF Labs</span>
+              </div>
+              <div class="project-action-row">
+                <div class="repo-meta">
+                  <span>Language: Python</span>
+                </div>
+                <a href="https://github.com/Mr-Nobody-Anonymous/Capture-Writeup" target="_blank" rel="noopener noreferrer" style="color:var(--accent-primary); font-weight:600;">View Repo &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials & CTF Section -->
+    <section class="section" id="credentials" aria-labelledby="credentials-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span style="color:var(--accent-primary)">//</span>
+            <span>Laboratory Verification</span>
+          </div>
+          <h2 class="section-title" id="credentials-heading">Cybersecurity Platforms & CTF</h2>
+          <p class="section-desc">
+            Hands-on vulnerability testing, laboratory challenge resolution, and ongoing technical study.
+          </p>
+        </div>
+
+        <div class="achieve-grid">
+          <div class="achieve-card">
+            <div class="achieve-icon-wrap" aria-hidden="true">🔥</div>
+            <div>
+              <h3 class="achieve-title">TryHackMe Profile</h3>
+              <p class="achieve-desc">
+                Active practice solving rooms across Web Fundamentals, Linux Privilege Escalation, Network Security, and Burp Suite recon.
+              </p>
+              <a href="https://tryhackme.com/p/Mr.nobody." target="_blank" rel="noopener noreferrer" class="achieve-link">
+                View Profile: Mr.nobody. &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="achieve-card">
+            <div class="achieve-icon-wrap" aria-hidden="true">🟩</div>
+            <div>
+              <h3 class="achieve-title">HackTheBox Profile</h3>
+              <p class="achieve-desc">
+                Engaging in live vulnerable machine testing, multi-step vulnerability chaining, and privilege escalation in isolated network environments.
+              </p>
+              <a href="https://app.hackthebox.com/users/2355243" target="_blank" rel="noopener noreferrer" class="achieve-link">
+                View Profile: User #2355243 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="achieve-card">
+            <div class="achieve-icon-wrap" aria-hidden="true">📜</div>
+            <div>
+              <h3 class="achieve-title">Certifications Track</h3>
+              <p class="achieve-desc">
+                Current professional study track working toward industry-standard offensive security certifications (eJPT & OSCP pathways).
+              </p>
+              <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--color-neon-amber);">
+                [ACTIVE STUDY TRACK]
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="contact-info-title" id="contact-heading">Direct Contact Channels</h2>
+              <p class="contact-info-desc">
+                Whether you have an inquiry regarding penetration testing, security tool development, AI agent collaboration, or want to connect, feel free to reach out directly.
+              </p>
+
+              <div class="contact-methods">
+                <div class="contact-method-item">
+                  <div class="method-details">
+                    <div class="method-icon" aria-hidden="true">✉️</div>
+                    <div>
+                      <div class="method-text-label">PRIMARY EMAIL</div>
+                      <div class="method-text-val">bmx310712@gmail.com</div>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="bmx310712@gmail.com" aria-label="Copy primary email to clipboard">COPY</button>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="method-details">
+                    <div class="method-icon" aria-hidden="true">📬</div>
+                    <div>
+                      <div class="method-text-label">SECONDARY EMAIL</div>
+                      <div class="method-text-val">bam310712@gmail.com</div>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="bam310712@gmail.com" aria-label="Copy secondary email to clipboard">COPY</button>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="method-details">
+                    <div class="method-icon" aria-hidden="true">💬</div>
+                    <div>
+                      <div class="method-text-label">DISCORD</div>
+                      <div class="method-text-val">mr.nobody.137</div>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="mr.nobody.137" aria-label="Copy Discord handle to clipboard">COPY</button>
+                </div>
+              </div>
+
+              <div class="hero-socials" aria-label="Professional Social Links">
+                <a href="https://github.com/Mr-Nobody-Anonymous" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+                <a href="https://tryhackme.com/p/Mr.nobody." target="_blank" rel="noopener noreferrer" class="hero-social-link" title="TryHackMe">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm0 2.25l8.25 4.83v9.84L12 21.75l-8.25-4.83V7.08L12 2.25z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Message Form -->
+            <form class="cyber-form" id="contact-form" aria-label="Direct Message Form">
+              <div class="form-group">
+                <label class="form-label" for="form-name">NAME / SENDER</label>
+                <input type="text" id="form-name" class="form-input" placeholder="Your name or organization" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">EMAIL ADDRESS</label>
+                <input type="email" id="form-email" class="form-input" placeholder="you@domain.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">MESSAGE</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Describe your inquiry, project scope, or security collaboration..." required></textarea>
+              </div>
+
+              <div class="form-status" id="form-status" role="alert"></div>
+
+              <button type="submit" class="cyber-btn cyber-btn-primary" style="margin-top: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Prepare Message Transmission
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="container footer-content">
+      <div>
+        <span>&copy; 2026 <b>Bam Sintu (Mr. Nobody)</b>. Open Source &amp; Verifiable.</span>
+      </div>
+      <div>
+        <span>SECURITY BASELINE: <span class="footer-highlight">ZERO-TRUST</span> // HOSTING: <span class="footer-highlight">GITHUB PAGES</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/matrix.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
