@@ -3,69 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404: Access Denied / Target Not Found | Mr. Nobody</title>
+  <title>404: Not Found | Mr. Nobody Anonymous</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
-    .error-container {
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
       min-height: 100vh;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
     }
-    .error-card {
-      max-width: 600px;
+    #matrix-canvas {
+      position: fixed;
+      inset: 0;
       width: 100%;
-      background: var(--bg-surface);
-      border: 1px solid var(--accent-border);
+      height: 100%;
+      z-index: 1;
+      opacity: 0.35;
+    }
+    .content-box {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      width: 90%;
+      background: rgba(17, 17, 17, 0.9);
+      border: 1px solid #00f0ff;
       border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.8), var(--glow-sm);
+      padding: 3rem 2rem;
       text-align: center;
+      box-shadow: 0 0 35px rgba(0, 240, 255, 0.35);
     }
-    .error-code {
-      font-family: var(--font-mono);
-      font-size: 4.5rem;
-      font-weight: 800;
-      color: var(--accent-primary);
-      line-height: 1;
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(3rem, 10vw, 5rem);
+      font-weight: 900;
+      color: #00f0ff;
+      text-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
       margin-bottom: 1rem;
-      text-shadow: var(--glow-md);
     }
-    .error-status {
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--color-neon-amber);
-      margin-bottom: 1.5rem;
-      letter-spacing: 1px;
-    }
-    .error-message {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
+    p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      line-height: 1.7;
       margin-bottom: 2rem;
-      line-height: 1.6;
+    }
+    .return-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 1px solid #00f0ff;
+      background: #00f0ff;
+      color: #0a0a0a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    }
+    .return-btn:hover {
+      background: transparent;
+      color: #00f0ff;
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
     }
   </style>
 </head>
 <body>
-  <div class="cyber-overlay"></div>
-  <div class="error-container">
-    <div class="error-card">
-      <div class="error-code">404</div>
-      <div class="error-status">[ERR_TARGET_NOT_FOUND // ACCESS_BLOCKED]</div>
-      <p class="error-message">
-        The requested sector does not exist, has been redacted, or perimeter access controls have restricted routing.
-      </p>
-      <a href="index.html" class="cyber-btn cyber-btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-        Return to Command Center
-      </a>
-    </div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <div class="content-box">
+    <h1>404</h1>
+    <p>&gt; You've gone where nobody has gone before.<br>Because this page doesn't exist.</p>
+    <a href="/Mr-Nobody-Anonymous/" class="return-btn">&gt; RETURN TO THE VOID</a>
   </div>
+
+  <script>
+    const canvas = document.getElementById('matrix-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01ABCDEF0123456789#$%&*+=-/[]{}<>MRNOBODY';
+    const fontSize = 14;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(1);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#00f0ff';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>

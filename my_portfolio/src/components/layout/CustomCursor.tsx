@@ -1,19 +1,23 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 export const CustomCursor: React.FC = () => {
-  // Inner dot position (instant)
   const [dotPos, setDotPos] = useState({ x: -100, y: -100 });
-  // Outer ring position (lerped with smooth lag)
   const ringPos = useRef({ x: -100, y: -100 });
   const [ringRender, setRingRender] = useState({ x: -100, y: -100 });
+  const [angle, setAngle] = useState(0);
+  const [velocity, setVelocity] = useState(0);
 
   const [cursorText, setCursorText] = useState<string | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isTextHover, setIsTextHover] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
 
+  const nextRippleId = useRef(0);
+
   useEffect(() => {
-    // Disable on touch devices (Section 34)
     if (window.matchMedia('(pointer: coarse)').matches) {
       setIsTouch(true);
       return;
@@ -21,6 +25,8 @@ export const CustomCursor: React.FC = () => {
 
     let mouseX = -100;
     let mouseY = -100;
+    let prevMouseX = -100;
+    let prevMouseY = -100;
     let animId: number;
 
     const onMouseMove = (e: MouseEvent) => {
@@ -29,7 +35,18 @@ export const CustomCursor: React.FC = () => {
       setDotPos({ x: mouseX, y: mouseY });
       if (!isVisible) setIsVisible(true);
 
-      // Check cursor target labels
+      const dx = mouseX - prevMouseX;
+      const dy = mouseY - prevMouseY;
+      const speed = Math.hypot(dx, dy);
+      setVelocity(Math.min(speed / 15, 1.3)); // Stretch factor
+      if (speed > 1) {
+        setAngle(Math.atan2(dy, dx));
+      }
+
+      prevMouseX = mouseX;
+      prevMouseY = mouseY;
+
+      // Check cursor targets
       const target = e.target as HTMLElement | null;
       if (!target) return;
 
@@ -37,42 +54,37 @@ export const CustomCursor: React.FC = () => {
       if (cursorTarget) {
         setCursorText(cursorTarget.getAttribute('data-cursor'));
         setIsHovered(true);
-      } else if (target.closest('button, a, [role="button"]')) {
+        setIsTextHover(false);
+      } else if (target.closest('button, a, [role="button"], input, textarea')) {
         setCursorText(null);
         setIsHovered(true);
+        setIsTextHover(false);
+      } else if (target.closest('p, h1, h2, h3, h4, span, li') && !target.closest('button, a')) {
+        setCursorText(null);
+        setIsHovered(false);
+        setIsTextHover(true);
       } else {
         setCursorText(null);
         setIsHovered(false);
+        setIsTextHover(false);
       }
     };
 
-    // Magnetic buttons proximity tracker (Section 5: 5-10px maximum movement toward cursor)
-    const handleMagneticProximity = (e: MouseEvent) => {
-      const magneticElements = document.querySelectorAll<HTMLElement>('[data-magnetic], .magnetic-btn');
-      magneticElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const distX = e.clientX - centerX;
-        const distY = e.clientY - centerY;
-        const distance = Math.hypot(distX, distY);
-
-        // Within 70px proximity, attract button by 5-10px
-        if (distance < 70) {
-          const intensity = (1 - distance / 70);
-          const pullX = (distX / distance) * 8 * intensity;
-          const pullY = (distY / distance) * 8 * intensity;
-          el.style.transform = `translate3d(${pullX}px, ${pullY}px, 0)`;
-        } else {
-          el.style.transform = 'translate3d(0, 0, 0)';
-        }
-      });
+    const onMouseDown = (e: MouseEvent) => {
+      setIsClicked(true);
+      const newRipple = { id: nextRippleId.current++, x: e.clientX, y: e.clientY };
+      setRipples((prev) => [...prev.slice(-4), newRipple]);
+      setTimeout(() => {
+        setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
+      }, 600);
     };
 
-    // Outer ring smooth lag loop
+    const onMouseUp = () => setIsClicked(false);
+
+    // Outer ring smooth lag loop (0.15s lag)
     const updateRing = () => {
-      ringPos.current.x += (mouseX - ringPos.current.x) * 0.18;
-      ringPos.current.y += (mouseY - ringPos.current.y) * 0.18;
+      ringPos.current.x += (mouseX - ringPos.current.x) * 0.16;
+      ringPos.current.y += (mouseY - ringPos.current.y) * 0.16;
       setRingRender({ x: ringPos.current.x, y: ringPos.current.y });
       animId = requestAnimationFrame(updateRing);
     };
@@ -83,13 +95,15 @@ export const CustomCursor: React.FC = () => {
     const onMouseEnter = () => setIsVisible(true);
 
     window.addEventListener('mousemove', onMouseMove, { passive: true });
-    window.addEventListener('mousemove', handleMagneticProximity, { passive: true });
+    window.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mouseup', onMouseUp);
     document.addEventListener('mouseleave', onMouseLeave);
     document.addEventListener('mouseenter', onMouseEnter);
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('mousemove', handleMagneticProximity);
+      window.removeEventListener('mousedown', onMouseDown);
+      window.removeEventListener('mouseup', onMouseUp);
       document.removeEventListener('mouseleave', onMouseLeave);
       document.removeEventListener('mouseenter', onMouseEnter);
       cancelAnimationFrame(animId);
@@ -100,7 +114,26 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <>
-      {/* 1. Outer Cyan Ring (○) with subtle delay (Section 4) */}
+      {/* Click Ripple Effect */}
+      {ripples.map((r) => (
+        <div
+          key={r.id}
+          className="cursor-ripple"
+          style={{
+            position: 'fixed',
+            left: r.x,
+            top: r.y,
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none',
+            zIndex: 99997,
+            borderRadius: '50%',
+            border: '1.5px solid #00f0ff',
+            boxShadow: '0 0 12px rgba(0, 240, 255, 0.6)'
+          }}
+        />
+      ))}
+
+      {/* Outer Ring: 30px (expands to 50px on hover, stretches oval on velocity) */}
       <div
         className="cursor-outer-ring"
         aria-hidden="true"
@@ -116,32 +149,37 @@ export const CustomCursor: React.FC = () => {
       >
         <div
           style={{
-            transform: 'translate(-50%, -50%)',
-            width: cursorText ? '60px' : isHovered ? '38px' : '26px',
-            height: cursorText ? '60px' : isHovered ? '38px' : '26px',
+            transform: `translate(-50%, -50%) rotate(${angle}rad) scale(${1 + velocity * 0.25}, ${1 - velocity * 0.15})`,
+            width: isClicked ? '16px' : isHovered ? '50px' : '30px',
+            height: isClicked ? '16px' : isHovered ? '50px' : '30px',
             borderRadius: '50%',
-            border: '1px solid rgba(0, 229, 255, 0.65)',
-            background: cursorText ? 'rgba(0, 229, 255, 0.12)' : isHovered ? 'rgba(0, 229, 255, 0.08)' : 'transparent',
-            boxShadow: isHovered ? '0 0 16px rgba(0, 229, 255, 0.35)' : 'none',
-            backdropFilter: cursorText ? 'blur(4px)' : 'none',
-            WebkitBackdropFilter: cursorText ? 'blur(4px)' : 'none',
+            border: isTextHover ? 'none' : '1px solid #00f0ff',
+            background: isHovered ? 'rgba(0, 240, 255, 0.10)' : 'transparent',
+            boxShadow: isHovered ? '0 0 15px rgba(0, 240, 255, 0.4)' : '0 0 8px rgba(0, 240, 255, 0.25)',
+            transition: 'width 0.18s ease-out, height 0.18s ease-out, background 0.18s ease-out, border 0.18s ease-out',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            color: '#00E5FF',
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.6rem',
-            fontWeight: 700,
-            letterSpacing: '0.08em',
-            textShadow: '0 0 8px rgba(0, 229, 255, 0.8)',
-            transition: 'width 0.22s cubic-bezier(0.16, 1, 0.3, 1), height 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease'
+            justifyContent: 'center'
           }}
         >
-          {cursorText}
+          {cursorText && (
+            <span
+              style={{
+                fontFamily: 'var(--font-mono, monospace)',
+                fontSize: '0.6rem',
+                color: '#00f0ff',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                pointerEvents: 'none'
+              }}
+            >
+              {cursorText}
+            </span>
+          )}
         </div>
       </div>
 
-      {/* 2. Inner Dot (•) with instant position (Section 4) */}
+      {/* Inner Dot: 8px solid cyan (or I-beam line over selectable text) */}
       <div
         className="cursor-inner-dot"
         aria-hidden="true"
@@ -158,15 +196,36 @@ export const CustomCursor: React.FC = () => {
         <div
           style={{
             transform: 'translate(-50%, -50%)',
-            width: cursorText ? '3px' : '5px',
-            height: cursorText ? '3px' : '5px',
-            borderRadius: '50%',
-            background: '#FFFFFF',
-            boxShadow: '0 0 6px rgba(255, 255, 255, 0.9), 0 0 12px rgba(0, 229, 255, 0.8)',
-            transition: 'width 0.15s ease, height 0.15s ease'
+            width: isTextHover ? '2px' : isClicked ? '4px' : '8px',
+            height: isTextHover ? '16px' : isClicked ? '4px' : '8px',
+            borderRadius: isTextHover ? '1px' : '50%',
+            background: '#00f0ff',
+            boxShadow: '0 0 10px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.8)',
+            transition: 'width 0.12s ease-out, height 0.12s ease-out, border-radius 0.12s ease-out'
           }}
         />
       </div>
+
+      <style>{`
+        @keyframes rippleExplode {
+          0% {
+            width: 8px;
+            height: 8px;
+            opacity: 1;
+          }
+          100% {
+            width: 90px;
+            height: 90px;
+            opacity: 0;
+          }
+        }
+        .cursor-ripple {
+          animation: rippleExplode 0.55s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+        }
+        * {
+          cursor: none !important;
+        }
+      `}</style>
     </>
   );
 };
