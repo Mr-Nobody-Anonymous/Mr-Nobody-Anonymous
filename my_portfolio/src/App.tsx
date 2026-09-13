@@ -39,7 +39,7 @@ export const App: React.FC = () => {
 
         {/* Main Content Modules */}
         <main id="main-content">
-          <Hero />
+          <Hero theme={theme} />
           <GitHubStats />
           <SkillMatrix />
           <CyberTerminal setTheme={setTheme} />

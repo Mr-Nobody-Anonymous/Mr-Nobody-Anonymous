@@ -7,7 +7,11 @@ import { ThreatRadar } from './ThreatRadar';
 import { SystemStatus } from './SystemStatus';
 import { staggerContainer, fadeUp } from '../../lib/animations';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  theme?: 'green' | 'cyan' | 'crimson';
+}
+
+export const Hero: React.FC<HeroProps> = ({ theme = 'green' }) => {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -178,7 +182,7 @@ export const Hero: React.FC = () => {
               width: '100%'
             }}
           >
-            <ThreatRadar />
+            <ThreatRadar theme={theme} />
             <SystemStatus />
           </motion.div>
         </motion.div>

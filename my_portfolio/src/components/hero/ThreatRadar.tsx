@@ -16,7 +16,37 @@ const SIMULATED_NODES: NodePoint[] = [
   { id: 'NODE-ULTRONE', x: 0.25, y: 0.75, status: 'VERIFIED', threatLevel: 'NOMINAL' }
 ];
 
-export const ThreatRadar: React.FC = () => {
+type ThemeName = 'green' | 'cyan' | 'crimson';
+
+interface ThreatRadarProps {
+  theme?: ThemeName;
+}
+
+const getRadarColors = (t: ThemeName = 'green') => {
+  switch (t) {
+    case 'cyan':
+      return {
+        beamStart: 'rgba(0, 240, 255, 0)',
+        beamEnd: 'rgba(0, 240, 255, 0.35)',
+        accent: '#00F0FF'
+      };
+    case 'crimson':
+      return {
+        beamStart: 'rgba(255, 42, 85, 0)',
+        beamEnd: 'rgba(255, 42, 85, 0.35)',
+        accent: '#FF2A55'
+      };
+    case 'green':
+    default:
+      return {
+        beamStart: 'rgba(0, 255, 102, 0)',
+        beamEnd: 'rgba(0, 255, 102, 0.35)',
+        accent: '#00FF66'
+      };
+  }
+};
+
+export const ThreatRadar: React.FC<ThreatRadarProps> = ({ theme = 'green' }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [selectedNode, setSelectedNode] = useState<NodePoint | null>(null);
   const reducedMotion = useReducedMotion();
@@ -34,6 +64,7 @@ export const ThreatRadar: React.FC = () => {
     canvas.height = size;
     const center = size / 2;
     const radius = size * 0.42;
+    const colors = getRadarColors(theme);
 
     const render = () => {
       ctx.clearRect(0, 0, size, size);
@@ -62,8 +93,8 @@ export const ThreatRadar: React.FC = () => {
         ctx.rotate(angle);
 
         const gradient = ctx.createLinearGradient(0, 0, radius, 0);
-        gradient.addColorStop(0, 'rgba(var(--accent-rgb), 0)');
-        gradient.addColorStop(1, 'rgba(var(--accent-rgb), 0.35)');
+        gradient.addColorStop(0, colors.beamStart);
+        gradient.addColorStop(1, colors.beamEnd);
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -72,7 +103,7 @@ export const ThreatRadar: React.FC = () => {
         ctx.closePath();
         ctx.fill();
 
-        ctx.strokeStyle = 'var(--accent)';
+        ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1.5;
         ctx.beginPath();
         ctx.moveTo(0, 0);
@@ -88,7 +119,7 @@ export const ThreatRadar: React.FC = () => {
         const nx = center + (node.x - 0.5) * (radius * 1.6);
         const ny = center + (node.y - 0.5) * (radius * 1.6);
 
-        ctx.fillStyle = node.threatLevel === 'EVALUATING' ? '#f59e0b' : 'var(--accent)';
+        ctx.fillStyle = node.threatLevel === 'EVALUATING' ? '#f59e0b' : colors.accent;
         ctx.beginPath();
         ctx.arc(nx, ny, 4, 0, Math.PI * 2);
         ctx.fill();
@@ -105,7 +136,7 @@ export const ThreatRadar: React.FC = () => {
     render();
 
     return () => cancelAnimationFrame(animationId);
-  }, [reducedMotion]);
+  }, [reducedMotion, theme]);
 
   return (
     <div

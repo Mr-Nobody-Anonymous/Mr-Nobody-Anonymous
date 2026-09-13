@@ -18,6 +18,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   return (
     <motion.div
       variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-40px' }}
       style={{
         textAlign: align,
         marginBottom: '3rem',
