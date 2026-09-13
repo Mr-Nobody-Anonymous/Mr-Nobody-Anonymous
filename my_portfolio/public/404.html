@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404: Access Denied / Target Not Found | Mr. Nobody</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .error-card {
+      max-width: 600px;
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8), var(--glow-sm);
+      text-align: center;
+    }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-shadow: var(--glow-md);
+    }
+    .error-status {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--color-neon-amber);
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .error-message {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="cyber-overlay"></div>
+  <div class="error-container">
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <div class="error-status">[ERR_TARGET_NOT_FOUND // ACCESS_BLOCKED]</div>
+      <p class="error-message">
+        The requested sector does not exist, has been redacted, or perimeter access controls have restricted routing.
+      </p>
+      <a href="index.html" class="cyber-btn cyber-btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Return to Command Center
+      </a>
+    </div>
+  </div>
+</body>
+</html>

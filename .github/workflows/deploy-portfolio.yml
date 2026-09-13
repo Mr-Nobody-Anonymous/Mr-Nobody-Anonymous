@@ -28,13 +28,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: my_portfolio/package-lock.json
+
+      - name: Install dependencies and build
+        working-directory: my_portfolio
+        run: |
+          npm ci
+          npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'my_portfolio'
+          path: 'my_portfolio/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
