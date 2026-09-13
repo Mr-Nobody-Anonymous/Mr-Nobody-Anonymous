@@ -27,7 +27,6 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <p align="center">
   <!-- Links row -->
-  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -35,8 +34,11 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&style=for-the-badge&color=7c3aed" alt="profile views" /> <br>
   <img src="https://trophies.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
+</p>
+
+<p align="center">
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="My Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
 </p>
 
 ---
