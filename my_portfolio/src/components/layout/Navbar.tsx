@@ -15,10 +15,11 @@ const MENU_ITEMS = [
   { id: 'cybersecurity', num: '03', label: 'CYBERSECURITY' },
   { id: 'terminal-section', num: '04', label: 'STORY TERMINAL' },
   { id: 'intelligence', num: '05', label: 'AI SYSTEMS' },
-  { id: 'operations', num: '06', label: 'CASE FILES' },
-  { id: 'toolkit', num: '07', label: 'ARSENAL TOOLKIT' },
-  { id: 'philosophy', num: '08', label: 'PHILOSOPHY' },
-  { id: 'final-transmission', num: '09', label: 'TRANSMISSION' }
+  { id: 'capabilities', num: '06', label: 'CAPABILITIES DASHBOARD' },
+  { id: 'operations', num: '07', label: 'CASE FILES' },
+  { id: 'toolkit', num: '08', label: 'ARSENAL TOOLKIT' },
+  { id: 'philosophy', num: '09', label: 'PHILOSOPHY' },
+  { id: 'final-transmission', num: '10', label: 'TRANSMISSION' }
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({

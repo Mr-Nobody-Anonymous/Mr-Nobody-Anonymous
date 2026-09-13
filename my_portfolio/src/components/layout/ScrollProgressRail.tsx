@@ -9,14 +9,15 @@ interface Chapter {
 const CHAPTERS: Chapter[] = [
   { id: 'hero', label: 'HERO', num: '00' },
   { id: 'identity', label: 'IDENTITY', num: '01' },
-  { id: 'system-map', label: 'TOPOLOGY', num: '02' },
+  { id: 'system-map', label: 'SYSTEM', num: '02' },
   { id: 'cybersecurity', label: 'SECURITY', num: '03' },
   { id: 'terminal-section', label: 'TERMINAL', num: '04' },
   { id: 'intelligence', label: 'AI INTEL', num: '05' },
-  { id: 'operations', label: 'CASES', num: '06' },
-  { id: 'toolkit', label: 'ARSENAL', num: '07' },
-  { id: 'philosophy', label: 'MINDSET', num: '08' },
-  { id: 'final-transmission', label: 'TRANSMIT', num: '09' }
+  { id: 'capabilities', label: 'CAPABILITIES', num: '06' },
+  { id: 'operations', label: 'CASES', num: '07' },
+  { id: 'toolkit', label: 'ARSENAL', num: '08' },
+  { id: 'philosophy', label: 'MINDSET', num: '09' },
+  { id: 'final-transmission', label: 'TRANSMIT', num: '10' }
 ];
 
 export const ScrollProgressRail: React.FC = () => {
