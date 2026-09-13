@@ -11,13 +11,14 @@ interface NavbarProps {
 }
 
 const NAV_ITEMS = [
-  { id: 'hero', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Arsenal' },
-  { id: 'terminal', label: 'Terminal' },
-  { id: 'projects', label: 'Operations' },
-  { id: 'experience', label: 'Timeline' },
-  { id: 'contact', label: 'Contact' }
+  { id: 'hero', label: 'Boot' },
+  { id: 'identity', label: 'Identity' },
+  { id: 'system-map', label: 'System' },
+  { id: 'cybersecurity', label: 'Security' },
+  { id: 'intelligence', label: 'AI' },
+  { id: 'operations', label: 'Operations' },
+  { id: 'philosophy', label: 'Mindset' },
+  { id: 'final-transmission', label: 'Transmit' }
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({
