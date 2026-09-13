@@ -7,17 +7,17 @@ interface Chapter {
 }
 
 const CHAPTERS: Chapter[] = [
-  { id: 'hero', label: 'HERO', num: '00' },
-  { id: 'identity', label: 'IDENTITY', num: '01' },
-  { id: 'system-map', label: 'SYSTEM', num: '02' },
-  { id: 'cybersecurity', label: 'SECURITY', num: '03' },
-  { id: 'terminal-section', label: 'TERMINAL', num: '04' },
-  { id: 'intelligence', label: 'AI INTEL', num: '05' },
-  { id: 'capabilities', label: 'CAPABILITIES', num: '06' },
-  { id: 'operations', label: 'CASES', num: '07' },
-  { id: 'toolkit', label: 'ARSENAL', num: '08' },
+  { id: 'home', label: 'GENESIS', num: '00' },
+  { id: 'about', label: 'IDENTITY', num: '01' },
+  { id: 'system-map', label: 'TOPOLOGY', num: '02' },
+  { id: 'arsenal', label: 'ARSENAL', num: '03' },
+  { id: 'intelligence', label: 'NEURAL AI', num: '04' },
+  { id: 'capabilities', label: 'TELEMETRY', num: '05' },
+  { id: 'work', label: 'OPERATIONS', num: '06' },
+  { id: 'experience', label: 'ROADMAP', num: '07' },
+  { id: 'playground', label: 'TERMINAL', num: '08' },
   { id: 'philosophy', label: 'MINDSET', num: '09' },
-  { id: 'final-transmission', label: 'TRANSMIT', num: '10' }
+  { id: 'contact', label: 'CHANNEL', num: '10' }
 ];
 
 export const ScrollProgressRail: React.FC = () => {

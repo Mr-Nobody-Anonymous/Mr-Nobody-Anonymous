@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, MotionConfig, motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import { ArrowDown, ArrowDownRight, ArrowUp, ArrowUpRight, BrainCircuit, Check, Code2, Copy, Crosshair, Maximize2, Menu, Minus, Pause, Play, Plus, Server, Terminal as TerminalIcon, X } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, ArrowUp, ArrowUpRight, BrainCircuit, Check, Code2, Copy, Crosshair, Maximize2, Menu, Minus, Pause, Play, Plus, Server, Terminal as TerminalIcon, Volume2, VolumeX, Shield, X } from 'lucide-react';
 import ContactForm from './ContactForm';
 import Modal from './Modal';
 import { Reveal, ScrollStatement } from './MotionPrimitives';
@@ -9,13 +9,29 @@ import Terminal from './Terminal';
 import { disciplines, EMAIL, GITHUB_URL, LINKEDIN_URL, projects, type Project, type ProjectCategory } from '../../data/portfolio';
 import { copyText } from '../../utils/clipboard';
 
+// Cinematic & System Suite Integration
+import { IdentityCard } from '../cinematic/IdentityCard';
+import { SystemMap } from '../cinematic/SystemMap';
+import { AiNeuralGraph } from '../cinematic/AiNeuralGraph';
+import { CapabilitiesDashboard } from '../cinematic/CapabilitiesDashboard';
+import { Timeline } from '../experience/Timeline';
+import { PhilosophySection } from '../cinematic/PhilosophySection';
+import { FinalTransmission } from '../cinematic/FinalTransmission';
+import { CyberEasterEggs } from '../cinematic/CyberEasterEggs';
+import { ScrollProgressRail } from '../layout/ScrollProgressRail';
+
 type Overlay = { type: 'project'; project: Project } | { type: 'contact' } | { type: 'terminal' } | null;
 
 const navigation = [
-  { id: 'about', label: 'About' },
+  { id: 'about', label: 'Mindset' },
+  { id: 'identity', label: 'Dossier' },
+  { id: 'system-map', label: 'Topology' },
   { id: 'arsenal', label: 'Arsenal' },
-  { id: 'work', label: 'Work' },
-  { id: 'playground', label: 'Playground' },
+  { id: 'intelligence', label: 'Neural AI' },
+  { id: 'capabilities', label: 'Telemetry' },
+  { id: 'work', label: 'Operations' },
+  { id: 'experience', label: 'Roadmap' },
+  { id: 'playground', label: 'Terminal' },
 ];
 
 const filters: { id: 'all' | ProjectCategory; label: string }[] = [
@@ -40,73 +56,100 @@ function SectionLabel({ number, children }: { number: string; children: string }
   return <p className="section-label"><span>{number} /</span>{children}</p>;
 }
 
-function SystemDiagram({ active, enabled }: { active: number; enabled: boolean }) {
+function SystemDiagram({ active }: { active: number; enabled?: boolean }) {
   const icons = [Crosshair, BrainCircuit, Code2, Server];
   const Icon = icons[active];
-  const discipline = disciplines[active];
-
   return (
     <div className="system-diagram" aria-hidden="true">
-      <div className="diagram-caption"><span>EXPLORATION MODULE</span><span>0{active + 1}</span></div>
-      <svg viewBox="0 0 400 400" fill="none" className="diagram-svg">
-        <path d="M200 44v312M44 200h312" stroke="#353638" strokeDasharray="3 7" />
-        <circle cx="200" cy="200" r="153" stroke="#2c2e2f" />
-        <circle cx="200" cy="200" r="132" stroke="#3c3531" strokeDasharray="2 7" />
-        <motion.circle cx="200" cy="200" r="102" stroke="#77513c" strokeWidth="0.75" initial={enabled ? { pathLength: 0 } : false} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 1.8 }} />
-        <circle cx="200" cy="200" r="74" stroke="#303234" />
-        {Array.from({ length: 32 }, (_, index) => <path key={index} d="M200 41v7" stroke={index % 8 === 0 ? '#ff683b' : '#454648'} strokeWidth={index % 8 === 0 ? 2 : 1} transform={`rotate(${index * 11.25} 200 200)`} />)}
-        <path d="M126 126l148 148M274 126L126 274" stroke="#383330" />
-        <rect x="159" y="159" width="82" height="82" rx="3" transform="rotate(45 200 200)" fill="#141414" stroke="#6b4938" />
-        <motion.g key={active} initial={enabled ? { opacity: 0 } : false} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
-          <Icon x={175} y={175} width={50} height={50} stroke="#ff683b" strokeWidth={1.15} />
-          <text x="200" y="24" textAnchor="middle">{discipline.nodes[0]}</text>
-          <text x="388" y="203" textAnchor="end">{discipline.nodes[1]}</text>
-          <text x="200" y="383" textAnchor="middle">{discipline.nodes[2]}</text>
-          <text x="12" y="203" textAnchor="start">{discipline.nodes[3]}</text>
-        </motion.g>
-        <g className={enabled ? 'diagram-orbit' : ''}><circle cx="200" cy="68" r="4" fill="#ff683b" /><circle cx="200" cy="68" r="8" stroke="#ff683b" strokeOpacity="0.3" /></g>
+      <svg className="diagram-canvas" viewBox="0 0 460 380" fill="none">
+        <defs>
+          <radialGradient id="diagram-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="var(--signal)" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="var(--signal)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <rect width="460" height="380" fill="#0e0f12" rx="4" />
+        <circle cx="230" cy="190" r="160" stroke="#1f2226" strokeWidth="1" strokeDasharray="3 4" />
+        <circle cx="230" cy="190" r="110" stroke="#25292e" strokeWidth="1" />
+        <circle cx="230" cy="190" r="60" stroke="#33383f" strokeWidth="1" />
+        <circle cx="230" cy="190" r="130" fill="url(#diagram-glow)" />
+        <line x1="230" y1="30" x2="230" y2="350" stroke="#1f2226" strokeWidth="1" strokeDasharray="2 4" />
+        <line x1="70" y1="190" x2="390" y2="190" stroke="#1f2226" strokeWidth="1" strokeDasharray="2 4" />
+        {[[230, 80], [340, 190], [230, 300], [120, 190]].map(([cx, cy], i) => (
+          <g key={i}>
+            <circle cx={cx} cy={cy} r={active === i ? 10 : 5} fill={active === i ? 'var(--signal)' : '#25292e'} />
+            <circle cx={cx} cy={cy} r={active === i ? 18 : 9} stroke={active === i ? 'var(--signal)' : '#25292e'} strokeWidth="1" strokeOpacity={active === i ? 0.6 : 0.3} />
+          </g>
+        ))}
       </svg>
-      <div className="diagram-principle"><span />{discipline.principle}</div>
+      <div className="diagram-overlay">
+        <span className="diagram-pill">DISCIPLINE 0{active + 1} ACTIVE</span>
+        <div className="diagram-icon"><Icon size={26} strokeWidth={1.5} /></div>
+        <p className="diagram-title">{disciplines[active].title}</p>
+        <span className="diagram-metric">{disciplines[active].principle}</span>
+      </div>
     </div>
   );
 }
 
-export default function App() {
-  const [overlay, setOverlay] = useState<Overlay>(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const [activeDiscipline, setActiveDiscipline] = useState(0);
+export default function AstraApp() {
   const [filter, setFilter] = useState<'all' | ProjectCategory>('all');
+  const [overlay, setOverlay] = useState<Overlay>(null);
+  const [activeDiscipline, setActiveDiscipline] = useState<number>(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
-  const [motionEnabled, setMotionEnabled] = useState(() => {
-    try {
-      const stored = localStorage.getItem('nobody-motion');
-      return stored ? stored === 'on' : !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch {
-      return !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    }
-  });
+  const [motionEnabled, setMotionEnabled] = useState(true);
+  const [activeSection, setActiveSection] = useState('home');
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [systemLogOpen, setSystemLogOpen] = useState(false);
+
   const hero = useRef<HTMLElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
+
   const { scrollYProgress } = useScroll();
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 180, damping: 28, mass: 0.2 });
+
   const { scrollYProgress: heroProgress } = useScroll({ target: hero, offset: ['start start', 'end start'] });
-  const heroY = useTransform(heroProgress, [0, 1], [0, 150]);
-  const heroOpacity = useTransform(heroProgress, [0, 0.72], [1, 0.12]);
-  const visibleProjects = projects.filter((project) => filter === 'all' || project.category === filter);
+  const heroY = useTransform(heroProgress, [0, 1], ['0%', '24%']);
+  const heroOpacity = useTransform(heroProgress, [0, 0.7], [1, 0]);
+
+  const visibleProjects = filter === 'all' ? projects : projects.filter((project) => project.category === filter);
 
   const rememberFocus = useCallback(() => {
-    const focused = document.activeElement;
-    if (focused instanceof HTMLElement && focused !== document.body && !focused.closest('[role="dialog"]')) returnFocus.current = focused;
+    returnFocus.current = document.activeElement as HTMLElement | null;
   }, []);
+
+  const openProject = useCallback((project: Project) => {
+    rememberFocus();
+    setMobileOpen(false);
+    setOverlay({ type: 'project', project });
+  }, [rememberFocus]);
+
+  const openContact = useCallback(() => {
+    rememberFocus();
+    setMobileOpen(false);
+    setOverlay({ type: 'contact' });
+  }, [rememberFocus]);
+
+  const openTerminal = useCallback(() => {
+    rememberFocus();
+    setMobileOpen(false);
+    setOverlay({ type: 'terminal' });
+  }, [rememberFocus]);
+
   const closeOverlay = useCallback(() => setOverlay(null), []);
-  const openContact = useCallback(() => { rememberFocus(); setMobileOpen(false); setOverlay({ type: 'contact' }); }, [rememberFocus]);
-  const openTerminal = useCallback(() => { rememberFocus(); setMobileOpen(false); setOverlay({ type: 'terminal' }); }, [rememberFocus]);
-  const openProject = useCallback((project: Project) => { rememberFocus(); setOverlay({ type: 'project', project }); }, [rememberFocus]);
-  const toggleMotion = useCallback(() => setMotionEnabled((previous) => !previous), []);
+
+  const toggleMotion = useCallback(() => {
+    setMotionEnabled((previous) => !previous);
+  }, []);
 
   useEffect(() => {
-    document.documentElement.dataset.motion = motionEnabled ? 'on' : 'off';
+    const saved = localStorage.getItem('nobody-motion');
+    if (saved) setMotionEnabled(saved === 'on');
+    else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) setMotionEnabled(false);
+  }, []);
+
+  useEffect(() => {
     try { localStorage.setItem('nobody-motion', motionEnabled ? 'on' : 'off'); } catch { /* Preferences remain usable without local storage. */ }
   }, [motionEnabled]);
 
@@ -128,7 +171,7 @@ export default function App() {
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) if (entry.isIntersecting) setActiveSection(entry.target.id);
     }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
-    ['home', ...navigation.map((item) => item.id), 'contact'].forEach((id) => {
+    ['home', ...navigation.map((item) => item.id), 'philosophy', 'contact'].forEach((id) => {
       const section = document.getElementById(id);
       if (section) observer.observe(section);
     });
@@ -158,30 +201,78 @@ export default function App() {
           <div className="container header-inner">
             <Brand />
             <nav className="desktop-nav" aria-label="Main navigation">
-              {navigation.map((item) => <a key={item.id} className={`nav-link ${activeSection === item.id ? 'active' : ''}`} href={`#${item.id}`} aria-current={activeSection === item.id ? 'location' : undefined}>{item.label}</a>)}
+              {navigation.map((item) => (
+                <a
+                  key={item.id}
+                  className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                  href={`#${item.id}`}
+                  aria-current={activeSection === item.id ? 'location' : undefined}
+                >
+                  {item.label}
+                </a>
+              ))}
             </nav>
             <div className="header-actions">
-              <button className="terminal-trigger" onClick={openTerminal} aria-label="Open command terminal" title="Open terminal (Ctrl / Cmd + K)"><TerminalIcon size={19} strokeWidth={1.5} /></button>
+              <button
+                className="terminal-trigger"
+                onClick={() => setSoundEnabled((prev) => !prev)}
+                aria-label={soundEnabled ? "Mute audio synthesis" : "Enable sound synthesis"}
+                title={soundEnabled ? "Mute cyber audio" : "Enable sound synthesis"}
+              >
+                {soundEnabled ? <Volume2 size={18} strokeWidth={1.5} color="#00F5FF" /> : <VolumeX size={18} strokeWidth={1.5} />}
+              </button>
+              <button
+                className="terminal-trigger"
+                onClick={() => setSystemLogOpen(true)}
+                aria-label="Inspect System Log #017"
+                title="Inspect System Log #017"
+              >
+                <Shield size={18} strokeWidth={1.5} />
+              </button>
+              <button className="terminal-trigger" onClick={openTerminal} aria-label="Open command terminal" title="Open terminal (Ctrl / Cmd + K)">
+                <TerminalIcon size={19} strokeWidth={1.5} />
+              </button>
               <button className="header-contact" onClick={openContact}>LET'S TALK <ArrowUpRight size={14} /></button>
-              <button className="menu-toggle" onClick={() => setMobileOpen((previous) => !previous)} aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="mobile-navigation">{mobileOpen ? <X size={23} /> : <Menu size={23} />}</button>
+              <button className="menu-toggle" onClick={() => setMobileOpen((previous) => !previous)} aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={mobileOpen} aria-controls="mobile-navigation">
+                {mobileOpen ? <X size={23} /> : <Menu size={23} />}
+              </button>
             </div>
           </div>
           <AnimatePresence>
-            {mobileOpen && <motion.nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
-              <div className="container mobile-nav-inner">{navigation.map((item, index) => <a href={`#${item.id}`} key={item.id} onClick={() => setMobileOpen(false)}><span>0{index + 1}</span>{item.label}<ArrowUpRight size={19} /></a>)}<button onClick={openContact}><span>05</span>Let's connect<ArrowUpRight size={19} /></button></div>
-            </motion.nav>}
+            {mobileOpen && (
+              <motion.nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
+                <div className="container mobile-nav-inner">
+                  {navigation.map((item, index) => (
+                    <a href={`#${item.id}`} key={item.id} onClick={() => setMobileOpen(false)}>
+                      <span>0{index + 1}</span>{item.label}<ArrowUpRight size={19} />
+                    </a>
+                  ))}
+                  <button onClick={openContact}><span>10</span>Let's connect<ArrowUpRight size={19} /></button>
+                </div>
+              </motion.nav>
+            )}
           </AnimatePresence>
         </header>
 
         <main id="main" tabIndex={-1}>
+          {/* Chapter 00: Hero Genesis */}
           <section className="hero" id="home" ref={hero} aria-labelledby="hero-title">
             <motion.div className="hero-visual" style={{ y: motionEnabled ? heroY : 0 }}>
-              <motion.img src={`${import.meta.env.BASE_URL}images/nobody-hero.jpg`} alt="A cinematic anonymous figure in a black technical hood, illuminated by signal-orange light" fetchPriority="high" initial={motionEnabled ? { scale: 1.07, opacity: 0.5 } : false} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1.7, ease: [0.22, 1, 0.36, 1] }} />
+              <motion.img
+                src={`${import.meta.env.BASE_URL}images/nobody-hero.jpg`}
+                alt="A cinematic anonymous figure in a black technical hood, illuminated by signal-orange light"
+                fetchPriority="high"
+                initial={motionEnabled ? { scale: 1.07, opacity: 0.5 } : false}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.7, ease: [0.22, 1, 0.36, 1] }}
+              />
             </motion.div>
             <div className="hero-shade" aria-hidden="true" />
             <div className="container hero-container">
               <motion.div className="hero-copy" style={{ opacity: motionEnabled ? heroOpacity : 1 }}>
-                <motion.p className="hero-eyebrow" initial={motionEnabled ? { opacity: 0, y: 10 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}><span />NOT EVERYONE NEEDS TO KNOW YOUR NAME.</motion.p>
+                <motion.p className="hero-eyebrow" initial={motionEnabled ? { opacity: 0, y: 10 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
+                  <span />NOT EVERYONE NEEDS TO KNOW YOUR NAME.
+                </motion.p>
                 <h1 id="hero-title" aria-label="Mr. Nobody.">
                   <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>MR.</motion.span></span>
                   <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.95, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>NOBODY<span className="accent">.</span></motion.span></span>
@@ -199,10 +290,20 @@ export default function App() {
             </div>
           </section>
 
+          {/* Marquee Ticker */}
           <div className="discipline-marquee" aria-label="Ethical hacking, autonomous agents, security research, creative engineering">
-            <div className="marquee-track" aria-hidden="true">{[0, 1].map((copy) => <div className="marquee-group" key={copy}>{['ETHICAL HACKING', 'AUTONOMOUS AGENTS', 'SECURITY RESEARCH', 'CREATIVE ENGINEERING'].map((item) => <span key={item}><span className="marquee-star">+</span>{item}</span>)}</div>)}</div>
+            <div className="marquee-track" aria-hidden="true">
+              {[0, 1].map((copy) => (
+                <div className="marquee-group" key={copy}>
+                  {['ETHICAL HACKING', 'AUTONOMOUS AGENTS', 'SECURITY RESEARCH', 'CREATIVE ENGINEERING'].map((item) => (
+                    <span key={item}><span className="marquee-star">+</span>{item}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
+          {/* Chapter 01: Behind the Handle / Mindset */}
           <section className="section about-section" id="about" aria-labelledby="about-title">
             <div className="container">
               <Reveal enabled={motionEnabled}><SectionLabel number="01">BEHIND THE HANDLE</SectionLabel></Reveal>
@@ -222,53 +323,107 @@ export default function App() {
             </div>
           </section>
 
+          {/* Chapter 02: 3D Holographic Identity Dossier */}
+          <IdentityCard />
+
+          {/* Chapter 03: Interconnected System Topology */}
+          <SystemMap />
+
+          {/* Chapter 04: The Arsenal & Interactive Diagram */}
           <section className="section arsenal-section" id="arsenal" aria-labelledby="arsenal-title">
             <div className="container">
               <Reveal enabled={motionEnabled}>
-                <SectionLabel number="02">THE ARSENAL</SectionLabel>
-                <div className="section-heading"><h2 id="arsenal-title">Different tools.<br />Same restless curiosity.</h2><p>A toolkit built through doing, not collecting.<br />Pick a discipline. Look under the hood.</p></div>
+                <SectionLabel number="04">THE ARSENAL</SectionLabel>
+                <div className="section-heading">
+                  <h2 id="arsenal-title">Different tools.<br />Same restless curiosity.</h2>
+                  <p>A toolkit built through doing, not collecting.<br />Pick a discipline. Look under the hood.</p>
+                </div>
               </Reveal>
               <div className="arsenal-grid">
                 <Reveal enabled={motionEnabled} className="discipline-list">
-                  {disciplines.map((discipline, index) => <div className={`discipline-item ${activeDiscipline === index ? 'is-open' : ''}`} key={discipline.title}>
-                    <button className="discipline-button" onClick={() => setActiveDiscipline((previous) => previous === index ? -1 : index)} aria-expanded={activeDiscipline === index} aria-controls={`discipline-${index}`}><span className="discipline-number">0{index + 1}</span><span>{discipline.title}</span>{activeDiscipline === index ? <Minus size={19} strokeWidth={1.5} /> : <Plus size={19} strokeWidth={1.5} />}</button>
-                    <AnimatePresence initial={false}>{activeDiscipline === index && <motion.div id={`discipline-${index}`} className="discipline-panel" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}><div className="discipline-panel-inner"><p>{discipline.description}</p><div className="discipline-tools"><span>IN THE TOOLKIT</span><p>{discipline.tools.join(' / ')}</p></div></div></motion.div>}</AnimatePresence>
-                  </div>)}
+                  {disciplines.map((discipline, index) => (
+                    <div className={`discipline-item ${activeDiscipline === index ? 'is-open' : ''}`} key={discipline.title}>
+                      <button className="discipline-button" onClick={() => setActiveDiscipline((previous) => previous === index ? -1 : index)} aria-expanded={activeDiscipline === index} aria-controls={`discipline-${index}`}>
+                        <span className="discipline-number">0{index + 1}</span>
+                        <span>{discipline.title}</span>
+                        {activeDiscipline === index ? <Minus size={19} strokeWidth={1.5} /> : <Plus size={19} strokeWidth={1.5} />}
+                      </button>
+                      <AnimatePresence initial={false}>
+                        {activeDiscipline === index && (
+                          <motion.div id={`discipline-${index}`} className="discipline-panel" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}>
+                            <div className="discipline-panel-inner">
+                              <p>{discipline.description}</p>
+                              <div className="discipline-tools"><span>IN THE TOOLKIT</span><p>{discipline.tools.join(' / ')}</p></div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
                 </Reveal>
-                <Reveal enabled={motionEnabled} delay={0.15} className="diagram-container"><SystemDiagram active={Math.max(activeDiscipline, 0)} enabled={motionEnabled} /></Reveal>
+                <Reveal enabled={motionEnabled} delay={0.15} className="diagram-container">
+                  <SystemDiagram active={Math.max(activeDiscipline, 0)} enabled={motionEnabled} />
+                </Reveal>
               </div>
             </div>
           </section>
 
+          {/* Chapter 05: Real-time Neural Graph Architecture */}
+          <AiNeuralGraph />
+
+          {/* Chapter 06: Capabilities Dashboard & Telemetry */}
+          <CapabilitiesDashboard />
+
+          {/* Chapter 07: Selected Operations & Case Files */}
           <section className="section work-section" id="work" aria-labelledby="work-title">
             <div className="container">
               <Reveal enabled={motionEnabled}>
-                <SectionLabel number="03">SELECTED OPERATIONS</SectionLabel>
-                <div className="section-heading work-heading"><h2 id="work-title">Less talk. More build<span className="accent">.</span></h2><a className="text-link" href={`${GITHUB_URL}?tab=repositories`} target="_blank" rel="noreferrer">All repositories <ArrowUpRight size={16} /></a></div>
+                <SectionLabel number="07">SELECTED OPERATIONS</SectionLabel>
+                <div className="section-heading work-heading">
+                  <h2 id="work-title">Less talk. More build<span className="accent">.</span></h2>
+                  <a className="text-link" href={`${GITHUB_URL}?tab=repositories`} target="_blank" rel="noreferrer">All repositories <ArrowUpRight size={16} /></a>
+                </div>
                 <p className="work-intro">Ideas taken out of the notebook and into the real world.</p>
               </Reveal>
               <Reveal enabled={motionEnabled}>
-                <div className="project-filters" role="group" aria-label="Filter projects">{filters.map((item) => <button key={item.id} onClick={() => setFilter(item.id)} aria-pressed={filter === item.id} aria-controls="project-grid" className={filter === item.id ? 'selected' : ''}>{item.label}<span>{String(item.id === 'all' ? projects.length : projects.filter((project) => project.category === item.id).length).padStart(2, '0')}</span>{filter === item.id && <motion.span className="filter-underline" layoutId="filter-underline" transition={{ type: 'spring', stiffness: 350, damping: 32 }} />}</button>)}</div>
+                <div className="project-filters" role="group" aria-label="Filter projects">
+                  {filters.map((item) => (
+                    <button key={item.id} onClick={() => setFilter(item.id)} aria-pressed={filter === item.id} aria-controls="project-grid" className={filter === item.id ? 'selected' : ''}>
+                      {item.label}
+                      <span>{String(item.id === 'all' ? projects.length : projects.filter((project) => project.category === item.id).length).padStart(2, '0')}</span>
+                      {filter === item.id && <motion.span className="filter-underline" layoutId="filter-underline" transition={{ type: 'spring', stiffness: 350, damping: 32 }} />}
+                    </button>
+                  ))}
+                </div>
               </Reveal>
               <p className="sr-only" role="status">Showing {visibleProjects.length} {filter === 'all' ? '' : filter === 'ai' ? 'AI and automation' : 'security'} projects.</p>
               <motion.div className="project-grid" id="project-grid" layout>
                 <AnimatePresence mode="popLayout">
-                  {visibleProjects.map((project, index) => <motion.button className="project-card" key={project.id} layout initial={motionEnabled ? { opacity: 0, y: 28 } : false} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '0px 0px -30px 0px' }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.5, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }} onClick={() => openProject(project)} aria-label={`Explore ${project.name} project details`} aria-haspopup="dialog">
-                    <span className="project-image"><img src={project.image} alt={project.imageAlt} loading="lazy" /><span className="project-image-reveal"><span>EXPLORE CASE FILE <ArrowUpRight size={15} /></span></span></span>
-                    <span className="project-heading"><span className="project-name" role="heading" aria-level={3}>{project.name}</span><span className="project-arrow"><ArrowUpRight size={19} strokeWidth={1.5} /></span></span>
-                    <span className="project-category">{project.categoryLabel}</span>
-                    <span className="project-description">{project.description}</span>
-                  </motion.button>)}
+                  {visibleProjects.map((project, index) => (
+                    <motion.button className="project-card" key={project.id} layout initial={motionEnabled ? { opacity: 0, y: 28 } : false} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '0px 0px -30px 0px' }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.5, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }} onClick={() => openProject(project)} aria-label={`Explore ${project.name} project details`} aria-haspopup="dialog">
+                      <span className="project-image">
+                        <img src={project.image} alt={project.imageAlt} loading="lazy" />
+                        <span className="project-image-reveal"><span>EXPLORE CASE FILE <ArrowUpRight size={15} /></span></span>
+                      </span>
+                      <span className="project-heading"><span className="project-name" role="heading" aria-level={3}>{project.name}</span><span className="project-arrow"><ArrowUpRight size={19} strokeWidth={1.5} /></span></span>
+                      <span className="project-category">{project.categoryLabel}</span>
+                      <span className="project-description">{project.description}</span>
+                    </motion.button>
+                  ))}
                 </AnimatePresence>
               </motion.div>
               <p className="work-footnote"><span /> OPEN SOURCE. OPEN MIND. ALWAYS EVOLVING.</p>
             </div>
           </section>
 
+          {/* Chapter 08: Progression Roadmap */}
+          <Timeline />
+
+          {/* Chapter 09: A Different Way In / Terminal Playground */}
           <section className="section playground-section" id="playground" aria-labelledby="playground-title">
             <div className="container playground-grid">
               <Reveal enabled={motionEnabled} className="playground-copy">
-                <SectionLabel number="04">A DIFFERENT WAY IN</SectionLabel>
+                <SectionLabel number="09">A DIFFERENT WAY IN</SectionLabel>
                 <h2 id="playground-title">For the<br />curious ones<span className="accent">.</span></h2>
                 <p>Some people read portfolios.<br />Others would rather run a command.<br />You're welcome either way.</p>
                 <button className="text-link terminal-launch" onClick={openTerminal}>Open the terminal <Maximize2 size={14} /></button>
@@ -278,27 +433,67 @@ export default function App() {
             </div>
           </section>
 
+          {/* Chapter 10: Beyond the Code / Mindset */}
+          <PhilosophySection />
+
+          {/* Chapter 11: Open a Channel */}
           <section className="section contact-section" id="contact" aria-labelledby="contact-title">
             <div className="container">
-              <Reveal enabled={motionEnabled}><SectionLabel number="05">OPEN A CHANNEL</SectionLabel></Reveal>
+              <Reveal enabled={motionEnabled}><SectionLabel number="11">OPEN A CHANNEL</SectionLabel></Reveal>
               <Reveal enabled={motionEnabled} className="contact-headline">
                 <h2 id="contact-title">STAY CURIOUS.<br />LET'S CONNECT.</h2>
                 <button className="contact-big-arrow" onClick={openContact} aria-label="Start a conversation"><ArrowUpRight strokeWidth={1} /></button>
               </Reveal>
               <Reveal enabled={motionEnabled} delay={0.12} className="contact-bottom">
                 <p>Got a challenge, a wild idea, or just a good question?<br />Let's make something that matters.</p>
-                <div className="contact-actions"><button className="button button-dark" onClick={openContact}>Start a conversation <ArrowUpRight size={17} /></button><button className="copy-email" onClick={copyEmail} title="Copy email address">{copyStatus === 'copied' ? <Check size={14} /> : <Copy size={14} />}<span>{copyStatus === 'copied' ? 'Email copied' : EMAIL}</span></button><span className="sr-only" role="status">{copyStatus === 'copied' ? 'Email address copied to clipboard.' : copyStatus === 'failed' ? `Copy unavailable. Email: ${EMAIL}` : ''}</span></div>
+                <div className="contact-actions">
+                  <button className="button button-dark" onClick={openContact}>Start a conversation <ArrowUpRight size={17} /></button>
+                  <button className="copy-email" onClick={copyEmail} title="Copy email address">
+                    {copyStatus === 'copied' ? <Check size={14} /> : <Copy size={14} />}
+                    <span>{copyStatus === 'copied' ? 'Email copied' : EMAIL}</span>
+                  </button>
+                  <span className="sr-only" role="status">{copyStatus === 'copied' ? 'Email address copied to clipboard.' : copyStatus === 'failed' ? `Copy unavailable. Email: ${EMAIL}` : ''}</span>
+                </div>
               </Reveal>
             </div>
           </section>
+
+          {/* Chapter 12: Final Transmission & Emergency Reboot Protocol */}
+          <FinalTransmission onRestartSystem={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }} />
         </main>
 
         <footer className="site-footer">
           <div className="container">
-            <div className="footer-top"><Brand footer /><div className="footer-socials"><a href={GITHUB_URL} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={13} /></a><a href={LINKEDIN_URL} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a><a href={`mailto:${EMAIL}`}>Email <ArrowUpRight size={13} /></a></div><a className="back-to-top" href="#home">BACK TO TOP <ArrowUp size={13} /></a></div>
-            <div className="footer-bottom"><span>&copy; {new Date().getFullYear()} BAM SINTU / MR. NOBODY</span><span className="footer-philosophy">BUILT WITH CURIOSITY. SECURED BY DESIGN.</span><button className="motion-toggle" onClick={toggleMotion} aria-pressed={!motionEnabled} aria-label="Pause ambient motion" title={motionEnabled ? 'Pause motion' : 'Resume motion'}>{motionEnabled ? <Pause size={11} /> : <Play size={11} />} MOTION {motionEnabled ? 'ON' : 'OFF'}</button></div>
+            <div className="footer-top">
+              <Brand footer />
+              <div className="footer-socials">
+                <a href={GITHUB_URL} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={13} /></a>
+                <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a>
+                <a href={`mailto:${EMAIL}`}>Email <ArrowUpRight size={13} /></a>
+              </div>
+              <a className="back-to-top" href="#home">BACK TO TOP <ArrowUp size={13} /></a>
+            </div>
+            <div className="footer-bottom">
+              <span>&copy; {new Date().getFullYear()} MR. NOBODY / BAM SINTU</span>
+              <span className="footer-philosophy">BUILT WITH CURIOSITY. SECURED BY DESIGN.</span>
+              <button className="motion-toggle" onClick={toggleMotion} aria-pressed={!motionEnabled} aria-label="Pause ambient motion" title={motionEnabled ? 'Pause motion' : 'Resume motion'}>
+                {motionEnabled ? <Pause size={11} /> : <Play size={11} />} MOTION {motionEnabled ? 'ON' : 'OFF'}
+              </button>
+            </div>
           </div>
         </footer>
+
+        {/* Vertical Chapter Progress Rail */}
+        <ScrollProgressRail />
+
+        {/* Audio Synthesizer, System Log #017 & Hidden Terminal Easter Eggs */}
+        <CyberEasterEggs
+          soundEnabled={soundEnabled}
+          systemLogOpen={systemLogOpen}
+          onCloseSystemLog={() => setSystemLogOpen(false)}
+        />
       </div>
 
       <AnimatePresence mode="wait" onExitComplete={() => {
@@ -307,11 +502,27 @@ export default function App() {
           target?.focus({ preventScroll: true });
         });
       }}>
-        {overlay && <Modal key={overlay.type} titleId={overlay.type === 'project' ? 'project-dialog-title' : overlay.type === 'contact' ? 'contact-dialog-title' : 'terminal-dialog-title'} onClose={closeOverlay} className={overlay.type === 'terminal' ? 'terminal-modal' : overlay.type === 'contact' ? 'contact-modal' : 'project-modal'}>
-          {overlay.type === 'project' && <ProjectDetails project={overlay.project} />}
-          {overlay.type === 'contact' && <ContactForm />}
-          {overlay.type === 'terminal' && <><div className="terminal-modal-heading"><p className="eyebrow accent">WELCOME TO THE OTHER SIDE</p><h2 id="terminal-dialog-title">Curiosity has a command line.</h2></div><Terminal {...terminalProps} onExit={closeOverlay} autofocus /><p className="terminal-modal-note">A local portfolio sandbox. No commands run on your device. Press Esc to return.</p></>}
-        </Modal>}
+        {overlay && (
+          <Modal
+            key={overlay.type}
+            titleId={overlay.type === 'project' ? 'project-dialog-title' : overlay.type === 'contact' ? 'contact-dialog-title' : 'terminal-dialog-title'}
+            onClose={closeOverlay}
+            className={overlay.type === 'terminal' ? 'terminal-modal' : overlay.type === 'contact' ? 'contact-modal' : 'project-modal'}
+          >
+            {overlay.type === 'project' && <ProjectDetails project={overlay.project} />}
+            {overlay.type === 'contact' && <ContactForm />}
+            {overlay.type === 'terminal' && (
+              <>
+                <div className="terminal-modal-heading">
+                  <p className="eyebrow accent">WELCOME TO THE OTHER SIDE</p>
+                  <h2 id="terminal-dialog-title">Curiosity has a command line.</h2>
+                </div>
+                <Terminal {...terminalProps} onExit={closeOverlay} autofocus />
+                <p className="terminal-modal-note">A local portfolio sandbox. No commands run on your device. Press Esc to return.</p>
+              </>
+            )}
+          </Modal>
+        )}
       </AnimatePresence>
     </MotionConfig>
   );
