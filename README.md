@@ -27,7 +27,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 
 <p align="center">
   <!-- Links row -->
-  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio Website" src="https://img.shields.io/badge/🌐_Portfolio_Website-00ff88?style=for-the-badge&logoColor=black&labelColor=0c142b"></a>
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
@@ -307,3 +307,24 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 <p align="center">
   💡 Feel free to reach out for collaborations, projects, or just to connect!
 </p>
+
+---
+
+<div align="center">
+
+## 🌐 **MY PORTFOLIO**
+
+<a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
+  <img src="https://img.shields.io/badge/🚀_VISIT_MY_PORTFOLIO_WEBSITE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=000000&labelColor=0a0f1d" alt="My Portfolio Website" />
+</a>
+<a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
+  <img src="https://img.shields.io/badge/STATUS-ONLINE_ACTIVE-00f0ff?style=for-the-badge&logo=statuspal&logoColor=000000&labelColor=0a0f1d" alt="Portfolio Status" />
+</a>
+
+<br><br>
+
+### <b>👉 <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/</a> 👈</b>
+
+<p><b>⚡ Interactive Matrix Terminal • Live Security Telemetry • Penetration Testing Projects • Threat Intelligence Research ⚡</b></p>
+
+</div>
