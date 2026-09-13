@@ -1,164 +1,122 @@
 import React from 'react';
-import { Shield, ExternalLink } from 'lucide-react';
-import { SOCIAL_LINKS } from '../../data/socials';
 
 export const Footer: React.FC = () => {
   return (
     <footer
       style={{
-        borderTop: '1px solid var(--border-subtle)',
-        background: 'rgba(3, 6, 13, 0.95)',
-        padding: '3.5rem 0 2rem',
-        marginTop: '6rem',
+        background: '#05070A',
+        padding: '5rem 2rem 3.5rem 2rem',
+        borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        fontFamily: 'var(--font-mono)',
         position: 'relative',
         zIndex: 10
       }}
     >
-      <div className="container">
-        <div
+      <div style={{ maxWidth: '600px', width: '100%' }}>
+        {/* Title (Section 27) */}
+        <h3
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '2.5rem',
-            marginBottom: '3rem'
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            fontWeight: 800,
+            color: '#E8F7FF',
+            letterSpacing: '0.08em',
+            margin: '0 0 0.4rem 0'
           }}
         >
-          {/* Identity */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
-              <div
-                style={{
-                  width: '28px',
-                  height: '28px',
-                  borderRadius: '4px',
-                  background: 'var(--accent-dim)',
-                  border: '1px solid var(--border-accent)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'var(--accent)'
-                }}
-              >
-                <Shield size={16} />
-              </div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
-                MR. NOBODY
-              </span>
-            </div>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, maxWidth: '320px' }}>
-              Cybersecurity practitioner, offensive security researcher, and autonomous AI systems builder based on real-world verification.
-            </p>
-          </div>
+          MR. NOBODY
+        </h3>
 
-          {/* Navigation Quick Links */}
-          <div>
-            <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '1rem' }}>
-              OPERATIONS
-            </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <a href="#about" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem' }}>&gt; About Mission</a>
-              <a href="#skills" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem' }}>&gt; Technical Arsenal</a>
-              <a href="#terminal" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem' }}>&gt; Security Console</a>
-              <a href="#projects" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem' }}>&gt; Verified Repositories</a>
-            </div>
-          </div>
-
-          {/* External Telemetry */}
-          <div>
-            <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '1rem' }}>
-              VERIFIED CHANNELS
-            </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {SOCIAL_LINKS.map(s => (
-                <a
-                  key={s.name}
-                  href={s.url}
-                  target={s.isEmail ? undefined : '_blank'}
-                  rel={s.isEmail ? undefined : 'noopener noreferrer'}
-                  style={{
-                    color: 'var(--text-secondary)',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem'
-                  }}
-                >
-                  <ExternalLink size={13} color="var(--accent)" />
-                  {s.name}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* System Telemetry & Status */}
-          <div>
-            <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '1rem' }}>
-              SYSTEM TELEMETRY
-            </h3>
-            <div
-              style={{
-                padding: '1rem',
-                background: 'var(--bg-surface)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: 'var(--radius-md)',
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.35rem'
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>TELEMETRY:</span>
-                <span style={{ color: 'var(--color-success)', fontWeight: 600 }}>● NOMINAL</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>ENVIRONMENT:</span>
-                <span style={{ color: 'var(--text-primary)' }}>GITHUB PAGES</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)' }}>ARCHITECTURE:</span>
-                <span style={{ color: 'var(--accent)' }}>REACT + TS + MOTION</span>
-              </div>
-            </div>
-          </div>
+        {/* Subtitle */}
+        <div
+          style={{
+            fontSize: '0.78rem',
+            color: '#00E5FF',
+            letterSpacing: '0.18em',
+            marginBottom: '2rem'
+          }}
+        >
+          CYBERSECURITY × AI
         </div>
 
-        {/* Bottom Bar */}
+        {/* Divider */}
         <div
           style={{
-            borderTop: '1px solid var(--border-subtle)',
-            paddingTop: '1.5rem',
+            width: '100%',
+            height: '1px',
+            background: 'rgba(255, 255, 255, 0.08)',
+            marginBottom: '2rem'
+          }}
+        />
+
+        {/* Primary Channels */}
+        <div
+          style={{
             display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '1rem',
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.8rem',
-            color: 'var(--text-muted)'
+            justifyContent: 'center',
+            gap: '2.5rem',
+            marginBottom: '2.5rem',
+            fontSize: '0.85rem'
           }}
         >
-          <div>
-            © {new Date().getFullYear()} Bam Sintu (Mr. Nobody). Open-source security research.
-          </div>
-          <div
+          <a
+            href="https://github.com/Mr-Nobody-Anonymous"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor="GITHUB"
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              padding: '0.2rem 0.6rem',
-              background: 'rgba(255, 255, 255, 0.03)',
-              borderRadius: 'var(--radius-sm)',
-              border: '1px solid var(--border-subtle)',
-              color: 'var(--text-secondary)'
+              color: '#CBD5E1',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
             }}
+            className="footer-clean-link"
           >
-            <span>BUILT WITH REACT + TYPESCRIPT + MOTION</span>
-          </div>
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/bam-sintu"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor="LINKEDIN"
+            style={{
+              color: '#CBD5E1',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
+            }}
+            className="footer-clean-link"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:mrnobody.anonymous.01@gmail.com"
+            data-cursor="EMAIL"
+            style={{
+              color: '#CBD5E1',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
+            }}
+            className="footer-clean-link"
+          >
+            Email
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <div style={{ fontSize: '0.75rem', color: '#7F8C9A', letterSpacing: '0.06em' }}>
+          © 2026 MR. NOBODY. All systems operational.
         </div>
       </div>
+
+      <style>{`
+        .footer-clean-link:hover {
+          color: #00E5FF !important;
+          text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+        }
+      `}</style>
     </footer>
   );
 };

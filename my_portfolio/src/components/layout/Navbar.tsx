@@ -1,308 +1,316 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shield, Menu, X, Monitor } from 'lucide-react';
-import { type ThemeName } from '../../hooks/useTheme';
+import { Volume2, VolumeX } from 'lucide-react';
 
 interface NavbarProps {
-  currentTheme: ThemeName;
-  onThemeChange: (theme: ThemeName) => void;
-  crtEnabled: boolean;
-  onToggleCrt: () => void;
+  soundEnabled: boolean;
+  onToggleSound: () => void;
+  onOpenSystemLog: () => void;
 }
 
-const NAV_ITEMS = [
-  { id: 'hero', label: 'Boot' },
-  { id: 'identity', label: 'Identity' },
-  { id: 'system-map', label: 'System' },
-  { id: 'cybersecurity', label: 'Security' },
-  { id: 'intelligence', label: 'AI' },
-  { id: 'operations', label: 'Operations' },
-  { id: 'philosophy', label: 'Mindset' },
-  { id: 'final-transmission', label: 'Transmit' }
+const MENU_ITEMS = [
+  { id: 'hero', num: '01', label: 'HOME' },
+  { id: 'about-system', num: '02', label: 'ABOUT' },
+  { id: 'capabilities', num: '03', label: 'SKILLS' },
+  { id: 'operations', num: '04', label: 'PROJECTS' },
+  { id: 'connection', num: '05', label: 'CONTACT' }
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({
-  currentTheme,
-  onThemeChange,
-  crtEnabled,
-  onToggleCrt
+  soundEnabled,
+  onToggleSound,
+  onOpenSystemLog
 }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuCursorOffset, setMenuCursorOffset] = useState<Record<string, { x: number; y: number }>>({});
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
-
-      const sections = NAV_ITEMS.map(item => document.getElementById(item.id));
-      const scrollPos = window.scrollY + 200;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const sec = sections[i];
-        if (sec && sec.offsetTop <= scrollPos) {
-          setActiveSection(NAV_ITEMS[i].id);
-          break;
-        }
-      }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigateTo = (id: string) => {
+    setIsMenuOpen(false);
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 280);
+  };
+
+  const handleItemMouseMove = (itemId: string, e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) * 0.15; // Subtle follow: 4-8px
+    const y = (e.clientY - rect.top - rect.height / 2) * 0.15;
+    setMenuCursorOffset((prev) => ({ ...prev, [itemId]: { x, y } }));
+  };
+
+  const handleItemMouseLeave = (itemId: string) => {
+    setMenuCursorOffset((prev) => ({ ...prev, [itemId]: { x: 0, y: 0 } }));
   };
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.45 }}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        padding: scrolled ? '0.6rem 0' : '1.2rem 0',
-        transition: 'padding var(--transition-smooth)',
-        backgroundColor: scrolled ? 'rgba(4, 7, 17, 0.88)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent'
-      }}
-    >
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Brand */}
-        <button
-          onClick={() => scrollTo('hero')}
+    <>
+      {/* Minimal Top Bar (Section 24) */}
+      <motion.header
+        initial={{ y: -60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 100,
+          padding: scrolled ? '0.8rem 2.5rem' : '1.4rem 2.5rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          background: scrolled ? 'rgba(5, 7, 10, 0.85)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(0, 229, 255, 0.12)' : '1px solid transparent',
+          transition: 'padding 0.3s ease, background 0.3s ease, border-color 0.3s ease'
+        }}
+      >
+        {/* Left: Brand Identity */}
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          data-cursor="TOP"
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '0.6rem',
-            fontFamily: 'var(--font-mono)',
-            fontWeight: 700,
-            fontSize: '1.05rem',
-            color: 'var(--text-primary)',
-            letterSpacing: '0.04em'
+            gap: '0.8rem',
+            cursor: 'pointer',
+            userSelect: 'none'
           }}
-          aria-label="Mr. Nobody Home"
         >
-          <div
+          <span
             style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: 'var(--radius-sm)',
-              background: 'var(--accent-dim)',
-              border: '1px solid var(--border-accent)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--accent)'
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.05rem',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              color: '#E8F7FF'
             }}
           >
-            <Shield size={18} />
-          </div>
-          <span>
-            Mr.Nobody<span style={{ color: 'var(--accent)', animation: 'pulse 1s infinite' }}>_</span>
+            MR.NOBODY
           </span>
-        </button>
-
-        {/* Desktop Links */}
-        <nav
-          style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}
-          className="desktop-nav"
-          aria-label="Main Navigation"
-        >
-          {NAV_ITEMS.map(item => {
-            const isActive = activeSection === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                style={{
-                  position: 'relative',
-                  padding: '0.4rem 0.85rem',
-                  fontSize: '0.85rem',
-                  fontFamily: 'var(--font-mono)',
-                  color: isActive ? 'var(--accent)' : 'var(--text-secondary)',
-                  fontWeight: isActive ? 600 : 500,
-                  borderRadius: 'var(--radius-sm)',
-                  transition: 'color var(--transition-fast)'
-                }}
-              >
-                {item.label}
-                {isActive && (
-                  <motion.div
-                    layoutId="activeNavIndicator"
-                    style={{
-                      position: 'absolute',
-                      bottom: '-2px',
-                      left: '15%',
-                      right: '15%',
-                      height: '2px',
-                      backgroundColor: 'var(--accent)',
-                      boxShadow: '0 0 8px var(--accent-glow)'
-                    }}
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </button>
-            );
-          })}
-        </nav>
-
-        {/* Controls: Theme & CRT & Mobile toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          {/* Theme Palette Switcher */}
-          <div
+          <span
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.35rem',
-              padding: '0.25rem',
-              background: 'var(--bg-surface)',
-              borderRadius: '20px',
-              border: '1px solid var(--border-subtle)'
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.65rem',
+              color: '#00E5FF',
+              padding: '0.15rem 0.45rem',
+              background: 'rgba(0, 229, 255, 0.08)',
+              border: '1px solid rgba(0, 229, 255, 0.25)',
+              borderRadius: '3px'
             }}
-            role="group"
-            aria-label="Theme Selector"
           >
-            <button
-              onClick={() => onThemeChange('green')}
-              style={{
-                width: '18px',
-                height: '18px',
-                borderRadius: '50%',
-                background: '#00FF66',
-                border: currentTheme === 'green' ? '2px solid white' : 'none',
-                boxShadow: currentTheme === 'green' ? '0 0 8px #00ff66' : 'none'
-              }}
-              title="Terminal Green Theme"
-              aria-label="Emerald Green Theme"
-            />
-            <button
-              onClick={() => onThemeChange('cyan')}
-              style={{
-                width: '18px',
-                height: '18px',
-                borderRadius: '50%',
-                background: '#00F0FF',
-                border: currentTheme === 'cyan' ? '2px solid white' : 'none',
-                boxShadow: currentTheme === 'cyan' ? '0 0 8px #00f0ff' : 'none'
-              }}
-              title="Cyber Cyan Theme"
-              aria-label="Cyber Cyan Theme"
-            />
-            <button
-              onClick={() => onThemeChange('crimson')}
-              style={{
-                width: '18px',
-                height: '18px',
-                borderRadius: '50%',
-                background: '#FF2A55',
-                border: currentTheme === 'crimson' ? '2px solid white' : 'none',
-                boxShadow: currentTheme === 'crimson' ? '0 0 8px #ff2a55' : 'none'
-              }}
-              title="Crimson Alert Theme"
-              aria-label="Crimson Theme"
-            />
-          </div>
+            // ANONYMOUS
+          </span>
+        </div>
 
-          {/* CRT Toggle Button */}
+        {/* Right Controls: Floating Status + Sound Toggle + MENU Button */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          {/* Section 23 & 39: Floating System Status (Breathing Dot, Clickable Easter Egg) */}
           <button
-            onClick={onToggleCrt}
+            onClick={onOpenSystemLog}
+            data-cursor="LOG"
+            title="Click to view System Log #017"
             style={{
+              background: 'rgba(10, 15, 20, 0.75)',
+              border: '1px solid rgba(0, 229, 255, 0.2)',
+              borderRadius: '20px',
+              padding: '0.35rem 0.85rem',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.35rem',
-              padding: '0.35rem 0.6rem',
-              borderRadius: 'var(--radius-sm)',
-              background: crtEnabled ? 'var(--accent-dim)' : 'var(--bg-surface)',
-              border: `1px solid ${crtEnabled ? 'var(--accent)' : 'var(--border-subtle)'}`,
-              color: crtEnabled ? 'var(--accent)' : 'var(--text-muted)',
-              fontSize: '0.75rem',
-              fontFamily: 'var(--font-mono)'
+              gap: '0.5rem',
+              cursor: 'pointer',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.7rem',
+              color: '#CBD5E1'
             }}
-            title="Toggle Scanline & CRT Effect"
-            aria-label="Toggle CRT Effect"
           >
-            <Monitor size={14} />
-            <span className="hide-mobile">CRT</span>
+            <span
+              style={{
+                width: '7px',
+                height: '7px',
+                borderRadius: '50%',
+                background: '#A3FF12',
+                boxShadow: '0 0 8px #A3FF12',
+                animation: 'breathingDot 2.4s ease-in-out infinite'
+              }}
+            />
+            <span style={{ letterSpacing: '0.06em' }}>SYSTEM ONLINE</span>
           </button>
 
-          {/* Mobile Hamburger Button */}
+          {/* Section 41: Subtle Sound Synthesis Toggle */}
           <button
-            onClick={() => setMobileMenuOpen(prev => !prev)}
-            className="mobile-menu-btn"
+            onClick={onToggleSound}
+            data-cursor="AUDIO"
+            title={soundEnabled ? 'Disable Cyber Audio' : 'Enable Subtle Cyber Audio'}
             style={{
-              padding: '0.4rem',
-              borderRadius: 'var(--radius-sm)',
-              color: 'var(--text-primary)',
-              display: 'none'
+              background: 'transparent',
+              border: 'none',
+              color: soundEnabled ? '#00E5FF' : '#7F8C9A',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              padding: '0.3rem',
+              transition: 'color 0.2s ease'
             }}
-            aria-label="Toggle Mobile Menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {soundEnabled ? <Volume2 size={16} /> : <VolumeX size={16} />}
+          </button>
+
+          {/* Minimal MENU Button (Section 24) */}
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            data-cursor="MENU"
+            data-magnetic="true"
+            className="magnetic-btn"
+            style={{
+              background: 'rgba(0, 229, 255, 0.08)',
+              border: '1px solid rgba(0, 229, 255, 0.35)',
+              borderRadius: '6px',
+              padding: '0.45rem 1.1rem',
+              color: '#00E5FF',
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.78rem',
+              fontWeight: 700,
+              letterSpacing: '0.12em',
+              cursor: 'pointer',
+              boxShadow: '0 0 15px rgba(0, 229, 255, 0.15)',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            MENU
           </button>
         </div>
-      </div>
+      </motion.header>
 
-      {/* Mobile Drawer */}
+      {/* Fullscreen Navigation Screen (Section 25) */}
       <AnimatePresence>
-        {mobileMenuOpen && (
+        {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, clipPath: 'circle(0% at 92% 5%)' }}
+            animate={{ opacity: 1, clipPath: 'circle(150% at 92% 5%)' }}
+            exit={{ opacity: 0, clipPath: 'circle(0% at 92% 5%)' }}
+            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
             style={{
-              backgroundColor: 'rgba(4, 7, 17, 0.96)',
-              backdropFilter: 'blur(16px)',
-              borderBottom: '1px solid var(--border-subtle)',
-              overflow: 'hidden'
+              position: 'fixed',
+              inset: 0,
+              zIndex: 9999,
+              background: 'rgba(5, 7, 10, 0.98)',
+              backdropFilter: 'blur(25px)',
+              WebkitBackdropFilter: 'blur(25px)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '2rem'
             }}
           >
-            <div className="container" style={{ padding: '1.25rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {NAV_ITEMS.map(item => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollTo(item.id)}
-                  style={{
-                    textAlign: 'left',
-                    padding: '0.6rem 0.5rem',
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '1rem',
-                    color: activeSection === item.id ? 'var(--accent)' : 'var(--text-primary)',
-                    fontWeight: activeSection === item.id ? 600 : 400
-                  }}
-                >
-                  &gt; {item.label}
-                </button>
-              ))}
+            {/* Close Button Top Right */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              data-cursor="CLOSE"
+              style={{
+                position: 'absolute',
+                top: '2rem',
+                right: '2.5rem',
+                background: 'transparent',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                borderRadius: '6px',
+                padding: '0.5rem 1rem',
+                color: '#E8F7FF',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.78rem',
+                cursor: 'pointer'
+              }}
+            >
+              [ CLOSE / ESC ]
+            </button>
+
+            {/* Menu Items (01 HOME, 02 ABOUT, etc. Following cursor slightly) */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '2.2rem',
+                textAlign: 'left',
+                width: '100%',
+                maxWidth: '600px'
+              }}
+            >
+              {MENU_ITEMS.map((item, idx) => {
+                const offset = menuCursorOffset[item.id] || { x: 0, y: 0 };
+                return (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 + idx * 0.06 }}
+                    onMouseMove={(e) => handleItemMouseMove(item.id, e)}
+                    onMouseLeave={() => handleItemMouseLeave(item.id)}
+                    onClick={() => navigateTo(item.id)}
+                    data-cursor="NAVIGATE"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'baseline',
+                      gap: '1.5rem',
+                      cursor: 'pointer',
+                      transform: `translate3d(${offset.x}px, ${offset.y}px, 0)`,
+                      transition: 'transform 0.12s ease-out',
+                      padding: '0.5rem 0',
+                      borderBottom: '1px solid rgba(255, 255, 255, 0.06)'
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '1rem',
+                        color: '#00E5FF',
+                        fontWeight: 700
+                      }}
+                    >
+                      {item.num}
+                    </span>
+                    <span
+                      className="nav-fullscreen-link"
+                      style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontSize: 'clamp(2rem, 5vw, 3.4rem)',
+                        fontWeight: 800,
+                        color: '#E8F7FF',
+                        letterSpacing: '-0.02em',
+                        transition: 'color 0.2s ease, text-shadow 0.2s ease'
+                      }}
+                    >
+                      {item.label}
+                    </span>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       <style>{`
-        @media (max-width: 860px) {
-          .desktop-nav {
-            display: none !important;
-          }
-          .mobile-menu-btn {
-            display: block !important;
-          }
-          .hide-mobile {
-            display: none;
-          }
+        @keyframes breathingDot {
+          0%, 100% { opacity: 0.45; }
+          50% { opacity: 1; }
+        }
+        .nav-fullscreen-link:hover {
+          color: #00E5FF !important;
+          text-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
         }
       `}</style>
-    </motion.header>
+    </>
   );
 };

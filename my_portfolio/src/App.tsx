@@ -2,102 +2,84 @@ import React, { useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
-import { SignalIndicator } from './components/layout/SignalIndicator';
 import { ScrollProgressRail } from './components/layout/ScrollProgressRail';
 import { CustomCursor } from './components/layout/CustomCursor';
 import { GrainOverlay } from './components/ui/GrainOverlay';
-import { MatrixBackground } from './components/hero/MatrixBackground';
+import { LivingCyberBackground } from './components/cinematic/LivingCyberBackground';
 
-// Cinematic Narrative Chapters
-import { CinematicBoot } from './components/cinematic/CinematicBoot';
-import { ParticleHero } from './components/cinematic/ParticleHero';
-import { IdentityCard } from './components/cinematic/IdentityCard';
-import { SystemMap } from './components/cinematic/SystemMap';
-import { CyberSection } from './components/cinematic/CyberSection';
-import { StoryTerminal } from './components/cinematic/StoryTerminal';
-import { AiNeuralGraph } from './components/cinematic/AiNeuralGraph';
+// Core Cinematic Narrative Chapters (Section 48)
+import { CinematicStoryHero } from './components/cinematic/CinematicStoryHero';
+import { AboutSystemCore } from './components/cinematic/AboutSystemCore';
+import { CapabilitiesDashboard } from './components/cinematic/CapabilitiesDashboard';
 import { HorizontalProjects } from './components/cinematic/HorizontalProjects';
-import { ToolkitConstellation } from './components/cinematic/ToolkitConstellation';
-import { PhilosophySection } from './components/cinematic/PhilosophySection';
-import { FinalTransmission } from './components/cinematic/FinalTransmission';
-
-import { useTheme } from './hooks/useTheme';
+import { CinematicContact } from './components/cinematic/CinematicContact';
+import { CyberEasterEggs } from './components/cinematic/CyberEasterEggs';
 
 export const App: React.FC = () => {
-  const { theme, setTheme, crtEnabled, toggleCrt } = useTheme();
-  const [bootKey, setBootKey] = useState(0);
+  const [soundEnabled, setSoundEnabled] = useState(false);
+  const [systemLogOpen, setSystemLogOpen] = useState(false);
 
-  const handleRestartSystem = () => {
-    setBootKey((prev) => prev + 1);
+  const toggleSound = () => {
+    setSoundEnabled((prev) => !prev);
   };
 
   return (
     <MotionConfig reducedMotion="user">
-      <div style={{ position: 'relative', minHeight: '100vh', background: '#05070A', color: '#F5F7FA' }}>
-        {/* Cinematic Boot Sequence (3-4s typing logs, glitch flash, enter button) */}
-        <CinematicBoot key={bootKey} onComplete={() => {}} />
+      <div
+        style={{
+          position: 'relative',
+          minHeight: '100vh',
+          background: '#05070A',
+          color: '#E8F7FF',
+          overflowX: 'hidden'
+        }}
+      >
+        {/* 1. Living Digital Background & Giant Lagged Ambient Glow (Sections 2, 3, 32, 33) */}
+        <LivingCyberBackground />
 
-        {/* Desktop Custom Magnetic Cursor */}
+        {/* 2. Dual-Ring Magnetic Cursor (Sections 4 & 5) */}
         <CustomCursor />
 
-        {/* Film Grain Texture Overlay */}
-        <GrainOverlay opacity={0.04} />
+        {/* 3. Subtle Film Grain Overlay (Section 1) */}
+        <GrainOverlay opacity={0.035} />
 
-        {/* Dynamic Signal Telemetry Indicator */}
-        <SignalIndicator />
-
-        {/* Vertical Scroll Progress Chapter Rail */}
+        {/* 4. Vertical Chapter Progress Rail (Section 22) */}
         <ScrollProgressRail />
 
-        {/* Ambient Matrix Rain Canvas Background */}
-        <MatrixBackground theme={theme} opacity={0.16} />
-
-        {/* Subtle Cyber Grid Floor */}
-        <div className="cyber-grid-floor" aria-hidden="true" />
-
-        {/* Floating Top Navigation */}
+        {/* 5. Minimal Top Bar & Fullscreen Curtain Navigation (Sections 23, 24, 25) */}
         <Navbar
-          currentTheme={theme}
-          onThemeChange={setTheme}
-          crtEnabled={crtEnabled}
-          onToggleCrt={toggleCrt}
+          soundEnabled={soundEnabled}
+          onToggleSound={toggleSound}
+          onOpenSystemLog={() => setSystemLogOpen(true)}
         />
 
-        {/* Scroll-Driven Story Chapters */}
+        {/* 6. Main Story Chapters (Section 48 Page Structure) */}
         <main id="main-content">
-          {/* Chapter 00: Boot & Dissolving Particle Hero */}
-          <ParticleHero />
+          {/* Chapter 01: Hero with 5s Choreography & Scroll Text Dispersal (Sections 6-11, 37) */}
+          <CinematicStoryHero />
 
-          {/* Chapter 01: Investigation & Identity Dossier */}
-          <IdentityCard />
+          {/* Chapter 02: About the System with Rotating 3D Network Core & Keyword Glow (Sections 12-14) */}
+          <AboutSystemCore />
 
-          {/* Chapter 02: Interconnected System Topology */}
-          <SystemMap />
+          {/* Chapter 03: Capabilities Dashboard with Skill Dimming & Live Readout (Sections 15-16) */}
+          <CapabilitiesDashboard />
 
-          {/* Chapter 03: Multi-Directional Cybersecurity Capabilities */}
-          <CyberSection />
-
-          {/* Chapter 03.5: Scroll-Revealed Shell Terminal */}
-          <StoryTerminal />
-
-          {/* Chapter 04: Real-time Neural Graph Architecture */}
-          <AiNeuralGraph />
-
-          {/* Chapter 05: Operational Case Files (Horizontal Carousel + Scanline Modal) */}
+          {/* Chapter 04: Operations & Case Files with 3D Tilt, 15% Parallax & Scanline Dossier (Sections 17-21) */}
           <HorizontalProjects />
 
-          {/* Chapter 05.5: The Arsenal (Interactive Constellation Toolkit) */}
-          <ToolkitConstellation />
-
-          {/* Chapter 06: Beyond The Code (Expanding Portal Philosophy) */}
-          <PhilosophySection />
-
-          {/* Chapter 07: Final Transmission & Shutdown / System Reboot */}
-          <FinalTransmission onRestartSystem={handleRestartSystem} />
+          {/* Chapter 05: Secure Connection Requested with 3-Phase Interactive Button (Section 26) */}
+          <CinematicContact />
         </main>
 
-        {/* Institutional Telemetry Footer */}
+        {/* 7. Ultra-Clean Footer (Section 27) */}
         <Footer />
+
+        {/* 8. Easter Eggs, Audio Synth, System Log #017 & Hidden Terminal (Sections 28, 39, 40, 41) */}
+        <CyberEasterEggs
+          soundEnabled={soundEnabled}
+          systemLogOpen={systemLogOpen}
+          onCloseSystemLog={() => setSystemLogOpen(false)}
+        />
       </div>
     </MotionConfig>
   );
