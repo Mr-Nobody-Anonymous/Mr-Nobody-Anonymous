@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './astra.css';
 
 /* Universal Reset */
 *, *::before, *::after {
