@@ -103,8 +103,16 @@ export const ParticleHero: React.FC = () => {
 
     const initParticles = () => {
       const fontSize = Math.min(width * 0.12, 110);
-      const phase1Points = getPointsFromText(['MR. NOBODY'], fontSize, 'Space Grotesk, sans-serif');
-      const phase2Points = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
+      let phase1Points = getPointsFromText(['MR. NOBODY'], fontSize, 'Space Grotesk, sans-serif');
+      let phase2Points = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
+
+      // Fallback to system font if custom font hasn't rendered pixels yet
+      if (phase1Points.length === 0) {
+        phase1Points = getPointsFromText(['MR. NOBODY'], fontSize, 'Arial, sans-serif');
+        phase2Points = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Arial, sans-serif');
+      }
+
+      if (phase1Points.length === 0) return;
 
       const maxCount = Math.max(phase1Points.length, phase2Points.length);
       particles = [];
@@ -130,6 +138,11 @@ export const ParticleHero: React.FC = () => {
     };
 
     initParticles();
+    if (document.fonts) {
+      document.fonts.ready.then(() => {
+        initParticles();
+      });
+    }
 
     // Render loop
     const render = () => {

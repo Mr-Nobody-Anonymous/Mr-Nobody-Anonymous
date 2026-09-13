@@ -9,11 +9,16 @@ interface NavbarProps {
 }
 
 const MENU_ITEMS = [
-  { id: 'hero', num: '01', label: 'HOME' },
-  { id: 'about-system', num: '02', label: 'ABOUT' },
-  { id: 'capabilities', num: '03', label: 'SKILLS' },
-  { id: 'operations', num: '04', label: 'PROJECTS' },
-  { id: 'connection', num: '05', label: 'CONTACT' }
+  { id: 'hero', num: '00', label: 'HERO / PARTICLES' },
+  { id: 'identity', num: '01', label: 'IDENTITY DOSSIER' },
+  { id: 'system-map', num: '02', label: 'SYSTEM TOPOLOGY' },
+  { id: 'cybersecurity', num: '03', label: 'CYBERSECURITY' },
+  { id: 'terminal-section', num: '04', label: 'STORY TERMINAL' },
+  { id: 'intelligence', num: '05', label: 'AI SYSTEMS' },
+  { id: 'operations', num: '06', label: 'CASE FILES' },
+  { id: 'toolkit', num: '07', label: 'ARSENAL TOOLKIT' },
+  { id: 'philosophy', num: '08', label: 'PHILOSOPHY' },
+  { id: 'final-transmission', num: '09', label: 'TRANSMISSION' }
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({
