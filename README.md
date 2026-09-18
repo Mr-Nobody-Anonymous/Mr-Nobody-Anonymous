@@ -261,8 +261,8 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 | 2 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | JavaScript | ⭐ 0 | 🍴 0 | Self-evolving swarm intelligence controlling machines across all warfighting domains. |
 | 3 | [Orion](https://github.com/Mr-Nobody-Anonymous/Orion) | Python | ⭐ 0 | 🍴 0 | Institutional intelligence and architectural security platform |
 | 4 | [Cerberus](https://github.com/Mr-Nobody-Anonymous/Cerberus) | Python | ⭐ 0 | 🍴 0 | Multi-vector security auditing & threat intelligence framework |
-| 5 | [civiclens](https://github.com/Mr-Nobody-Anonymous/civiclens) | Python | ⭐ 0 | 🍴 0 | Civic monitoring and data analysis platform |
-| 6 | [All-skills](https://github.com/Mr-Nobody-Anonymous/All-skills) | Python | ⭐ 0 | 🍴 0 | Cybersecurity and technical skills reference repository |
+| 5 | [All-skills](https://github.com/Mr-Nobody-Anonymous/All-skills) | Python | ⭐ 0 | 🍴 0 | Cybersecurity and technical skills reference repository |
+| 6 | [rc4](https://github.com/Mr-Nobody-Anonymous/rc4) | Python | ⭐ 0 | 🍴 0 | Stream cipher implementation and cryptographic analysis |
 
 <sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
 <!-- TOP-REPOS:END -->
