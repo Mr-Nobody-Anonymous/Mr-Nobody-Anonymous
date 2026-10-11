@@ -261,8 +261,8 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 | 2 | [All-skills](https://github.com/Mr-Nobody-Anonymous/All-skills) | JavaScript | ⭐ 0 | 🍴 0 | Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity |
 | 3 | [Orion](https://github.com/Mr-Nobody-Anonymous/Orion) | Python | ⭐ 0 | 🍴 0 | Institutional intelligence and architectural security platform |
 | 4 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | JavaScript | ⭐ 0 | 🍴 0 | Self-evolving swarm intelligence controlling machines across all warfighting domains. |
-| 5 | [Cerberus](https://github.com/Mr-Nobody-Anonymous/Cerberus) | Python | ⭐ 0 | 🍴 0 | Multi-vector security auditing & threat intelligence framework |
-| 6 | [civiclens](https://github.com/Mr-Nobody-Anonymous/civiclens) | Python | ⭐ 0 | 🍴 0 | Civic monitoring and data analysis platform |
+| 5 | [arena-ai-android](https://github.com/Mr-Nobody-Anonymous/arena-ai-android) | Smali | ⭐ 0 | 🍴 0 | Cybersecurity & development project |
+| 6 | [Cerberus](https://github.com/Mr-Nobody-Anonymous/Cerberus) | Python | ⭐ 0 | 🍴 0 | Multi-vector security auditing & threat intelligence framework |
 
 <sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
 <!-- TOP-REPOS:END -->
