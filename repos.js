@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 
 const username = "Mr-Nobody-Anonymous";
 
@@ -18,46 +17,6 @@ const fallbackDescriptions = {
     "tryhackme-write-ups": "Hands-on penetration testing labs & TryHackMe walk-throughs",
     "arena-ai-android": "Unofficial standalone Android client for Arena (arena.ai)"
 };
-
-async function updateTrophies() {
-    const trophyMirrors = [
-        `https://github-profile-trophies.vercel.app/?username=${username}&theme=radical&no-frame=true&row=2&column=4&title=MultiLanguage,Commits,Issues,Repositories,Experience,Stars,Followers,PullRequest`,
-        `https://github-trophies.vercel.app/?username=${username}&theme=radical&no-frame=true&row=2&column=4&title=MultiLanguage,Commits,Issues,Repositories,Experience,Stars,Followers,PullRequest`,
-        `https://profile-trophy.vercel.app/?username=${username}&theme=radical&no-frame=true&row=2&column=4&title=MultiLanguage,Commits,Issues,Repositories,Experience,Stars,Followers,PullRequest`,
-        `https://github-profile-trophy-nu.vercel.app/?username=${username}&theme=radical&no-frame=true&row=2&column=4&title=MultiLanguage,Commits,Issues,Repositories,Experience,Stars,Followers,PullRequest`
-    ];
-
-    const assetsDir = path.join(__dirname, "assets");
-    if (!fs.existsSync(assetsDir)) {
-        fs.mkdirSync(assetsDir, { recursive: true });
-    }
-    const trophyPath = path.join(assetsDir, "trophies.svg");
-
-    for (const url of trophyMirrors) {
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 7000);
-            const res = await fetch(url, { signal: controller.signal });
-            clearTimeout(timeoutId);
-
-            if (!res.ok) continue;
-            const svg = await res.text();
-            if (svg.includes("<svg") && svg.includes("</svg>")) {
-                fs.writeFileSync(trophyPath, svg, "utf8");
-                console.log(`✅ assets/trophies.svg successfully updated from ${new URL(url).hostname}`);
-                return;
-            }
-        } catch (err) {
-            // Fallback to next mirror
-        }
-    }
-
-    if (fs.existsSync(trophyPath)) {
-        console.log("⚠️ Could not reach trophy mirrors; existing assets/trophies.svg preserved.");
-    } else {
-        console.warn("⚠️ Could not fetch trophies and no cached trophies.svg exists.");
-    }
-}
 
 async function main() {
     try {
@@ -154,9 +113,6 @@ async function main() {
 
         fs.writeFileSync(readmePath, newReadme, "utf8");
         console.log("✅ README.md successfully updated with top repository rankings.");
-
-        // Automatically update trophies SVG asset with multi-mirror resilience
-        await updateTrophies();
     } catch (err) {
         console.error("❌ Failed to update repositories:", err.message);
         process.exit(1);
