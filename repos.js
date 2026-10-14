@@ -2,20 +2,70 @@ const fs = require("fs");
 
 const username = "Mr-Nobody-Anonymous";
 
-// Custom descriptions for repositories that don't have a GitHub description set yet
-const fallbackDescriptions = {
-    "Cerberus": "Multi-vector security auditing & threat intelligence framework",
-    "Orion": "Institutional intelligence and architectural security platform",
-    "ultrone": "Autonomous AI agent architecture and task execution framework",
-    "plaq-os": "Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner",
-    "daily-git-digest": "Autonomous daily Git commit audit & automated markdown digest generation",
-    "fkali": "Automated Kali Linux penetration testing and recon toolkit",
-    "Capture-Writeup": "Security CTF challenge write-ups and walkthroughs",
-    "rc4": "Stream cipher implementation and cryptographic analysis",
-    "civiclens": "Civic monitoring and data analysis platform",
-    "All-skills": "Universal Agent Skills Operating System (14,850+ skills)",
-    "tryhackme-write-ups": "Hands-on penetration testing labs & TryHackMe walk-throughs",
-    "arena-ai-android": "Unofficial standalone Android client for Arena (arena.ai)"
+// Metadata and fallback descriptions for repositories
+const repoMetadata = {
+    "Argus": {
+        domain: "AI & Vision",
+        desc: "SentinelSight AI Video Analytics Platform with intelligent stream processing"
+    },
+    "All-skills": {
+        domain: "Agent OS",
+        desc: "Universal Agent Skills Operating System: 14,850+ skills across 251 domains"
+    },
+    "arena-ai-android": {
+        domain: "Mobile AI",
+        desc: "Unofficial standalone Android client for Arena (arena.ai) LLM evaluations"
+    },
+    "plaq-os": {
+        domain: "Quantum OS",
+        desc: "Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner"
+    },
+    "Orion": {
+        domain: "Security Intel",
+        desc: "Institutional intelligence and architectural security analysis platform"
+    },
+    "ultrone": {
+        domain: "Swarm AI",
+        desc: "Self-evolving swarm intelligence controlling machines across operational domains"
+    },
+    "Cerberus": {
+        domain: "Pentest Recon",
+        desc: "Multi-vector security auditing & threat intelligence framework"
+    },
+    "civiclens": {
+        domain: "Data Analytics",
+        desc: "Civic monitoring and public dataset telemetry analysis platform"
+    },
+    "daily-git-digest": {
+        domain: "DevOps Tooling",
+        desc: "Autonomous daily Git commit audit & automated markdown digest generation"
+    },
+    "fkali": {
+        domain: "Kali Linux",
+        desc: "Automated Kali Linux penetration testing and recon toolkit"
+    },
+    "rc4": {
+        domain: "Cryptography",
+        desc: "Stream cipher implementation and statistical randomness security analysis"
+    },
+    "Capture-Writeup": {
+        domain: "CTF Labs",
+        desc: "Security CTF challenge write-ups and vulnerability walkthroughs"
+    },
+    "tryhackme-write-ups": {
+        domain: "Penetration Testing",
+        desc: "Hands-on penetration testing labs & TryHackMe walk-throughs"
+    }
+};
+
+const langBadges = {
+    "Python": "![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)",
+    "Java": "![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)",
+    "JavaScript": "![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)",
+    "TypeScript": "![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)",
+    "Shell": "![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square&logo=gnu-bash&logoColor=white)",
+    "C++": "![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)",
+    "C": "![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)"
 };
 
 async function main() {
@@ -69,16 +119,22 @@ async function main() {
                     Math.min(sizeKb / 500, 10) +
                     recencyBonus;
 
+                const meta = repoMetadata[repo.name] || {};
                 const desc =
                     (repo.description && repo.description.trim()) ||
-                    fallbackDescriptions[repo.name] ||
-                    "Cybersecurity & development project";
+                    meta.desc ||
+                    "Cybersecurity & engineering system";
+                const domain = meta.domain || "Engineering";
+                const lang = repo.language || "N/A";
+                const langBadge = langBadges[lang] || `\`${lang}\``;
 
                 return {
                     name: repo.name,
                     url: repo.html_url,
+                    domain,
                     desc,
-                    lang: repo.language || "N/A",
+                    lang,
+                    langBadge,
                     stars,
                     forks,
                     score
@@ -87,16 +143,30 @@ async function main() {
             .sort((a, b) => b.score - a.score)
             .slice(0, 6);
 
-        const header = "| # | Repository | Language | Stars | Forks | Description |";
-        const separator = "|---|-----------|----------|-------|-------|-------------|";
-        const rows = ranked
+        // 1. Generate Interactive Pinned Cards (2 per row for balanced grid)
+        const pinCards = [];
+        for (let i = 0; i < ranked.length; i += 2) {
+            const first = ranked[i];
+            const second = ranked[i + 1];
+            let rowHtml = `<p align="center">\n  <a href="${first.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${first.name}&theme=radical&hide_border=true" alt="${first.name}" /></a>`;
+            if (second) {
+                rowHtml += `\n  <a href="${second.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${second.name}&theme=radical&hide_border=true" alt="${second.name}" /></a>`;
+            }
+            rowHtml += `\n</p>`;
+            pinCards.push(rowHtml);
+        }
+
+        // 2. Generate Structured Matrix Table
+        const tableHeader = "| # | Project | Domain | Stack | Stars | Description |";
+        const tableSeparator = "|:---:|---------|:------:|:-----:|:-----:|-------------|";
+        const tableRows = ranked
             .map(
                 (r, i) =>
-                    `| ${i + 1} | [${r.name}](${r.url}) | ${r.lang} | ⭐ ${r.stars} | 🍴 ${r.forks} | ${r.desc} |`
+                    `| ${i + 1} | [**${r.name}**](${r.url}) | \`${r.domain}\` | ${r.langBadge} | ⭐ ${r.stars} | ${r.desc} |`
             )
             .join("\n");
 
-        const output = `### 🔥 Top Repositories\n\n${header}\n${separator}\n${rows}\n\n<sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>`;
+        const output = `### ⚡ Featured Systems & Flagship Repositories\n\n${pinCards.join("\n")}\n\n### 🛠️ Active Arsenal & Repository Directory\n\n${tableHeader}\n${tableSeparator}\n${tableRows}\n\n<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>`;
 
         const readmePath = "README.md";
         const readme = fs.readFileSync(readmePath, "utf8");
@@ -112,7 +182,7 @@ async function main() {
         );
 
         fs.writeFileSync(readmePath, newReadme, "utf8");
-        console.log("✅ README.md successfully updated with top repository rankings.");
+        console.log("✅ README.md successfully updated with cool featured cards and repository directory.");
     } catch (err) {
         console.error("❌ Failed to update repositories:", err.message);
         process.exit(1);

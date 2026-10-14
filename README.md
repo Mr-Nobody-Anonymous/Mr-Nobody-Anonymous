@@ -253,18 +253,33 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## My repositories / work
 
 <!-- TOP-REPOS:START -->
-### 🔥 Top Repositories
+### ⚡ Featured Systems & Flagship Repositories
 
-| # | Repository | Language | Stars | Forks | Description |
-|---|-----------|----------|-------|-------|-------------|
-| 1 | [Argus](https://github.com/Mr-Nobody-Anonymous/Argus) | Python | ⭐ 1 | 🍴 0 | SentinelSight AI Video Analytics Platform |
-| 2 | [All-skills](https://github.com/Mr-Nobody-Anonymous/All-skills) | JavaScript | ⭐ 0 | 🍴 0 | Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity |
-| 3 | [arena-ai-android](https://github.com/Mr-Nobody-Anonymous/arena-ai-android) | Java | ⭐ 0 | 🍴 0 | Unofficial standalone Android client for Arena (arena.ai) |
-| 4 | [Orion](https://github.com/Mr-Nobody-Anonymous/Orion) | Python | ⭐ 0 | 🍴 0 | Institutional intelligence and architectural security platform |
-| 5 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | JavaScript | ⭐ 0 | 🍴 0 | Self-evolving swarm intelligence controlling machines across all warfighting domains. |
-| 6 | [plaq-os](https://github.com/Mr-Nobody-Anonymous/plaq-os) | Python | ⭐ 0 | 🍴 0 | Plaq OS: Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner |
+<p align="center">
+  <a href="https://github.com/Mr-Nobody-Anonymous/Argus"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=Argus&theme=radical&hide_border=true" alt="Argus" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous/All-skills"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=All-skills&theme=radical&hide_border=true" alt="All-skills" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/Mr-Nobody-Anonymous/arena-ai-android"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=arena-ai-android&theme=radical&hide_border=true" alt="arena-ai-android" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous/Orion"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=Orion&theme=radical&hide_border=true" alt="Orion" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/Mr-Nobody-Anonymous/ultrone"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=ultrone&theme=radical&hide_border=true" alt="ultrone" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous/plaq-os"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=plaq-os&theme=radical&hide_border=true" alt="plaq-os" /></a>
+</p>
 
-<sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
+### 🛠️ Active Arsenal & Repository Directory
+
+| # | Project | Domain | Stack | Stars | Description |
+|:---:|---------|:------:|:-----:|:-----:|-------------|
+| 1 | [**Argus**](https://github.com/Mr-Nobody-Anonymous/Argus) | `AI & Vision` | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | ⭐ 1 | SentinelSight AI Video Analytics Platform |
+| 2 | [**All-skills**](https://github.com/Mr-Nobody-Anonymous/All-skills) | `Agent OS` | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | ⭐ 0 | Universal Agent Skills Operating System: 14,855+ skills across 251 domains and 15 super-domains for Claude, Cursor, Codex, Copilot, Gemini & Antigravity |
+| 3 | [**arena-ai-android**](https://github.com/Mr-Nobody-Anonymous/arena-ai-android) | `Mobile AI` | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | ⭐ 0 | Unofficial standalone Android client for Arena (arena.ai) |
+| 4 | [**Orion**](https://github.com/Mr-Nobody-Anonymous/Orion) | `Security Intel` | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | ⭐ 0 | Institutional intelligence and architectural security analysis platform |
+| 5 | [**ultrone**](https://github.com/Mr-Nobody-Anonymous/ultrone) | `Swarm AI` | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | ⭐ 0 | Self-evolving swarm intelligence controlling machines across all warfighting domains. |
+| 6 | [**plaq-os**](https://github.com/Mr-Nobody-Anonymous/plaq-os) | `Quantum OS` | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | ⭐ 0 | Plaq OS: Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner |
+
+<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>
 <!-- TOP-REPOS:END -->
 
 ## 📊 GitHub Stats
