@@ -1,21 +1,21 @@
 <!--
 Profile README for: Mr-Nobody-Anonymous
-Repo: Mr-Nobody-Anonymous/anonymous
+Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,100:DC2626&height=200&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Mr.nobody%20" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141321,50:00f0ff,100:fe428e&height=220&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Mr.nobody%20" alt="Header" />
 </p>
 
 <div align="center">
 
-  <h1>🔐 Cybersecurity professional</h1>
-  <b>⚡ && ⚡</b>
-   <br>
-  <b>🤖 AI • 🌐 Web Development</b>
+  <h1>🔐 Cybersecurity Professional</h1>
+  <b>⚡ Offensive Security Practitioner • Systems Architecture • Threat Intelligence ⚡</b>
   <br>
+  <b>🤖 Applied AI & Swarm Intelligence • 🌐 Secure Full-Stack Engineering • 🛡️ Vulnerability Research</b>
+  <br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=500&lines=Penetration+Tester;Network+Security+Explorer;Ethical+Hacking;Bug+Bounty+Hunter;Security+Researcher" alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00FF41&center=true&vCenter=true&width=550&lines=Ethical+Hacker+%26+Security+Researcher;Penetration+Tester+%26+Bug+Bounty;Autonomous+AI+Systems+Architect;Network+Defense+%26+Threat+Intelligence;Curiosity+Has+A+Command+Line" alt="Typing animation" />
 </div>
 
 <p align="center">
@@ -34,7 +34,7 @@ Repo: Mr-Nobody-Anonymous/anonymous
 </p>
 
 <p align="center">
-  <img src="https://trophies.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=6" alt="trophies" />
+  <img src="https://github-profile-trophy-nu.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=7&margin_w=15" alt="GitHub Trophies" />
 </p>
 
 <p align="center">
@@ -149,7 +149,7 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
     </picture>
   </a>
   <a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
-    <img src="https://img.shields.io/badge/GitLab-FC6D26?style=social&logo=gitlab&logoColor=white" width="32" height="32" alt="GitLab" title="GitLab" />
+    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="32" height="32" alt="GitLab" title="GitLab" />
   </a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noreferrer">
     <picture>
@@ -226,29 +226,29 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 ---
 
-<h2>📚 Certifications & Learning</h2>
+<h2>📚 Certifications & Hands-on Labs</h2>
 
 <p>
-  🔭 Currently learning:
-  <strong>Penetration Testing</strong> •
-  <strong>Web Exploitation</strong> •
-  <strong>Web development</strong>
+  🔭 Focus areas:
+  <strong>Offensive Security & Pentesting</strong> •
+  <strong>Web Application Exploitation</strong> •
+  <strong>Threat Modeling & Defense</strong>
 </p>
 
 <p>
   <a href="https://tryhackme.com/p/Mr.nobody.">
-    <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody-red?style=for-the-badge&logo=tryhackme" />
+    <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody.-C1272D?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe Profile" />
   </a>
   <a href="https://app.hackthebox.com/users/2355243">
-    <img src="https://img.shields.io/badge/HackTheBox-Profile-green?style=for-the-badge&logo=hackthebox" />
+    <img src="https://img.shields.io/badge/HackTheBox-2355243-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=000000" alt="HackTheBox Profile" />
   </a>
 </p>
 
-<h3>🧾 Certifications</h3>
-
-<ul>
-  <li>🏆 certifications will be added in the future here</li>
-</ul>
+<p>
+  <img src="https://img.shields.io/badge/Lab_Status-Active_Practitioner-00f0ff?style=flat-square&logo=terminal&logoColor=white" alt="Lab Status" />
+  <img src="https://img.shields.io/badge/CTF_Focus-Web_|_Recon_|_Crypto-fe428e?style=flat-square&logo=target&logoColor=white" alt="CTF Focus" />
+  <img src="https://img.shields.io/badge/Certifications-In_Progress-f59e0b?style=flat-square&logo=buffer&logoColor=white" alt="Certifications In Progress" />
+</p>
 
 ## My repositories / work
 
@@ -262,7 +262,7 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 | 3 | [arena-ai-android](https://github.com/Mr-Nobody-Anonymous/arena-ai-android) | Java | ⭐ 0 | 🍴 0 | Unofficial standalone Android client for Arena (arena.ai) |
 | 4 | [Orion](https://github.com/Mr-Nobody-Anonymous/Orion) | Python | ⭐ 0 | 🍴 0 | Institutional intelligence and architectural security platform |
 | 5 | [ultrone](https://github.com/Mr-Nobody-Anonymous/ultrone) | JavaScript | ⭐ 0 | 🍴 0 | Self-evolving swarm intelligence controlling machines across all warfighting domains. |
-| 6 | [Cerberus](https://github.com/Mr-Nobody-Anonymous/Cerberus) | Python | ⭐ 0 | 🍴 0 | Multi-vector security auditing & threat intelligence framework |
+| 6 | [plaq-os](https://github.com/Mr-Nobody-Anonymous/plaq-os) | Python | ⭐ 0 | 🍴 0 | Plaq OS: Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner |
 
 <sub>Auto-updated by [repos.js](./repos.js) — ranking based on stars, forks, activity & size.</sub>
 <!-- TOP-REPOS:END -->
@@ -270,8 +270,8 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&count_private=true&include_all_commits=true&theme=radical&hide_border=true&rank_icon=github" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=8&theme=radical&hide_border=true" alt="Top Languages" />
 </p>
 
 <p align="center">

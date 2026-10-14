@@ -7,12 +7,15 @@ const fallbackDescriptions = {
     "Cerberus": "Multi-vector security auditing & threat intelligence framework",
     "Orion": "Institutional intelligence and architectural security platform",
     "ultrone": "Autonomous AI agent architecture and task execution framework",
+    "plaq-os": "Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner",
+    "daily-git-digest": "Autonomous daily Git commit audit & automated markdown digest generation",
     "fkali": "Automated Kali Linux penetration testing and recon toolkit",
     "Capture-Writeup": "Security CTF challenge write-ups and walkthroughs",
     "rc4": "Stream cipher implementation and cryptographic analysis",
     "civiclens": "Civic monitoring and data analysis platform",
-    "All-skills": "Cybersecurity and technical skills reference repository",
-    "tryhackme-write-ups": "Hands-on penetration testing labs & TryHackMe walk-throughs"
+    "All-skills": "Universal Agent Skills Operating System (14,850+ skills)",
+    "tryhackme-write-ups": "Hands-on penetration testing labs & TryHackMe walk-throughs",
+    "arena-ai-android": "Unofficial standalone Android client for Arena (arena.ai)"
 };
 
 async function main() {
@@ -51,8 +54,8 @@ async function main() {
             .map(repo => {
                 const pushedMs = repo.pushed_at ? new Date(repo.pushed_at).getTime() : 0;
                 const daysSincePush = Math.max(0, (now - pushedMs) / (1000 * 60 * 60 * 24));
-                // Recency bonus: active in last 30 days = +15, last 90 days = +8
-                const recencyBonus = daysSincePush <= 30 ? 15 : daysSincePush <= 90 ? 8 : 0;
+                // Recency bonus: active in last 7 days = +22, last 30 days = +14, last 90 days = +6
+                const recencyBonus = daysSincePush <= 7 ? 22 : daysSincePush <= 30 ? 14 : daysSincePush <= 90 ? 6 : 0;
 
                 const stars = repo.stargazers_count || 0;
                 const forks = repo.forks_count || 0;

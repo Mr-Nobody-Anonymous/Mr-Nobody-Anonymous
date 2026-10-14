@@ -1,27 +1,26 @@
-# TODO.md - Fix Repos/Trophies Section
+# TODO.md - Fix Repos, Badges, Stats & Profile Showcase
 
-## Steps
+## Steps Completed
 
-- [x] Analyze repo structure and understand the issue
+- [x] Analyze repo structure and diagnose non-displaying assets
 - [x] Update `repos.js`:
-  - Add language to output
-  - Better description fallback (use name if empty)
-  - Better scoring (include size, open_issues_count when stars=0)
-  - Format output as a markdown table
-- [x] Update `README.md`:
-  - Remove the outdated static table ("My repositories / work")
-  - Keep `<!-- TOP-REPOS:START -->` / `<!-- TOP-REPOS:END -->` markers intact
-- [x] Run `repos.js` to regenerate the README with proper content
-- [x] Configure and fix GitHub Actions workflow (`.github/workflows/update-repos.yml`) to auto-run `repos.js` every 24h at 06:00 UTC with `contents: write` permissions and `GITHUB_TOKEN` auth
-- [x] Keep Node.js Package release publishing workflow (`.github/workflows/npm-publish-github-packages.yml`)
-- [x] Fix broken trophies badge (402 Payment Required) and GitHub readme stats (503 Service Unavailable) with working endpoints
-- [x] Exclude profile repository from portfolio showcase and add recency bonus & custom fallback descriptions in `repos.js`
-- [x] Build and audit standalone cybersecurity portfolio website in `my_portfolio/`
-  - Accessible Matrix digital rain with reduced-motion support and toggle
-  - Secure, XSS-sanitized interactive cyber terminal CLI
-  - Real verified project showcases with direct GitHub repository links
-  - Genuine CTF and lab platform credentials (TryHackMe & HackTheBox)
-  - Custom SVG favicon, 404 page, and `.nojekyll` for GitHub Pages
-  - GitHub Pages deployment workflow (`.github/workflows/deploy-portfolio.yml`)
-
-
+  - Added language to output
+  - Added custom fallback descriptions for `plaq-os`, `daily-git-digest`, `Cerberus`, `Orion`, `ultrone`, etc.
+  - Enhanced recency scoring (last 7 days = +22, last 30 days = +14, last 90 days = +6)
+  - Formatted output as clean markdown table
+  - Ran `repos.js` to update top repositories
+- [x] Fix non-displaying / broken badges & widgets in `README.md`:
+  - Replaced broken trophies URL (`trophies.vercel.app` was returning an HTML game) with live, working endpoint `github-profile-trophy-nu.vercel.app`
+  - Replaced failing GitHub Readme Stats cards (`github-readme-stats-sigma-five.vercel.app` was returning "Maximum retries exceeded") with the official working `github-readme-stats.vercel.app`
+  - Replaced distorted squashed GitLab social badge with matching 32x32 round SVG icon
+  - Fixed incomplete `⚡ && ⚡` title subtitle with sharp offensive security & AI architect titles
+  - Upgraded header capsule banner with cyberpunk radical palette (`#141321`, `#00f0ff`, `#fe428e`)
+  - Enhanced Certifications & Hands-on Labs section with TryHackMe, HackTheBox, and CTF focus badges
+- [x] Harden GitHub Actions workflows:
+  - Streamlined `.github/workflows/update-repos.yml` with path filtering, node 22, and safe conditional commit-push
+  - Removed duplicate `.github/workflows/update-readme.yml` to avoid push collisions
+  - Fixed `.github/workflows/npm-publish-github-packages.yml` working directory
+- [x] Update portfolio website in `my_portfolio/`:
+  - Added latest projects (`plaq-os` and `arena-ai-android`) to catalog and terminal
+  - Verified full TypeScript compilation and Vite production build
+  - Verified GitHub Pages live deployment assets

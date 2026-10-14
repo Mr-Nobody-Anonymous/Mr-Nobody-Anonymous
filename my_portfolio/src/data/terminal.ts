@@ -100,7 +100,7 @@ export function executeCommand(cmdStr: string, setTheme?: (t: 'green' | 'cyan' |
           'ANIMATION ENGINE:   Motion for React',
           'NETWORK STATUS:     ENCRYPTED / SECURE',
           'THREAT LEVEL:       NOMINAL (SIMULATED)',
-          'ACTIVE REPOSITORIES: 8 public frameworks indexed'
+          `ACTIVE REPOSITORIES: ${PROJECTS.length} public frameworks indexed`
         ]
       };
 

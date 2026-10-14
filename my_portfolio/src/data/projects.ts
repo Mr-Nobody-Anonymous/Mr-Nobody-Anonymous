@@ -208,5 +208,53 @@ export const PROJECTS: Project[] = [
       '[CIPHER] Key scheduling initialized (KSA 256 bytes)',
       '[TEST] Known-answer test vectors: PASS'
     ]
+  },
+  {
+    id: 'plaq-os',
+    name: 'plaq-os',
+    codename: 'OP_QUANTUM_OPTIMIZER',
+    description: 'Fault-Tolerant Quantum Resource Optimizer & Cross-Layer Execution Planner.',
+    longDescription: 'Advanced quantum computing scheduling and resource allocation engine engineered to optimize circuit compilation, gate fidelity routing, and fault-tolerant qubit mapping across heterogeneous quantum architectures.',
+    language: 'Python',
+    category: 'tools',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/plaq-os',
+    tags: ['Quantum Computing', 'Resource Optimization', 'Compilers', 'Python', 'Scheduling'],
+    status: 'ACTIVE',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Topological qubit routing and swap minimizer',
+      'Dynamic noise-aware pulse scheduling',
+      'Fault-tolerant syndrome measurement pipeline'
+    ],
+    telemetryLogs: [
+      '[PLAQ] Quantum compiler initialized: 128 logical qubits',
+      '[SCHEDULE] Cross-layer gate fidelity optimized: 99.84%',
+      '[EXEC] Resource mapping converged in 4.2ms'
+    ]
+  },
+  {
+    id: 'arena-ai-android',
+    name: 'arena-ai-android',
+    codename: 'OP_ARENA_CLIENT',
+    description: 'Unofficial standalone Android client for Arena (arena.ai) with native performance.',
+    longDescription: 'High-performance native mobile client providing direct, low-latency access to multi-model LLM benchmarking arenas, leaderboard tracking, and side-by-side prompt evaluation.',
+    language: 'Java',
+    category: 'ai',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/arena-ai-android',
+    tags: ['Android', 'Java', 'AI Benchmarking', 'Mobile Security', 'REST API'],
+    status: 'ACTIVE',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Native Android runtime with MVVM architecture',
+      'Encrypted client-side token storage',
+      'Streaming token response renderer'
+    ],
+    telemetryLogs: [
+      '[ARENA] Client handshake verified with arena.ai',
+      '[STREAM] Receiving dual-model response tokens...',
+      '[RENDER] UI frame rate steady @ 120fps'
+    ]
   }
 ];
