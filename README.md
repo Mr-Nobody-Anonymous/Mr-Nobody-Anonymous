@@ -34,7 +34,9 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy-nu.vercel.app/?username=Mr-Nobody-Anonymous&theme=radical&no-frame=true&row=1&column=7&margin_w=15" alt="GitHub Trophies" />
+  <a href="https://github.com/Mr-Nobody-Anonymous">
+    <img src="https://raw.githubusercontent.com/Mr-Nobody-Anonymous/Mr-Nobody-Anonymous/main/assets/trophies.svg" alt="GitHub Trophies" />
+  </a>
 </p>
 
 <p align="center">
