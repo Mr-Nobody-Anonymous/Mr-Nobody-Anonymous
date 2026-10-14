@@ -156,17 +156,7 @@ async function main() {
             pinCards.push(rowHtml);
         }
 
-        // 2. Generate Structured Matrix Table
-        const tableHeader = "| # | Project | Domain | Stack | Stars | Description |";
-        const tableSeparator = "|:---:|---------|:------:|:-----:|:-----:|-------------|";
-        const tableRows = ranked
-            .map(
-                (r, i) =>
-                    `| ${i + 1} | [**${r.name}**](${r.url}) | \`${r.domain}\` | ${r.langBadge} | ⭐ ${r.stars} | ${r.desc} |`
-            )
-            .join("\n");
-
-        const output = `### ⚡ Featured Systems & Flagship Repositories\n\n${pinCards.join("\n")}\n\n### 🛠️ Active Arsenal & Repository Directory\n\n${tableHeader}\n${tableSeparator}\n${tableRows}\n\n<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>`;
+        const output = `### ⚡ Featured Systems & Flagship Repositories\n\n${pinCards.join("\n")}\n\n<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>`;
 
         const readmePath = "README.md";
         const readme = fs.readFileSync(readmePath, "utf8");
