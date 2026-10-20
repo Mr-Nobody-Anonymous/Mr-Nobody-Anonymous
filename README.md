@@ -250,10 +250,8 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   <img src="https://img.shields.io/badge/Certifications-In_Progress-f59e0b?style=flat-square&logo=buffer&logoColor=white" alt="Certifications In Progress" />
 </p>
 
-## My repositories / work
 
-<!-- TOP-REPOS:START -->
-<!-- TOP-REPOS:END -->
+
 
 
 
