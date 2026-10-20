@@ -253,22 +253,6 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## My repositories / work
 
 <!-- TOP-REPOS:START -->
-### ⚡ Featured Systems & Flagship Repositories
-
-<p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous/Argus"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=Argus&theme=radical&hide_border=true" alt="Argus" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous/All-skills"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=All-skills&theme=radical&hide_border=true" alt="All-skills" /></a>
-</p>
-<p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous/arena-ai-android"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=arena-ai-android&theme=radical&hide_border=true" alt="arena-ai-android" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous/Orion"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=Orion&theme=radical&hide_border=true" alt="Orion" /></a>
-</p>
-<p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous/Cerberus"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=Cerberus&theme=radical&hide_border=true" alt="Cerberus" /></a>
-  <a href="https://github.com/Mr-Nobody-Anonymous/ultrone"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Mr-Nobody-Anonymous&repo=ultrone&theme=radical&hide_border=true" alt="ultrone" /></a>
-</p>
-
-<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>
 <!-- TOP-REPOS:END -->
 
 
