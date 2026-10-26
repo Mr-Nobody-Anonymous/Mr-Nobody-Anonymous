@@ -20,17 +20,17 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 
 <p align="center">
   <!-- Focus badges (rounded angles) -->
-  <img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=flat&logo=protonvpn&logoColor=white" width="206" height="40">
-  <img alt="AI & ML" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=flat&logo=openai&logoColor=white" width="106" height="40">
-  <img alt="Web Development" src="https://img.shields.io/badge/Web%20Development-22c55e?style=flat&logo=vercel&logoColor=white" width="258" height="40">
+  <img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=flat&logo=protonvpn&logoColor=white">
+  <img alt="AI & ML" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=flat&logo=openai&logoColor=white">
+  <img alt="Web Development" src="https://img.shields.io/badge/Web%20Development-22c55e?style=flat&logo=vercel&logoColor=white">
 </p>
 
 <p align="center">
   <!-- Links row (rounded angles) -->
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" width="130" height="40"></a>
-  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" width="114" height="40"></a>
-  <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white" width="406" height="40"></a>
-  <a href="mailto:bam310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bam310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white" width="406" height="40"></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white"></a>
+  <a href="mailto:bam310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bam310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 </p>
 
 <p align="center">
-  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="My Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=flat&logo=googlechrome&logoColor=black&labelColor=0c142b" width="160" height="40"></a>
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="My Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=flat&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
 </p>
 
 ---
@@ -68,37 +68,37 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 ### 💻 Languages
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,py,java,php,js,ts,bash,html,css,dart&perline=12" height="24" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,py,java,php,js,ts,bash,html,css,dart&perline=12" height="44" alt="Languages" />
 </p>
 
 ### 🌐 Frontend & Backend
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,express,nestjs,flask,django&perline=12" height="24" alt="Frontend & Backend" />
+  <img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,express,nestjs,flask,django&perline=12" height="44" alt="Frontend & Backend" />
 </p>
 
 ### 🗄️ Databases
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb&perline=12" height="24" alt="Databases" />
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb&perline=12" height="44" alt="Databases" />
 </p>
 
 ### 📊 Data Science & Machine Learning
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=tensorflow&perline=12" height="24" alt="TensorFlow" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="24" alt="NumPy" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="24" alt="Pandas" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" height="24" alt="Scikit-Learn" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" height="24" alt="Matplotlib" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="24" alt="Jupyter" />
+  <img src="https://skillicons.dev/icons?i=tensorflow&perline=12" height="44" alt="TensorFlow" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="44" alt="NumPy" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="44" alt="Pandas" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" height="44" alt="Scikit-Learn" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" height="44" alt="Matplotlib" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="44" alt="Jupyter" />
 </p>
 
 ### 📱 Mobile Development
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=flutter,dart&perline=12" height="24" alt="Mobile Development" />
+  <img src="https://skillicons.dev/icons?i=flutter,dart&perline=12" height="44" alt="Mobile Development" />
 </p>
 
 ### 🚀 DevOps, Platforms & Hardware
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,ubuntu,docker,git,github,githubactions,vscode,raspberrypi,arduino&perline=12" height="24" alt="DevOps & Platforms" />
+  <img src="https://skillicons.dev/icons?i=linux,ubuntu,docker,git,github,githubactions,vscode,raspberrypi,arduino&perline=12" height="44" alt="DevOps & Platforms" />
 </p>
 
 ---
@@ -106,10 +106,10 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## 🌐 Socials
 
 <p align="center">
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="16" height="16" alt="GitHub" /></a>&nbsp;
-  <a href="https://www.gitlab.com/bmx310712"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="16" height="16" alt="GitLab" /></a>&nbsp;
-  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="16" height="16" alt="LinkedIn" /></a>&nbsp;
-  <a href="https://discord.com/users/mr.nobody.137"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="16" height="16" alt="Discord" /></a>
+  <a href="https://github.com/Mr-Nobody-Anonymous" target="_blank"><img src="https://skillicons.dev/icons?i=github" height="38" alt="GitHub" /></a>&nbsp;
+  <a href="https://www.gitlab.com/bmx310712" target="_blank"><img src="https://skillicons.dev/icons?i=gitlab" height="38" alt="GitLab" /></a>&nbsp;
+  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank"><img src="https://skillicons.dev/icons?i=linkedin" height="38" alt="LinkedIn" /></a>&nbsp;
+  <a href="https://discord.com/users/mr.nobody.137" target="_blank"><img src="https://skillicons.dev/icons?i=discord" height="38" alt="Discord" /></a>
 </p>
 
 ---
@@ -191,16 +191,16 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 <p align="center">
   <a href="mailto:bmx310712@gmail.com">
-    <img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 1" width="406" height="40" />
+    <img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 1" />
   </a>
   <a href="mailto:bam310712@gmail.com">
-    <img src="https://img.shields.io/badge/Email-bam310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 2" width="406" height="40" />
+    <img src="https://img.shields.io/badge/Email-bam310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 2" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" width="348" height="40" />
+    <img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </p>
 
@@ -217,10 +217,10 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## 🌐 **MY PORTFOLIO**
 
 <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
-  <img src="https://img.shields.io/badge/🚀_VISIT_MY_PORTFOLIO_WEBSITE-00FF66?style=flat&logo=googlechrome&logoColor=000000&labelColor=0a0f1d" alt="My Portfolio Website" width="446" height="40" />
+  <img src="https://img.shields.io/badge/🚀_VISIT_MY_PORTFOLIO_WEBSITE-00FF66?style=flat&logo=googlechrome&logoColor=000000&labelColor=0a0f1d" alt="My Portfolio Website" />
 </a>
 <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
-  <img src="https://img.shields.io/badge/STATUS-ONLINE_ACTIVE-00f0ff?style=flat&logo=statuspal&logoColor=000000&labelColor=0a0f1d" alt="Portfolio Status" width="338" height="40" />
+  <img src="https://img.shields.io/badge/STATUS-ONLINE_ACTIVE-00f0ff?style=flat&logo=statuspal&logoColor=000000&labelColor=0a0f1d" alt="Portfolio Status" />
 </a>
 
 <br><br>
