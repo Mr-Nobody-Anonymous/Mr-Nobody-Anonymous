@@ -19,18 +19,18 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 </div>
 
 <p align="center">
-  <!-- Focus badges -->
-  <img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=for-the-badge&logo=protonvpn&logoColor=white">
-  <img alt="AI & ML" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=for-the-badge&logo=openai&logoColor=white">
-  <img alt="Web Development" src="https://img.shields.io/badge/Web%20Development-22c55e?style=for-the-badge&logo=vercel&logoColor=white">
+  <!-- Focus badges (rounded angles) -->
+  <img alt="Cybersecurity" src="https://img.shields.io/badge/Cybersecurity-0ea5e9?style=flat&logo=protonvpn&logoColor=white">
+  <img alt="AI & ML" src="https://img.shields.io/badge/AI%20%26%20ML-7c3aed?style=flat&logo=openai&logoColor=white">
+  <img alt="Web Development" src="https://img.shields.io/badge/Web%20Development-22c55e?style=flat&logo=vercel&logoColor=white">
 </p>
 
 <p align="center">
-  <!-- Links row -->
-  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="mailto:bam310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bam310712%40gmail.com-ef4444?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <!-- Links row (rounded angles) -->
+  <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white"></a>
+  <a href="mailto:bam310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-bam310712%40gmail.com-ef4444?style=flat&logo=gmail&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 </p>
 
 <p align="center">
-  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="My Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="My Portfolio Website" src="https://img.shields.io/badge/⚡_MY_PORTFOLIO_WEBSITE-LIVE-00FF66?style=flat&logo=googlechrome&logoColor=black&labelColor=0c142b"></a>
 </p>
 
 ---
@@ -64,9 +64,9 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 <div align="center">
 
-### Skills
+## 🛠️ Skills
 
-<!-- Core Languages & Frameworks (Organized logically) -->
+<!-- Core Languages & Frameworks -->
 <p align="center">
   <a href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" title="C" width="36" height="36" />
@@ -142,164 +142,176 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
   </a>
 </p>
 
-<!-- Modern Frontend & Backend Frameworks (Deduplicated) -->
+<!-- Modern Frontend & Backend -->
 <p align="center">
+  <strong>Modern Frontend & Backend</strong>
+  <br>
   <img src="https://skillicons.dev/icons?i=react,css,tailwind,express,nestjs" alt="Modern Frontend & Backend: React, CSS3, Tailwind CSS, Express, NestJS" />
 </p>
 
 <!-- Python Data Science Libraries -->
 <p align="center">
-  <a href="https://numpy.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/NumPy-000000?logo=numpy" alt="NumPy" /></a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Pandas-000000?logo=pandas" alt="Pandas" /></a>
-  <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Scikit--Learn-000000?logo=scikit-learn" alt="Scikit-Learn" /></a>
-  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Matplotlib-000000?logo=matplotlib" alt="Matplotlib" /></a>
-  <a href="https://jupyter.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Jupyter-000000?logo=jupyter" alt="Jupyter" /></a>
+  <strong>Data Science & Machine Learning</strong>
+  <br>
+  <a href="https://numpy.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white" alt="NumPy" /></a>
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white" alt="Pandas" /></a>
+  <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" /></a>
+  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=matplotlib&logoColor=white" /></a>
+  <a href="https://jupyter.org/" target="_blank" rel="noreferrer"><img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" /></a>
 </p>
 
-<!-- Mobile Development & Version Control (Deduplicated) -->
+<!-- Mobile Development & Platform -->
 <p align="center">
+  <strong>Mobile Development & Platform</strong>
+  <br>
   <img src="https://skillicons.dev/icons?i=flutter,dart,github" alt="Mobile Development & Platform: Flutter, Dart, GitHub" />
 </p>
 
 </div>
 
-### Socials
+---
 
-<p align="left">
+<div align="center">
 
+## 🌐 Socials
+
+<p align="center">
   <a href="https://www.github.com/Mr-Nobody-Anonymous" target="_blank" rel="noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" />
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" />
-      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" title="GitHub" />
+      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="36" height="36" alt="GitHub" title="GitHub" />
     </picture>
   </a>
   <a href="https://www.gitlab.com/bmx310712" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="32" height="32" alt="GitLab" title="GitLab" />
+    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/gitlab.svg" width="36" height="36" alt="GitLab" title="GitLab" />
   </a>
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank" rel="noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" />
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" />
-      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" alt="LinkedIn" title="LinkedIn" />
+      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="36" height="36" alt="LinkedIn" title="LinkedIn" />
     </picture>
   </a>
   <a href="https://discord.com/users/mr.nobody.137" target="_blank" rel="noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord-dark.svg" />
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" />
-      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="32" height="32" alt="Discord" title="Discord" />
+      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" width="36" height="36" alt="Discord" title="Discord" />
     </picture>
   </a>
-
 </p>
 
-<br>
-
-## Toolbox (tech & tools)
-
-> These are common tools in my workflow.
-
-### Security
-
-<p>
-  <a href="https://www.kali.org/" target="_blank"><img alt="Kali" src="https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white" /></a>
-  <a href="https://portswigger.net/burp" target="_blank"><img alt="Burp Suite" src="https://img.shields.io/badge/Burp%20Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white" /></a>
-  <a href="https://nmap.org/" target="_blank"><img alt="Nmap" src="https://img.shields.io/badge/Nmap-004d7a?style=for-the-badge&logoColor=white" /></a>
-  <a href="https://www.wireshark.org/" target="_blank"><img alt="Wireshark" src="https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" /></a>
-  <a href="https://www.metasploit.com/" target="_blank"><img alt="Metasploit" src="https://img.shields.io/badge/Metasploit-0b1320?style=for-the-badge&logoColor=white" /></a>
-  <a href="https://owasp.org/" target="_blank"><img alt="OWASP" src="https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white" /></a>
-</p>
-
-### Programming
-
-<p>
-  <a href="https://www.python.org/" target="_blank"><img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /></a>
-  <a href="https://en.cppreference.com/w/c" target="_blank"><img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=000" /></a>
-  <a href="https://isocpp.org/" target="_blank"><img alt="C%2B%2B" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" /></a>
-  <a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank"><img alt="C%23" src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" /></a>
-  <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank"><img alt="Assembly" src="https://img.shields.io/badge/Assembly-6E4C13?style=for-the-badge&logoColor=white" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /></a>
-  <a href="https://www.typescriptlang.org/" target="_blank"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" /></a>
-  <a href="https://go.dev/" target="_blank"><img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /></a>
-  <a href="https://www.rust-lang.org/" target="_blank"><img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" /></a>
-  <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" /></a>
-  <a href="https://learn.microsoft.com/powershell/" target="_blank"><img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" /></a>
-  <a href="https://dart.dev/" target="_blank"><img alt="Dart" src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" /></a>
-</p>
-
-### Web / Backend
-
-<p>
-  <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"><img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /></a>
-  <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"><img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /></a>
-  <a href="https://www.php.net/" target="_blank"><img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" /></a>
-  <a href="https://www.postgresql.org/docs/" target="_blank"><img alt="SQL" src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" /></a>
-  <a href="https://nodejs.org/" target="_blank"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /></a>
-  <a href="https://expressjs.com/" target="_blank"><img alt="Express" src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" /></a>
-  <a href="https://react.dev/" target="_blank"><img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /></a>
-  <a href="https://nextjs.org/" target="_blank"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" /></a>
-  <a href="https://flask.palletsprojects.com/" target="_blank"><img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /></a>
-  <a href="https://tailwindcss.com/" target="_blank"><img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" /></a>
-  <a href="https://nestjs.com/" target="_blank"><img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" /></a>
-</p>
-
-### Data Science & Machine Learning
-
-<p>
-  <a href="https://numpy.org/" target="_blank"><img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" /></a>
-  <a href="https://pandas.pydata.org/" target="_blank"><img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" /></a>
-  <a href="https://scikit-learn.org/" target="_blank"><img alt="Scikit-Learn" src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" /></a>
-  <a href="https://matplotlib.org/" target="_blank"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=matplotlib&logoColor=white" /></a>
-  <a href="https://jupyter.org/" target="_blank"><img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" /></a>
-</p>
-
-### Mobile Development
-
-<p>
-  <a href="https://flutter.dev/" target="_blank"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" /></a>
-  <a href="https://dart.dev/" target="_blank"><img alt="Dart" src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" /></a>
-</p>
-
-### DevOps / Platforms
-
-<p>
-  <a href="https://www.docker.com/" target="_blank"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /></a>
-  <a href="https://www.kernel.org/" target="_blank"><img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=000" /></a>
-  <a href="https://git-scm.com/" target="_blank"><img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" /></a>
-  <a href="https://github.com/features/actions" target="_blank"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /></a>
-</p>
+</div>
 
 ---
 
-<h2>📚 Certifications & Hands-on Labs</h2>
+<div align="center">
 
-<p>
-  🔭 Focus areas:
-  <strong>Offensive Security & Pentesting</strong> •
-  <strong>Web Application Exploitation</strong> •
-  <strong>Threat Modeling & Defense</strong>
+## 🧰 Toolbox (tech & tools)
+
+<p align="center"><em>These are common tools in my workflow.</em></p>
+
+### 🛡️ Security
+
+<p align="center">
+  <a href="https://www.kali.org/" target="_blank"><img alt="Kali" src="https://img.shields.io/badge/Kali%20Linux-557C94?style=flat&logo=kalilinux&logoColor=white" /></a>
+  <a href="https://portswigger.net/burp" target="_blank"><img alt="Burp Suite" src="https://img.shields.io/badge/Burp%20Suite-FF6633?style=flat&logo=burpsuite&logoColor=white" /></a>
+  <a href="https://nmap.org/" target="_blank"><img alt="Nmap" src="https://img.shields.io/badge/Nmap-004d7a?style=flat&logoColor=white" /></a>
+  <a href="https://www.wireshark.org/" target="_blank"><img alt="Wireshark" src="https://img.shields.io/badge/Wireshark-1679A7?style=flat&logo=wireshark&logoColor=white" /></a>
+  <a href="https://www.metasploit.com/" target="_blank"><img alt="Metasploit" src="https://img.shields.io/badge/Metasploit-0b1320?style=flat&logoColor=white" /></a>
+  <a href="https://owasp.org/" target="_blank"><img alt="OWASP" src="https://img.shields.io/badge/OWASP-000000?style=flat&logo=owasp&logoColor=white" /></a>
 </p>
 
-<p>
+### 💻 Programming
+
+<p align="center">
+  <a href="https://www.python.org/" target="_blank"><img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" /></a>
+  <a href="https://en.cppreference.com/w/c" target="_blank"><img alt="C" src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=000" /></a>
+  <a href="https://isocpp.org/" target="_blank"><img alt="C%2B%2B" src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white" /></a>
+  <a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank"><img alt="C%23" src="https://img.shields.io/badge/C%23-512BD4?style=flat&logo=csharp&logoColor=white" /></a>
+  <a href="https://en.wikipedia.org/wiki/Assembly_language" target="_blank"><img alt="Assembly" src="https://img.shields.io/badge/Assembly-6E4C13?style=flat&logoColor=white" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" /></a>
+  <a href="https://www.typescriptlang.org/" target="_blank"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" /></a>
+  <a href="https://go.dev/" target="_blank"><img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" /></a>
+  <a href="https://www.rust-lang.org/" target="_blank"><img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white" /></a>
+  <a href="https://www.gnu.org/software/bash/" target="_blank"><img alt="Bash" src="https://img.shields.io/badge/Bash-121011?style=flat&logo=gnu-bash&logoColor=white" /></a>
+  <a href="https://learn.microsoft.com/powershell/" target="_blank"><img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-5391FE?style=flat&logo=powershell&logoColor=white" /></a>
+  <a href="https://dart.dev/" target="_blank"><img alt="Dart" src="https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white" /></a>
+</p>
+
+### 🌐 Web / Backend
+
+<p align="center">
+  <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank"><img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" /></a>
+  <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank"><img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" /></a>
+  <a href="https://www.php.net/" target="_blank"><img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" /></a>
+  <a href="https://www.postgresql.org/docs/" target="_blank"><img alt="SQL" src="https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white" /></a>
+  <a href="https://nodejs.org/" target="_blank"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white" /></a>
+  <a href="https://expressjs.com/" target="_blank"><img alt="Express" src="https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white" /></a>
+  <a href="https://react.dev/" target="_blank"><img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" /></a>
+  <a href="https://nextjs.org/" target="_blank"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white" /></a>
+  <a href="https://flask.palletsprojects.com/" target="_blank"><img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white" /></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white" /></a>
+  <a href="https://nestjs.com/" target="_blank"><img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white" /></a>
+</p>
+
+### 📊 Data Science & Machine Learning
+
+<p align="center">
+  <a href="https://numpy.org/" target="_blank"><img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white" /></a>
+  <a href="https://pandas.pydata.org/" target="_blank"><img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white" /></a>
+  <a href="https://scikit-learn.org/" target="_blank"><img alt="Scikit-Learn" src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn&logoColor=white" /></a>
+  <a href="https://matplotlib.org/" target="_blank"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=matplotlib&logoColor=white" /></a>
+  <a href="https://jupyter.org/" target="_blank"><img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" /></a>
+</p>
+
+### 📱 Mobile Development
+
+<p align="center">
+  <a href="https://flutter.dev/" target="_blank"><img alt="Flutter" src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white" /></a>
+  <a href="https://dart.dev/" target="_blank"><img alt="Dart" src="https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white" /></a>
+</p>
+
+### 🚀 DevOps / Platforms
+
+<p align="center">
+  <a href="https://www.docker.com/" target="_blank"><img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" /></a>
+  <a href="https://www.kernel.org/" target="_blank"><img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=000" /></a>
+  <a href="https://git-scm.com/" target="_blank"><img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" /></a>
+  <a href="https://github.com/features/actions" target="_blank"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white" /></a>
+</p>
+
+</div>
+
+---
+
+<div align="center">
+
+## 📚 Certifications & Hands-on Labs
+
+<p align="center">
+  🔭 <strong>Focus areas:</strong> Offensive Security & Pentesting • Web Application Exploitation • Threat Modeling & Defense
+</p>
+
+<p align="center">
   <a href="https://tryhackme.com/p/Mr.nobody.">
-    <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody.-C1272D?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe Profile" />
+    <img src="https://img.shields.io/badge/TryHackMe-Mr.nobody.-C1272D?style=flat&logo=tryhackme&logoColor=white" alt="TryHackMe Profile" />
   </a>
   <a href="https://app.hackthebox.com/users/2355243">
-    <img src="https://img.shields.io/badge/HackTheBox-2355243-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=000000" alt="HackTheBox Profile" />
+    <img src="https://img.shields.io/badge/HackTheBox-2355243-9FEF00?style=flat&logo=hackthebox&logoColor=000000" alt="HackTheBox Profile" />
   </a>
 </p>
 
-<p>
-  <img src="https://img.shields.io/badge/Lab_Status-Active_Practitioner-00f0ff?style=flat-square&logo=terminal&logoColor=white" alt="Lab Status" />
-  <img src="https://img.shields.io/badge/CTF_Focus-Web_|_Recon_|_Crypto-fe428e?style=flat-square&logo=target&logoColor=white" alt="CTF Focus" />
-  <img src="https://img.shields.io/badge/Certifications-In_Progress-f59e0b?style=flat-square&logo=buffer&logoColor=white" alt="Certifications In Progress" />
+<p align="center">
+  <img src="https://img.shields.io/badge/Lab_Status-Active_Practitioner-00f0ff?style=flat&logo=terminal&logoColor=000000" alt="Lab Status" />
+  <img src="https://img.shields.io/badge/CTF_Focus-Web_|_Recon_|_Crypto-fe428e?style=flat&logo=target&logoColor=white" alt="CTF Focus" />
+  <img src="https://img.shields.io/badge/Certifications-In_Progress-f59e0b?style=flat&logo=buffer&logoColor=white" alt="Certifications In Progress" />
 </p>
 
+</div>
 
-
-
-
+---
 
 ## 📊 GitHub Stats
 
@@ -323,26 +335,30 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 ---
 
-<h2 align="center">📬 Contact Me</h2>
+<div align="center">
+
+## 📬 Contact Me
 
 <p align="center">
   <a href="mailto:bmx310712@gmail.com">
-    <img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 1" />
+    <img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 1" />
   </a>
   <a href="mailto:bam310712@gmail.com">
-    <img src="https://img.shields.io/badge/Email-bam310712%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email 2" />
+    <img src="https://img.shields.io/badge/Email-bam310712%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" alt="Email 2" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </p>
 
 <p align="center">
   💡 Feel free to reach out for collaborations, projects, or just to connect!
 </p>
+
+</div>
 
 ---
 
@@ -351,10 +367,10 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 ## 🌐 **MY PORTFOLIO**
 
 <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
-  <img src="https://img.shields.io/badge/🚀_VISIT_MY_PORTFOLIO_WEBSITE-00FF66?style=for-the-badge&logo=googlechrome&logoColor=000000&labelColor=0a0f1d" alt="My Portfolio Website" />
+  <img src="https://img.shields.io/badge/🚀_VISIT_MY_PORTFOLIO_WEBSITE-00FF66?style=flat&logo=googlechrome&logoColor=000000&labelColor=0a0f1d" alt="My Portfolio Website" />
 </a>
 <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
-  <img src="https://img.shields.io/badge/STATUS-ONLINE_ACTIVE-00f0ff?style=for-the-badge&logo=statuspal&logoColor=000000&labelColor=0a0f1d" alt="Portfolio Status" />
+  <img src="https://img.shields.io/badge/STATUS-ONLINE_ACTIVE-00f0ff?style=flat&logo=statuspal&logoColor=000000&labelColor=0a0f1d" alt="Portfolio Status" />
 </a>
 
 <br><br>
