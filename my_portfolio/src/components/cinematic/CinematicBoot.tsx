@@ -9,7 +9,7 @@ const BOOT_LINES = [
   '> Initializing...',
   '> Loading identity...',
   '> ERROR: Identity not found.',
-  '> Loading Mr. Nobody Anonymous...'
+  '> Loading Beamlak Sintayehu...'
 ];
 
 export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
@@ -71,7 +71,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
   const triggerGlitch = () => {
     setIsGlitching(true);
     const chars = '!@#$%^&*()_+-=[]{}|;:,.<>?/01';
-    const original = '> Loading Mr. Nobody Anonymous...';
+    const original = '> Loading Beamlak Sintayehu...';
     let count = 0;
 
     const glitchInterval = setInterval(() => {

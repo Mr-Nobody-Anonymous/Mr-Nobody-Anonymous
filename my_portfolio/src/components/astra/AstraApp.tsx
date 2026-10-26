@@ -42,12 +42,12 @@ const filters: { id: 'all' | ProjectCategory; label: string }[] = [
 
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
-    <a href="#home" className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Mr. Nobody, back to top">
+    <a href="#home" className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Beamlak Sintayehu, back to top">
       <svg className="brand-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path d="M10 3H3v7M22 3h7v7M29 22v7h-7M10 29H3v-7" stroke="currentColor" strokeWidth="1.4" />
         <path d="M10 23V9l12 14V9" stroke="currentColor" strokeWidth="2.2" />
       </svg>
-      <span>MR. NOBODY<span className="accent">.</span></span>
+      <span>BEAMLAK SINTAYEHU<span className="accent">.</span></span>
     </a>
   );
 }
@@ -273,9 +273,9 @@ export default function AstraApp() {
                 <motion.p className="hero-eyebrow" initial={motionEnabled ? { opacity: 0, y: 10 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
                   <span />NOT EVERYONE NEEDS TO KNOW YOUR NAME.
                 </motion.p>
-                <h1 id="hero-title" aria-label="Mr. Nobody.">
-                  <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>MR.</motion.span></span>
-                  <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.95, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>NOBODY<span className="accent">.</span></motion.span></span>
+                <h1 id="hero-title" aria-label="Beamlak Sintayehu.">
+                  <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.9, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}>BEAMLAK</motion.span></span>
+                  <span className="title-line"><motion.span initial={motionEnabled ? { y: '110%' } : false} animate={{ y: 0 }} transition={{ duration: 0.95, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>SINTAYEHU<span className="accent">.</span></motion.span></span>
                 </h1>
                 <motion.div initial={motionEnabled ? { opacity: 0, y: 20 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.65 }}>
                   <p className="hero-tagline">Breaking systems. Building possibilities.</p>
@@ -476,7 +476,7 @@ export default function AstraApp() {
               <a className="back-to-top" href="#home">BACK TO TOP <ArrowUp size={13} /></a>
             </div>
             <div className="footer-bottom">
-              <span>&copy; {new Date().getFullYear()} MR. NOBODY / BAM SINTU</span>
+              <span>&copy; {new Date().getFullYear()} BEAMLAK SINTAYEHU</span>
               <span className="footer-philosophy">BUILT WITH CURIOSITY. SECURED BY DESIGN.</span>
               <button className="motion-toggle" onClick={toggleMotion} aria-pressed={!motionEnabled} aria-label="Pause ambient motion" title={motionEnabled ? 'Pause motion' : 'Resume motion'}>
                 {motionEnabled ? <Pause size={11} /> : <Play size={11} />} MOTION {motionEnabled ? 'ON' : 'OFF'}

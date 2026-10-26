@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               color: '#E8F7FF'
             }}
           >
-            MR.NOBODY
+            BEAMLAK SINTAYEHU
           </span>
           <span
             style={{

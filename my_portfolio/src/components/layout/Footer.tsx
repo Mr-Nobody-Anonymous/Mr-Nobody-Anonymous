@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
             margin: '0 0 0.4rem 0'
           }}
         >
-          MR. NOBODY
+          BEAMLAK SINTAYEHU
         </h3>
 
         {/* Subtitle */}
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div style={{ fontSize: '0.75rem', color: '#7F8C9A', letterSpacing: '0.06em' }}>
-          © 2026 MR. NOBODY. All systems operational.
+          © 2026 BEAMLAK SINTAYEHU. All systems operational.
         </div>
       </div>
 

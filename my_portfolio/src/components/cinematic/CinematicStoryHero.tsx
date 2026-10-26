@@ -171,7 +171,7 @@ export const CinematicStoryHero: React.FC<CinematicStoryHeroProps> = ({
               transition: 'opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.9s ease'
             }}
           >
-            MR.
+            BEAMLAK
           </span>
 
           {/* NOBODY (1.25s entrance: dominant, huge Space Grotesk) */}
@@ -188,7 +188,7 @@ export const CinematicStoryHero: React.FC<CinematicStoryHeroProps> = ({
               transition: 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease'
             }}
           >
-            NOBODY
+            SINTAYEHU
           </span>
         </h1>
 

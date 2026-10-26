@@ -11,7 +11,7 @@ export default function ContactForm() {
   const [draftReady, setDraftReady] = useState(false);
   const [copyStatus, setCopyStatus] = useState('');
   const heading = useRef<HTMLHeadingElement>(null);
-  const body = `Hi Bam,\n\n${message}\n\nFrom: ${name}\nReply to: ${email}`;
+  const body = `Hi Beamlak,\n\n${message}\n\nFrom: ${name}\nReply to: ${email}`;
   const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(`[Portfolio] ${subject}`)}&body=${encodeURIComponent(body)}`;
 
   useEffect(() => {

@@ -84,7 +84,7 @@ export const CyberTerminal: React.FC<CyberTerminalProps> = ({ setTheme }) => {
                   color: 'var(--text-muted)'
                 }}
               >
-                bash - mrnobody@security-node: ~
+                bash - beamlak@security-node: ~
               </span>
             </div>
 
@@ -171,7 +171,7 @@ export const CyberTerminal: React.FC<CyberTerminalProps> = ({ setTheme }) => {
             }}
           >
             <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent)', fontWeight: 600, fontSize: '0.85rem' }}>
-              visitor@mrnobody:~$
+              visitor@beamlak:~$
             </span>
 
             <div style={{ position: 'relative', flex: 1, display: 'flex', alignItems: 'center' }}>

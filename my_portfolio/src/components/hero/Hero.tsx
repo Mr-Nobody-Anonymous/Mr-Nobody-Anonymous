@@ -84,9 +84,9 @@ export const Hero: React.FC<HeroProps> = ({ theme = 'green' }) => {
                 color: 'var(--text-primary)'
               }}
             >
-              MR. NOBODY
+              BEAMLAK SINTAYEHU
               <span style={{ display: 'block', color: 'var(--accent)', fontSize: '0.6em', fontFamily: 'var(--font-mono)', marginTop: '0.2rem' }}>
-                &lt;BAM SINTU /&gt;
+                &lt;BEAMLAK SINTAYEHU /&gt;
               </span>
             </motion.h1>
 

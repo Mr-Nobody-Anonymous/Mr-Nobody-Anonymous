@@ -191,7 +191,7 @@ export const IdentityCard: React.FC = () => {
                   margin: '0 0 0.5rem 0'
                 }}
               >
-                MR. NOBODY
+                BEAMLAK SINTAYEHU
               </h3>
               <div style={{ fontSize: '0.9rem', color: '#00F5FF', letterSpacing: '0.04em' }}>
                 Cybersecurity Practitioner <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span> AI Systems Explorer

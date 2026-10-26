@@ -52,7 +52,7 @@ export function executeCommand(cmdStr: string, setTheme?: (t: 'green' | 'cyan' |
       return {
         type: 'success',
         content: [
-          'OPERATOR: Bam Sintu (Mr. Nobody)',
+          'OPERATOR: Beamlak Sintayehu',
           'ROLE:     Cybersecurity Practitioner & AI Systems Explorer',
           'FOCUS:    Offensive Security, Threat Modeling & Autonomous Tooling',
           'STATUS:   ONLINE & VERIFIED'

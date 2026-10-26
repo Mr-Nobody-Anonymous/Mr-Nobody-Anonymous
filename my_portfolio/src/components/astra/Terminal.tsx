@@ -21,7 +21,7 @@ interface TerminalProps {
 const welcome: TerminalEntry = {
   id: 0,
   command: 'whoami',
-  output: 'Mr. Nobody.\nSecurity practitioner. AI explorer. Perpetually curious.\n\nNo black magic. Just a different way to explore.\nType "help" to see what you can do.',
+  output: 'Beamlak Sintayehu.\nSecurity practitioner. AI explorer. Perpetually curious.\n\nNo black magic. Just a different way to explore.\nType "help" to see what you can do.',
 };
 
 export default function Terminal({ onOpenProject, onContact, onToggleMotion, motionEnabled, onExit, autofocus = false }: TerminalProps) {
@@ -59,7 +59,7 @@ export default function Terminal({ onOpenProject, onContact, onToggleMotion, mot
         output = 'AVAILABLE COMMANDS\n\nwhoami          The person behind the handle\nskills          Explore the toolkit\nprojects        List selected projects\nopen <project>  Inspect argus, cerberus, or ultrone\ncontact         Start a conversation\ncat mission.txt Read the philosophy\nmotion          Toggle ambient animation\ndate            Your current local date\nclear           Clear this terminal\nexit            Leave or reset the session\n\nTip: use the up/down arrows for command history.\nThis is a portfolio sandbox, not a real system shell.';
         break;
       case 'whoami':
-        output = "Bam Sintu, a.k.a. Mr. Nobody.\n\nA cybersecurity-focused technologist exploring\noffensive security, autonomous AI, and secure systems.\n\nThe name is anonymous. The curiosity isn't.";
+        output = "Beamlak Sintayehu.\n\nA cybersecurity-focused technologist exploring\noffensive security, autonomous AI, and secure systems.\n\nThe curiosity never stops.";
         break;
       case 'skills':
         output = 'SECURITY  Kali Linux / Burp Suite / Nmap / Wireshark\nAI        Python / PyTorch / OpenCV / Agent runtimes\nBUILD     React / TypeScript / Node.js / Flask\nSYSTEMS   Linux / Bash / Docker / Git\n\nTools change. The mindset keeps evolving.';

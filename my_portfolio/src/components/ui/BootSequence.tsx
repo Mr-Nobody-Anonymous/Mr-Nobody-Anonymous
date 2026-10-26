@@ -81,7 +81,7 @@ export const BootSequence: React.FC<BootSequenceProps> = ({ onComplete }) => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
             <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--accent)', boxShadow: '0 0 10px var(--accent)' }} />
             <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', letterSpacing: '0.1em' }}>
-              BOOT DIAGNOSTICS // MR. NOBODY
+              BOOT DIAGNOSTICS // BEAMLAK SINTAYEHU
             </span>
           </div>
 

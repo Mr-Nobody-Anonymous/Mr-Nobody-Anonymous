@@ -4,7 +4,7 @@ Repo: Mr-Nobody-Anonymous/Mr-Nobody-Anonymous
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141321,50:00f0ff,100:fe428e&height=220&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Mr.nobody%20" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141321,50:00f0ff,100:fe428e&height=220&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&text=Hi%20👋%2C%20I%27m%20Beamlak%20Sintayehu%20" alt="Header" />
 </p>
 
 <div align="center">
@@ -290,7 +290,7 @@ I'm a cybersecurity-focused technologist who enjoys building secure systems and 
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Bam%20Sintu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </p>
 

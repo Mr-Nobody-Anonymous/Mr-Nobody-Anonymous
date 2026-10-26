@@ -42,7 +42,7 @@ export const TerminalLine: React.FC<TerminalLineProps> = ({ entry }) => {
       {command && (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
           <span style={{ color: 'var(--text-muted)', fontSize: '0.72rem' }}>[{timestamp}]</span>
-          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>visitor@mrnobody:~$</span>
+          <span style={{ color: 'var(--accent)', fontWeight: 600 }}>visitor@beamlak:~$</span>
           <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{command}</span>
         </div>
       )}

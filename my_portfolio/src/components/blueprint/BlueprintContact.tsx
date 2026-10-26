@@ -68,7 +68,7 @@ export const BlueprintContact: React.FC<BlueprintContactProps> = ({ onGlitchEast
 
     setTimeout(() => {
       // Open mailto fallback and show success
-      const body = `Hi Mr. Nobody,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`;
+      const body = `Hi Beamlak,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`;
       window.location.href = `mailto:${EMAIL}?subject=[Contact]%20Transmission&body=${encodeURIComponent(body)}`;
       setFormState('sent');
 

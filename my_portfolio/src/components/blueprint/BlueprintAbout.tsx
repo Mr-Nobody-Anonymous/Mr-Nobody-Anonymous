@@ -62,7 +62,7 @@ export const BlueprintAbout: React.FC = () => {
             />
           </motion.div>
 
-          {/* Heading: WHO IS MR. NOBODY? */}
+          {/* Heading: WHO IS BEAMLAK SINTAYEHU? */}
           <div style={{ position: 'relative', marginBottom: '2.5rem' }}>
             <h2
               style={{
@@ -78,7 +78,7 @@ export const BlueprintAbout: React.FC = () => {
                 gap: '0.65rem'
               }}
             >
-              {['WHO', 'IS', 'MR.', 'NOBODY?'].map((word, idx) => (
+              {['WHO', 'IS', 'BEAMLAK', 'SINTAYEHU?'].map((word, idx) => (
                 <motion.span
                   key={word}
                   initial={{ opacity: 0, x: -30 }}

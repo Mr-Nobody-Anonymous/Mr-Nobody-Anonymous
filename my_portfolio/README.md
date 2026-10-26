@@ -1,4 +1,4 @@
-# Mr. Nobody // Cybersecurity & AI Systems Portfolio 2.0
+# Beamlak Sintayehu // Cybersecurity & AI Systems Portfolio 2.0
 
 > Premium interactive cybersecurity operations console and developer portfolio built with **React 19**, **TypeScript**, **Vite**, and **Motion (`motion/react`)**.
 

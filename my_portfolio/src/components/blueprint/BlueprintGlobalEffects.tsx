@@ -21,7 +21,7 @@ export const BlueprintGlobalEffects: React.FC<BlueprintGlobalEffectsProps> = ({ 
    ██║   ╚██████╔╝╚██████╔╝
    ╚═╝    ╚═════╝  ╚═════╝
 FOUND THE CONSOLE. YOU'RE CURIOUS. I LIKE THAT.
-— Mr. Nobody Anonymous
+— Beamlak Sintayehu
 `,
       'color: #00f0ff; font-family: monospace; font-weight: bold; font-size: 13px; text-shadow: 0 0 5px #00f0ff;'
     );

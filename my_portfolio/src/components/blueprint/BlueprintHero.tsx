@@ -15,7 +15,7 @@ export const BlueprintHero: React.FC<BlueprintHeroProps> = ({ onScrollToAbout })
   const [taglineVisible, setTaglineVisible] = useState(false);
 
   // Title hover glitch state
-  const [titleText, setTitleText] = useState('MR. NOBODY');
+  const [titleText, setTitleText] = useState('BEAMLAK SINTAYEHU');
   const [isTitleGlitching, setIsTitleGlitching] = useState(false);
 
   const fullSubtitle = 'ANONYMOUS';
@@ -52,7 +52,7 @@ export const BlueprintHero: React.FC<BlueprintHeroProps> = ({ onScrollToAbout })
     if (isTitleGlitching) return;
     setIsTitleGlitching(true);
     const symbols = '!@#$%^&*<>[]{}';
-    const original = 'MR. NOBODY';
+    const original = 'BEAMLAK SINTAYEHU';
     let count = 0;
 
     const interval = setInterval(() => {
@@ -164,10 +164,10 @@ export const BlueprintHero: React.FC<BlueprintHeroProps> = ({ onScrollToAbout })
           }}
         >
           <motion.span style={{ x: mrX, opacity: titleOpacity, display: 'inline-block' }}>
-            {titleText.split(' ')[0] || 'MR.'}
+            {titleText.split(' ')[0] || 'BEAMLAK'}
           </motion.span>
           <motion.span style={{ x: nobodyX, opacity: titleOpacity, display: 'inline-block' }}>
-            {titleText.split(' ')[1] || 'NOBODY'}
+            {titleText.split(' ').slice(1).join(' ') || 'SINTAYEHU'}
           </motion.span>
         </div>
 

@@ -17,7 +17,7 @@ export const CyberEasterEggs: React.FC<CyberEasterEggsProps> = ({
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalHistory, setTerminalHistory] = useState<string[]>([
-    'MR. NOBODY KERNEL v4.19.0-26-amd64',
+    'BEAMLAK SINTAYEHU KERNEL v4.19.0-26-amd64',
     "Type 'help' for available root directives."
   ]);
 

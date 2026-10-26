@@ -23,7 +23,7 @@ function Word({ children, progress, range, enabled, accent }: { children: string
 export function ScrollStatement({ enabled }: { enabled: boolean }) {
   const element = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({ target: element, offset: ['start 0.93', 'end 0.48'] });
-  const words = "I'm Bam Sintu. A security-first technologist exploring the space between how systems are built and how they break.".split(' ');
+  const words = "I'm Beamlak Sintayehu. A security-first technologist exploring the space between how systems are built and how they break.".split(' ');
 
   return (
     <p className="scroll-statement" ref={element}>

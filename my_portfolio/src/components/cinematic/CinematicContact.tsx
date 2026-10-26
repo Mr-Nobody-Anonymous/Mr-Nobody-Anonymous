@@ -113,7 +113,7 @@ export const CinematicContact: React.FC = () => {
             marginBottom: '3rem'
           }}
         >
-          Ready to connect with Mr. Nobody?
+          Ready to connect with Beamlak Sintayehu?
         </motion.p>
 
         {/* Interactive Magnetic Button: INITIATE CONTACT -> INITIALIZING -> CONNECTION ESTABLISHED */}

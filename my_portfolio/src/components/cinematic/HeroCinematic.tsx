@@ -17,7 +17,7 @@ const BOOT_LOGS = [
   'INITIALIZING SYSTEM...',
   'LOADING IDENTITY MODULE...',
   'ACCESSING UNKNOWN NODE [45.192.88.10]...',
-  'IDENTITY: MR. NOBODY',
+  'IDENTITY: BEAMLAK SINTAYEHU',
   'STATUS: ONLINE'
 ];
 
@@ -83,7 +83,7 @@ export const HeroCinematic: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Canvas particle morphing engine: "MR. NOBODY" -> "WHO IS MR. NOBODY?" (Section 2)
+  // Canvas particle morphing engine: "BEAMLAK SINTAYEHU" -> "WHO IS BEAMLAK SINTAYEHU?" (Section 2)
   useEffect(() => {
     if (isReducedMotion || bootPhase !== 'active') return;
 
@@ -143,12 +143,12 @@ export const HeroCinematic: React.FC = () => {
 
     const initParticles = () => {
       const fontSize = Math.min(width * 0.12, 110);
-      let phase1 = getPointsFromText(['MR. NOBODY'], fontSize, 'Space Grotesk, sans-serif');
-      let phase2 = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
+      let phase1 = getPointsFromText(['BEAMLAK SINTAYEHU'], fontSize, 'Space Grotesk, sans-serif');
+      let phase2 = getPointsFromText(['WHO IS', 'BEAMLAK SINTAYEHU?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
 
       if (phase1.length === 0) {
-        phase1 = getPointsFromText(['MR. NOBODY'], fontSize, 'Arial, sans-serif');
-        phase2 = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Arial, sans-serif');
+        phase1 = getPointsFromText(['BEAMLAK SINTAYEHU'], fontSize, 'Arial, sans-serif');
+        phase2 = getPointsFromText(['WHO IS', 'BEAMLAK SINTAYEHU?'], fontSize * 0.85, 'Arial, sans-serif');
       }
 
       if (phase1.length === 0) return;
@@ -192,7 +192,7 @@ export const HeroCinematic: React.FC = () => {
         let destY: number;
 
         if (p < 0.2) {
-          // Phase 1: Solid "MR. NOBODY"
+          // Phase 1: Solid "BEAMLAK SINTAYEHU"
           destX = pt.originX;
           destY = pt.originY;
         } else if (p < 0.65) {
@@ -203,7 +203,7 @@ export const HeroCinematic: React.FC = () => {
           destX = centerX + Math.cos(angle) * radius + (Math.random() - 0.5) * 50;
           destY = centerY + Math.sin(angle) * radius + (Math.random() - 0.5) * 50;
         } else {
-          // Phase 2: Reorganize into "WHO IS MR. NOBODY?"
+          // Phase 2: Reorganize into "WHO IS BEAMLAK SINTAYEHU?"
           const finalP = (p - 0.65) / 0.35;
           destX = pt.originX + (pt.targetX - pt.originX) * finalP;
           destY = pt.originY + (pt.targetY - pt.originY) * finalP;
@@ -293,7 +293,7 @@ export const HeroCinematic: React.FC = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                   <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#A3FF12', boxShadow: '0 0 8px #A3FF12' }} />
                   <span style={{ fontSize: '0.78rem', color: '#E8F7FF', fontWeight: 700 }}>
-                    BOOT SEQUENCE // MR. NOBODY
+                    BOOT SEQUENCE // BEAMLAK SINTAYEHU
                   </span>
                 </div>
                 <button
@@ -351,7 +351,7 @@ export const HeroCinematic: React.FC = () => {
                     margin: '0 0 1rem 0'
                   }}
                 >
-                  MR. NOBODY
+                  BEAMLAK SINTAYEHU
                 </h1>
                 <p style={{ fontFamily: 'var(--font-mono)', color: '#00E5FF', letterSpacing: '0.12em' }}>
                   Cybersecurity × AI × Systems

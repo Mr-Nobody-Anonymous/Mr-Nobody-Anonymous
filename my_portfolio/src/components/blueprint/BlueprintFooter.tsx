@@ -56,7 +56,7 @@ export const BlueprintFooter: React.FC = () => {
             letterSpacing: '0.04em'
           }}
         >
-          Built by Mr. Nobody Anonymous
+          Built by Beamlak Sintayehu
         </p>
 
         {/* Line 2: Copyright notice */}

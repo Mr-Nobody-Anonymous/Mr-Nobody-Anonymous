@@ -16,7 +16,7 @@ export function useTerminal(setTheme?: (t: 'green' | 'cyan' | 'crimson') => void
         type: 'banner',
         content: [
           '╔══════════════════════════════════════════════════════════════╗',
-          '║  MR. NOBODY // CYBERSECURITY INTELLIGENCE TERMINAL v2.4      ║',
+          '║  BEAMLAK SINTAYEHU // CYBERSECURITY INTELLIGENCE TERMINAL v2.4 ║',
           '║  Type "help" to display operational commands.                ║',
           '╚══════════════════════════════════════════════════════════════╝'
         ]

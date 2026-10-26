@@ -103,13 +103,13 @@ export const ParticleHero: React.FC = () => {
 
     const initParticles = () => {
       const fontSize = Math.min(width * 0.12, 110);
-      let phase1Points = getPointsFromText(['MR. NOBODY'], fontSize, 'Space Grotesk, sans-serif');
-      let phase2Points = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
+      let phase1Points = getPointsFromText(['BEAMLAK SINTAYEHU'], fontSize, 'Space Grotesk, sans-serif');
+      let phase2Points = getPointsFromText(['WHO IS', 'BEAMLAK SINTAYEHU?'], fontSize * 0.85, 'Space Grotesk, sans-serif');
 
       // Fallback to system font if custom font hasn't rendered pixels yet
       if (phase1Points.length === 0) {
-        phase1Points = getPointsFromText(['MR. NOBODY'], fontSize, 'Arial, sans-serif');
-        phase2Points = getPointsFromText(['WHO IS', 'MR. NOBODY?'], fontSize * 0.85, 'Arial, sans-serif');
+        phase1Points = getPointsFromText(['BEAMLAK SINTAYEHU'], fontSize, 'Arial, sans-serif');
+        phase2Points = getPointsFromText(['WHO IS', 'BEAMLAK SINTAYEHU?'], fontSize * 0.85, 'Arial, sans-serif');
       }
 
       if (phase1Points.length === 0) return;
@@ -161,7 +161,7 @@ export const ParticleHero: React.FC = () => {
         let destY: number;
 
         if (p < 0.25) {
-          // Phase 1: Solid "MR. NOBODY"
+          // Phase 1: Solid "BEAMLAK SINTAYEHU"
           destX = pt.originX;
           destY = pt.originY;
         } else if (p < 0.7) {

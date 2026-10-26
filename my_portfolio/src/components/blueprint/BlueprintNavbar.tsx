@@ -177,7 +177,7 @@ export const BlueprintNavbar: React.FC<BlueprintNavbarProps> = ({ soundEnabled, 
                 letterSpacing: '1px'
               }}
             >
-              MR. NOBODY
+              BEAMLAK SINTAYEHU
             </span>
           </button>
 

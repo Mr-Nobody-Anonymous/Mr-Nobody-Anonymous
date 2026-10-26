@@ -75,7 +75,7 @@ export const FinalTransmission: React.FC<FinalTransmissionProps> = ({ onRestartS
                 marginBottom: '1rem'
               }}
             >
-              MR. NOBODY
+              BEAMLAK SINTAYEHU
             </h1>
 
             <div style={{ color: '#7D8795', fontSize: '0.85rem', letterSpacing: '0.15em', marginBottom: '0.5rem' }}>
