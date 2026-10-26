@@ -12,7 +12,7 @@ export const SKILL_CATEGORIES = [
   { id: 'offensive', label: 'Offensive Security', codename: 'SECTOR_01' },
   { id: 'defensive', label: 'Defensive & Hardening', codename: 'SECTOR_02' },
   { id: 'programming', label: 'Languages & Scripting', codename: 'SECTOR_03' },
-  { id: 'ai', label: 'AI & Automation', codename: 'SECTOR_04' },
+  { id: 'ai', label: 'AI & Data Science', codename: 'SECTOR_04' },
   { id: 'web', label: 'Web Technologies', codename: 'SECTOR_05' },
   { id: 'tools', label: 'Tools & Environments', codename: 'SECTOR_06' }
 ] as const;
@@ -93,14 +93,42 @@ export const SKILLS: Skill[] = [
     usageScore: 72,
     description: 'Low-level systems fundamentals, memory management, binary analysis, and pointer mechanics.'
   },
+  {
+    name: 'Dart',
+    category: 'programming',
+    proficiency: 'ADVANCED',
+    usageScore: 80,
+    description: 'Strongly typed client-optimized language powering cross-platform Flutter applications.'
+  },
 
-  // AI & Automation
+  // AI & Data Science
   {
     name: 'Autonomous AI Agents',
     category: 'ai',
     proficiency: 'CORE',
     usageScore: 90,
     description: 'Designing stateful reasoning loops, dynamic tool calling schemas, and context caching architectures (ultrone).'
+  },
+  {
+    name: 'NumPy & Pandas',
+    category: 'ai',
+    proficiency: 'CORE',
+    usageScore: 88,
+    description: 'High-performance array computation, vector math, statistical feature extraction, and dataset telemetry transformation.'
+  },
+  {
+    name: 'Scikit-Learn & ML',
+    category: 'ai',
+    proficiency: 'ADVANCED',
+    usageScore: 84,
+    description: 'Predictive modeling, regression, clustering algorithms, classification pipelines, and feature selection.'
+  },
+  {
+    name: 'Matplotlib & Data Viz',
+    category: 'ai',
+    proficiency: 'ADVANCED',
+    usageScore: 82,
+    description: 'Scientific telemetry plotting, loss curve monitoring, feature distribution graphs, and anomaly heatmaps.'
   },
   {
     name: 'Computer Vision & Analytics',
@@ -119,6 +147,20 @@ export const SKILLS: Skill[] = [
     description: 'Component architecture, responsive glassmorphic interfaces, and motion physics rendering.'
   },
   {
+    name: 'Tailwind CSS',
+    category: 'web',
+    proficiency: 'CORE',
+    usageScore: 86,
+    description: 'Utility-first modern CSS workflows, responsive fluid layouts, and cyber dark HUD component styling.'
+  },
+  {
+    name: 'Express.js & NestJS',
+    category: 'web',
+    proficiency: 'ADVANCED',
+    usageScore: 84,
+    description: 'Scalable Node.js microservices, TypeScript architectural patterns, dependency injection, and REST controllers.'
+  },
+  {
     name: 'REST APIs & Security',
     category: 'web',
     proficiency: 'ADVANCED',
@@ -133,6 +175,20 @@ export const SKILLS: Skill[] = [
     proficiency: 'CORE',
     usageScore: 94,
     description: 'Daily operational OS, security repositories, package configuration, and system hardening.'
+  },
+  {
+    name: 'Flutter',
+    category: 'tools',
+    proficiency: 'ADVANCED',
+    usageScore: 82,
+    description: 'Multi-platform reactive UI framework for natively compiled mobile and desktop applications.'
+  },
+  {
+    name: 'Jupyter Notebooks',
+    category: 'tools',
+    proficiency: 'CORE',
+    usageScore: 88,
+    description: 'Interactive computational notebooks for data science experiments, rapid prototyping, and model validation.'
   },
   {
     name: 'Git & GitHub Actions',

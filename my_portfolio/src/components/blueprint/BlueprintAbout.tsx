@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const TECH_TAGS = ['JavaScript', 'Python', 'Cyber Security', 'Web Dev', 'Anonymity'];
+const TECH_TAGS = ['React', 'TypeScript', 'Python', 'NumPy', 'Pandas', 'Tailwind', 'Flutter', 'Cyber Security'];
 
 export const BlueprintAbout: React.FC = () => {
   const [isCardHovered, setIsCardHovered] = useState(false);
