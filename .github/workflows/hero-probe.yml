@@ -1,0 +1,25 @@
+name: hero-probe
+on:
+  push:
+    paths:
+      - '.github/workflows/hero-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect hero graphics
+        run: |
+          probe () {
+            code=$(curl -sL -m 30 -A "Mozilla/5.0" -o /tmp/body -w "%{http_code}" "$1" || echo ERR)
+            size=$(wc -c < /tmp/body | tr -d ' ')
+            printf '=== %s\ncode=%s size=%s\n%s\n\n' "$1" "$code" "$size" "$(head -c 900 /tmp/body | tr -d '\n')"
+          }
+          {
+          probe "https://capsule-render.vercel.app/api?type=waving&color=0:07080a,55:0e1116,100:e9a268&height=210&section=header&text=Beamlak%20Sintayehu&fontSize=42&fontColor=ede8df&fontAlignY=36&desc=Cybersecurity%20%C2%B7%20Offensive%20Security%20%C2%B7%20Applied%20AI&descAlignY=56&descSize=15&animation=fadeIn"
+          probe "https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&pause=1400&color=E9A268&center=true&vCenter=true&width=640&height=42&lines=Offensive+security+%26+threat+modeling"
+          } | tee out.txt
+          gh api -X POST "repos/${{ github.repository }}/issues/5/comments" --field body="$(cat out.txt)" --jq .html_url
