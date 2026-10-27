@@ -5,7 +5,8 @@ on:
       - '.github/workflows/widget-probe.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
+  issues: write
 
 jobs:
   probe:
@@ -47,8 +48,9 @@ jobs:
             probe "$u"
           done | tee probe-results.txt
 
-      - name: Upload results
-        uses: actions/upload-artifact@v4
-        with:
-          name: probe
-          path: probe-results.txt
+      - name: Publish results as issue comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X POST "repos/${{ github.repository }}/issues/5/comments" \
+            --field body="$(cat probe-results.txt)" --jq .html_url
