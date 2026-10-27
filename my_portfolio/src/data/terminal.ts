@@ -159,7 +159,7 @@ export function executeCommand(cmdStr: string, setTheme?: (t: 'green' | 'cyan' |
           'SECURE CHANNELS:',
           'Primary:   bmx310712@gmail.com',
           'Secondary: bam310712@gmail.com',
-          'LinkedIn:  https://www.linkedin.com/in/bam-sintu-a47b4b281/'
+          'LinkedIn:  https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/'
         ]
       };
 

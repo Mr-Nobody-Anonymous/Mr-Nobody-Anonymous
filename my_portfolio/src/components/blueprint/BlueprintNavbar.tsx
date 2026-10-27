@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, VolumeX, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Volume2, VolumeX, Menu, X, ArrowUpRight, Download } from 'lucide-react';
+
+/** Static asset served from /public — swap the file, the link keeps working. */
+export const CV_URL = `${import.meta.env.BASE_URL}cv.pdf`;
 
 interface BlueprintNavbarProps {
   soundEnabled: boolean;
@@ -68,17 +71,26 @@ export const BlueprintNavbar: React.FC<BlueprintNavbarProps> = ({ soundEnabled, 
       {/* Compact menu trigger while the hero is on screen */}
       <AnimatePresence>
         {!scrolledPastHero && (
-          <motion.button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            aria-label="Open navigation"
-            className="nav-burger"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <motion.div
+            className="nav-hero-actions"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <Menu size={18} strokeWidth={1.6} />
-          </motion.button>
+            <a href={CV_URL} download className="cv-btn cv-btn--floating">
+              <Download size={14} strokeWidth={1.8} />
+              <span>Download CV</span>
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open navigation"
+              className="nav-burger"
+            >
+              <Menu size={18} strokeWidth={1.6} />
+            </button>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -126,6 +138,11 @@ export const BlueprintNavbar: React.FC<BlueprintNavbarProps> = ({ soundEnabled, 
             >
               {soundEnabled ? <Volume2 size={16} strokeWidth={1.7} /> : <VolumeX size={16} strokeWidth={1.7} />}
             </button>
+
+            <a href={CV_URL} download className="cv-btn">
+              <Download size={14} strokeWidth={1.8} />
+              <span>Download CV</span>
+            </a>
 
             <button type="button" className="nav-cta" onClick={() => scrollTo('contact')}>
               Get in touch
@@ -195,6 +212,9 @@ export const BlueprintNavbar: React.FC<BlueprintNavbarProps> = ({ soundEnabled, 
               </nav>
 
               <div className="nav-drawer-foot">
+                <a href={CV_URL} download className="btn btn--ghost">
+                  <Download size={15} /> Download CV
+                </a>
                 <button type="button" className="btn btn--ghost" onClick={onToggleSound}>
                   {soundEnabled ? <Volume2 size={15} /> : <VolumeX size={15} />}
                   Sound {soundEnabled ? 'on' : 'off'}
@@ -222,10 +242,44 @@ export const BlueprintNavbar: React.FC<BlueprintNavbarProps> = ({ soundEnabled, 
           transition: width 0.12s linear;
         }
 
-        .nav-burger {
+        .nav-hero-actions {
           position: fixed;
           top: 1.35rem; right: 1.35rem;
           z-index: 99980;
+          display: flex;
+          align-items: center;
+          gap: 0.55rem;
+        }
+
+        .cv-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.52rem 1.05rem;
+          border-radius: var(--radius-pill);
+          border: 1px solid rgba(233, 162, 104, 0.42);
+          background: rgba(233, 162, 104, 0.1);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          font-family: var(--font-heading);
+          font-size: 0.78rem;
+          letter-spacing: 0.01em;
+          color: var(--ember-soft);
+          white-space: nowrap;
+          transition: background var(--transition-fast), border-color var(--transition-fast),
+            color var(--transition-fast), transform var(--transition-fast);
+        }
+        .cv-btn:hover {
+          background: var(--gradient-ember);
+          border-color: transparent;
+          color: #1a1108;
+          transform: translateY(-1px);
+        }
+        .cv-btn svg { transition: transform var(--transition-fast); }
+        .cv-btn:hover svg { transform: translateY(1px); }
+        .cv-btn--floating { box-shadow: 0 12px 30px -22px rgba(0, 0, 0, 0.9); }
+
+        .nav-burger {
           display: grid;
           place-items: center;
           width: 42px; height: 42px;

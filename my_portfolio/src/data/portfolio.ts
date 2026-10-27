@@ -1,5 +1,5 @@
 export const GITHUB_URL = 'https://github.com/Mr-Nobody-Anonymous';
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/bam-sintu-a47b4b281/';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/';
 export const EMAIL = 'bmx310712@gmail.com';
 
 export type ProjectCategory = 'security' | 'ai';

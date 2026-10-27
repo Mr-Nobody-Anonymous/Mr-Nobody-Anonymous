@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/bam-sintu"
+            href="https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/"
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="LINKEDIN"

@@ -16,7 +16,7 @@ const CHANNELS = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    value: 'in/bam-sintu',
+    value: 'in/beamlak-sintayehu',
     href: LINKEDIN_URL,
     icon: ArrowUpRight
   },

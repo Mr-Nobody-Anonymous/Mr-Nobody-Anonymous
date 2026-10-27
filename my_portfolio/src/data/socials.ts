@@ -15,9 +15,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/bam-sintu-a47b4b281/',
+    url: 'https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/',
     iconName: 'linkedin',
-    label: 'linkedin.com/in/bam-sintu'
+    label: 'linkedin.com/in/beamlak-sintayehu'
   },
   {
     name: 'TryHackMe',
