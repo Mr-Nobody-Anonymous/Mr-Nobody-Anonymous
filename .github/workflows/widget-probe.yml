@@ -18,7 +18,7 @@ jobs:
             code=$(curl -sL -m 30 -A "Mozilla/5.0 (compatible; probe)" -o /tmp/body -w "%{http_code}" "$1" || echo "ERR")
             size=$(wc -c < /tmp/body | tr -d ' ')
             printf '%-4s %-8s %s\n' "$code" "$size" "$1"
-            printf '     HEAD>>> %s\n' "$(tr -d '\n' < /tmp/body | sed 's/  */ /g' | cut -c1-160)"
+            printf '     HEAD>>> %s\n' "$(tr -d '\n' < /tmp/body | sed 's/  */ /g' | cut -c1-700)"
           }
           {
           while IFS= read -r u; do [ -n "$u" ] && probe "$u"; done <<'URLS'
@@ -27,6 +27,8 @@ jobs:
           https://img.shields.io/github/followers/Mr-Nobody-Anonymous?label=Followers&style=flat-square&color=e9a268&labelColor=0e1116&cacheSeconds=86400
           https://img.shields.io/github/stars/Mr-Nobody-Anonymous?label=Total%20stars&affiliations=OWNER&style=flat-square&color=e9a268&labelColor=0e1116&cacheSeconds=86400
           https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&cache_seconds=86400&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268
+          https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268
+          https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=10&hide_border=true&bg_color=0e1116&title_color=e9a268&text_color=ede8df
           https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=10&hide_border=true&cache_seconds=86400&bg_color=0e1116&title_color=e9a268&text_color=ede8df
           https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&hide_border=true&background=0e1116&border=1b1f25&stroke=e9a268&ring=e9a268&fire=e9a268&currStreakNum=ede8df&sideNums=ede8df&currStreakLabel=e9a268&sideLabels=8a8f96&dates=8a8f96
           https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous&theme=github_dark
