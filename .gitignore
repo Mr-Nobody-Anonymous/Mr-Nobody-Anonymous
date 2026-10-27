@@ -6,3 +6,6 @@ Thumbs.db
 .env
 dist/
 *.tsbuildinfo
+
+# local preview overrides (Arena sandbox)
+vite.preview.config.mjs
