@@ -20,7 +20,8 @@
 
 <p align="center">
   <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-Visit%20the%20site-e9a268?style=flat-square&labelColor=0e1116&logo=googlechrome&logoColor=e9a268" /></a>
-  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=flat-square&labelColor=0e1116&logo=linkedin&logoColor=ede8df" /></a>
+  <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/cv.pdf" download><img alt="Download CV" src="https://img.shields.io/badge/CV-Download%20PDF-0e1116?style=flat-square&labelColor=0e1116&logo=adobeacrobatreader&logoColor=e9a268" /></a>
+  <a href="https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=flat-square&labelColor=0e1116&logo=linkedin&logoColor=ede8df" /></a>
   <a href="mailto:bmx310712@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-Say%20hello-e9a268?style=flat-square&labelColor=0e1116&logo=gmail&logoColor=ede8df" /></a>
   <a href="https://github.com/Mr-Nobody-Anonymous"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&labelColor=0e1116&logo=github&logoColor=ede8df" /></a>
 </p>
@@ -457,7 +458,7 @@ Every icon is a link — click any logo to open the official site, docs or downl
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mr-Nobody-Anonymous&bg_color=0e1116&color=e9a268&line=e9a268&point=ede8df&area=true&area_color=e9a268&hide_border=true&days=90&radius=8" alt="Contribution activity over the last 90 days" width="100%" />
+  <img src="https://ghchart.rshah.org/e9a268/Mr-Nobody-Anonymous" alt="Contribution calendar — the last year of commits" width="100%" />
 </p>
 
 <p align="center">
@@ -471,24 +472,24 @@ Every icon is a link — click any logo to open the official site, docs or downl
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark&no-frame=true&no-bg=true&column=7&row=1&margin-w=8&margin-h=8" alt="GitHub trophies" />
+  <img src="https://trophy.ryglcloud.net/?username=Mr-Nobody-Anonymous&theme=onedark&no-frame=true&no-bg=true&column=7&row=1&margin-w=8&margin-h=8" alt="GitHub trophies" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/followers/Mr-Nobody-Anonymous?label=Followers&style=flat-square&color=e9a268&labelColor=0e1116" alt="Followers" />
-  <img src="https://img.shields.io/github/stars/Mr-Nobody-Anonymous?label=Total%20stars&affiliations=OWNER&style=flat-square&color=e9a268&labelColor=0e1116" alt="Total stars" />
+  <img src="https://img.shields.io/github/followers/Mr-Nobody-Anonymous?label=Followers&style=flat-square&color=e9a268&labelColor=0e1116&cacheSeconds=86400" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/Mr-Nobody-Anonymous?label=Total%20stars&affiliations=OWNER&style=flat-square&color=e9a268&labelColor=0e1116&cacheSeconds=86400" alt="Total stars" />
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FMr-Nobody-Anonymous&query=public_repos&label=Public%20repos&style=flat-square&color=e9a268&labelColor=0e1116&cacheSeconds=3600" alt="Public repositories" />
   <img src="https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous&label=Profile%20views&color=e9a268&style=flat-square" alt="Profile views" />
 </p>
 
-<sub>Widgets are rendered live by third-party services. If a card looks blank, GitHub's image cache is refreshing — it resolves within a few minutes.</sub>
+<sub>All widgets are live. Counters (followers, stars, repos, views) re-cache at most once a day — <code>cacheSeconds=86400</code> — so they stay current without ever going stale. If a card is ever blank, GitHub's image proxy is mid-refresh; it heals within minutes.</sub>
 
 <a id="connect"></a>
 
 ## 🌐 Connect
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/bam-sintu-a47b4b281/"><img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0a66c2?style=flat-square&labelColor=0e1116&logo=linkedin&logoColor=ede8df" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/"><img src="https://img.shields.io/badge/LinkedIn-Beamlak%20Sintayehu-0a66c2?style=flat-square&labelColor=0e1116&logo=linkedin&logoColor=ede8df" alt="LinkedIn" /></a>
   <a href="https://github.com/Mr-Nobody-Anonymous"><img src="https://img.shields.io/badge/GitHub-Mr--Nobody--Anonymous-181717?style=flat-square&labelColor=0e1116&logo=github&logoColor=ede8df" alt="GitHub" /></a>
   <a href="https://gitlab.com/bmx310712"><img src="https://img.shields.io/badge/GitLab-bmx310712-fc6d26?style=flat-square&labelColor=0e1116&logo=gitlab&logoColor=ede8df" alt="GitLab" /></a>
   <a href="mailto:bmx310712@gmail.com"><img src="https://img.shields.io/badge/Email-bmx310712%40gmail.com-e9a268?style=flat-square&labelColor=0e1116&logo=gmail&logoColor=ede8df" alt="Primary email" /></a>
