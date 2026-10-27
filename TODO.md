@@ -54,6 +54,12 @@ render smoke test, not just by intent.
 - [x] **Education** block added under the timeline: Addis Ababa University (EiABC, UGR/5194/17) and Adama High School (ESSLCE 492/600).
 - [x] Five projects that were missing from the site: ETHIO-CYBERGUARD, EVOLYX, MIRROR, PHANTOM and daily-git-digest.
 
+### README header graphics
+- [x] **Found the real reason the header looked blank.** `capsule-render.vercel.app` does answer 200 — but its SVG has two `<path d="">` with empty geometry, a `calcmod=` typo instead of `calcMode`, and no `<rect>` background at all. Rendered, it is a **transparent/white rectangle**: the title and subtitle were invisible. Reproduced locally with resvg before touching anything.
+- [x] Replaced it with `assets/profile-banner.svg` — a repo-hosted obsidian-and-ember banner (grid, glow, two ember waves, name, discipline line, monospace caption). No third-party host, no CDN dependency, animates with plain SMIL and degrades to a static image.
+- [x] Verified both `raw.githubusercontent.com` and `github.com/.../raw/...` serve it as `image/svg+xml`, and that the XML parses.
+- [x] Dropped the duplicated `<h3>` line (the banner now carries it), fixed the dead `#top` link with a real `<a id="top">`, and turned the section strip into clickable code chips.
+
 ### Credentials
 - [x] Verified and published: **AI for Everyone: Master the Basics** (IBM · edX, 2026) and **Claude Code 101** (Claude Academy · Anthropic, 2026) — both with public verification links, in the site and the README.
 - [x] The LinkedIn record is linked as the always-current full list, so newer credentials never make the site go stale.
