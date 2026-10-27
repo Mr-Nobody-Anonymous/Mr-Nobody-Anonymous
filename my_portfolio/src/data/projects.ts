@@ -256,5 +256,125 @@ export const PROJECTS: Project[] = [
       '[STREAM] Receiving dual-model response tokens...',
       '[RENDER] UI frame rate steady @ 120fps'
     ]
-  }
+  },
+  {
+    id: 'ethio-cyberguard',
+    name: 'ETHIO-CYBERGUARD',
+    codename: 'OP_NATIONAL_SOC',
+    description: 'AI-assisted threat detection and automated incident response for national cyber defence.',
+    longDescription: 'Co-engineered during the INSA 5th National Cyber Talent Camp on the Ethiopian National Cyber Range. Combines ML-assisted anomaly detection with an automated triage and response pipeline, verified continuously by GitHub Actions CI.',
+    language: 'Python',
+    category: 'security',
+    githubUrl: 'https://github.com/AbeniYirgalem/ETHIO-CYBERGUARD',
+    tags: ['AI SecOps', 'Threat Detection', 'Incident Response', 'STRIDE', 'CI/CD'],
+    status: 'ACTIVE',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'STRIDE threat model driving detection coverage',
+      'Automated triage with human-in-the-loop escalation',
+      'CI verification on every commit'
+    ],
+    telemetryLogs: [
+      '[SOC] Range link established: ncrp.et',
+      '[DETECT] Anomaly classifier loaded: 12 signal families',
+      '[RESPONSE] Playbook arm — awaiting operator confirmation'
+    ]
+  },
+  {
+    id: 'evolyx',
+    name: 'EVOLYX',
+    codename: 'OP_CONTINUAL_RESEARCH',
+    description: 'Continual AI research platform with runtime memory and gated fine-tuning.',
+    longDescription: 'Research harness for models that improve between runs: persistent runtime memory, evaluation gates, and LoRA/DPO fine-tuning that only promotes a checkpoint after benchmark thresholds are met.',
+    language: 'Python',
+    category: 'ai',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/EVOLYX',
+    tags: ['LoRA', 'DPO', 'FastAPI', 'Evaluation Harnesses', 'Python'],
+    status: 'EXPERIMENTAL',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Gated promotion: no checkpoint ships without passing evals',
+      'LoRA / DPO adapters with versioned artefacts',
+      'FastAPI control plane with Vite/React inspection UI'
+    ],
+    telemetryLogs: [
+      '[EVOLYX] Memory store hydrated: 4,096 episodes',
+      '[TRAIN] LoRA adapter r=16 attached',
+      '[GATE] Candidate rejected — benchmark delta -0.4%'
+    ]
+  },
+  {
+    id: 'mirror',
+    name: 'MIRROR',
+    codename: 'OP_FAULT_INJECTION',
+    description: 'Fault-injection and multi-armed bandit crash simulator for AI agents.',
+    longDescription: 'Adversarial testbed that stresses agent runtimes: injects tool failures, malformed observations and timeouts, then uses a multi-armed bandit to concentrate on the failure modes that actually break a given agent.',
+    language: 'Python',
+    category: 'ai',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/mirror',
+    tags: ['Fault Injection', 'Multi-Armed Bandits', 'Agent Testing', 'Reliability'],
+    status: 'RESEARCH',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Pluggable fault catalogue: tool, network, schema, timeout',
+      'Bandit policy allocates budget to the worst-performing arms',
+      'Deterministic seeds for reproducible crash reports'
+    ],
+    telemetryLogs: [
+      '[MIRROR] Seeding fault catalogue: 24 vectors',
+      '[BANDIT] Exploit arm 7 — timeout cascade reproduced',
+      '[REPORT] Minimal failing trace written'
+    ]
+  },
+  {
+    id: 'phantom',
+    name: 'PHANTOM',
+    codename: 'OP_CAUSAL_MINIMISATION',
+    description: 'Causal failure-reconstruction engine for Raft microservices.',
+    longDescription: 'Takes a distributed failure in a Raft-based service and works backwards: correlates logs and traces, then minimises the event set to the smallest causal chain that still reproduces the fault.',
+    language: 'Python',
+    category: 'tools',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/phantom',
+    tags: ['Distributed Systems', 'Raft', 'Causal Inference', 'Observability'],
+    status: 'RESEARCH',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Log and trace correlation across replicas',
+      'Delta-debugging style minimisation of the causal chain',
+      'Replay harness validates the reduced explanation'
+    ],
+    telemetryLogs: [
+      '[PHANTOM] Ingesting 3 replicas × 180k events',
+      '[CORRELATE] Candidate cause: leadership churn @ t+4.2s',
+      '[REPLAY] Reduced chain reproduces 9/9 runs'
+    ]
+  },
+  {
+    id: 'daily-git-digest',
+    name: 'daily-git-digest',
+    codename: 'OP_COMMIT_AUDITOR',
+    description: 'Autonomous daily commit auditor and release-notes pipeline.',
+    longDescription: 'Runs every day: audits what actually landed in the repositories, summarises it, and drafts release notes — so the changelog reflects the commits rather than someone\'s memory of them.',
+    language: 'Python',
+    category: 'tools',
+    githubUrl: 'https://github.com/Mr-Nobody-Anonymous/daily-git-digest',
+    tags: ['Automation', 'GitHub Actions', 'Release Notes', 'Python'],
+    status: 'ACTIVE',
+    stars: 0,
+    forks: 0,
+    architectureNotes: [
+      'Scheduled GitHub Actions run over the day\'s commits',
+      'Commit classification into features, fixes and chores',
+      'Draft release notes with links back to every change'
+    ],
+    telemetryLogs: [
+      '[DIGEST] Scanning commits since 00:00 UTC',
+      '[CLASSIFY] 7 commits → 2 features, 4 fixes, 1 chore',
+      '[PUBLISH] Draft release notes generated'
+    ]
+  },
 ];

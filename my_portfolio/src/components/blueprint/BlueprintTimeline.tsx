@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { EXPERIENCE_TIMELINE } from '../../data/experience';
+import { EXPERIENCE_TIMELINE, EDUCATION } from '../../data/experience';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -59,6 +59,29 @@ export const BlueprintTimeline: React.FC = () => {
             </motion.li>
           ))}
         </ol>
+
+        {/* Education — deliberately quiet: a footer, not a headline. */}
+        <motion.div
+          className="timeline-education"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease }}
+        >
+          <p className="eyebrow">Education</p>
+          <ul className="edu-list">
+            {EDUCATION.map((item) => (
+              <li key={item.institution} className="edu-item">
+                <div className="edu-head">
+                  <h3 className="edu-institution">{item.institution}</h3>
+                  <span className="edu-period">{item.period}</span>
+                </div>
+                <p className="edu-programme">{item.programme}</p>
+                <p className="edu-detail">{item.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
 
       <style>{`
@@ -180,6 +203,57 @@ export const BlueprintTimeline: React.FC = () => {
           border: 1px solid rgba(237, 232, 223, 0.08);
           border-radius: var(--radius-pill);
           padding: 0.22rem 0.6rem;
+        }
+
+        /* ── Education ────────────────────────────────────────────── */
+        .timeline-education {
+          margin-top: clamp(2.75rem, 5vw, 4rem);
+          padding-top: clamp(1.75rem, 3vw, 2.5rem);
+          border-top: 1px solid var(--hairline);
+        }
+        .edu-list {
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: clamp(1rem, 2.5vw, 2rem);
+          margin-top: 1.15rem;
+        }
+        .edu-item {
+          padding: 1.1rem 1.25rem;
+          border: 1px solid var(--hairline);
+          border-radius: var(--radius-md);
+          background: rgba(237, 232, 223, 0.02);
+        }
+        .edu-head {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 0.75rem;
+        }
+        .edu-institution {
+          font-family: var(--font-heading);
+          font-size: 1rem;
+          font-weight: 500;
+          color: var(--text-primary);
+        }
+        .edu-period {
+          font-family: var(--font-mono);
+          font-size: 0.62rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--ember);
+          white-space: nowrap;
+        }
+        .edu-programme {
+          margin-top: 0.35rem;
+          font-size: 0.86rem;
+          color: var(--text-secondary);
+        }
+        .edu-detail {
+          margin-top: 0.3rem;
+          font-size: 0.78rem;
+          line-height: 1.5;
+          color: var(--text-faint);
         }
 
         @media (max-width: 780px) {

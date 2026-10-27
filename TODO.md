@@ -44,8 +44,15 @@ render smoke test, not just by intent.
 - [x] Followers / stars badges now carry `cacheSeconds=86400`, so the count re-resolves at most once a day instead of being served stale from GitHub's image cache.
 - [x] Every LinkedIn link points at `linkedin.com/in/beamlak-sintayehu-a47b4b281` — README (3 places) and the portfolio (`portfolio.ts`, `socials.ts`, `terminal.ts`, `Footer.tsx`, `BlueprintContact.tsx`, `index.html` JSON-LD).
 - [x] **Download CV** button, top-right: floating next to the menu trigger while the hero is on screen, in the nav bar once you scroll, and in the mobile drawer. Served from `public/cv.pdf` via `CV_URL` in `BlueprintNavbar.tsx`.
-- [x] `my_portfolio/scripts/make_cv.py` generates that PDF (one page, obsidian & ember) from the same facts the site publishes — replace `public/cv.pdf` with a designed CV any time, the button keeps working.
+- [x] `my_portfolio/scripts/make_cv.py` regenerates the PDF from the real CV (`scripts/make_cv.py` → `public/cv.pdf`), so the downloaded file and the site never drift apart.
+- [x] **Real CV is now the served file.** The copy in Drive carried three things the rest of the project disagrees with — LinkedIn `in/bam-sintu…`, `https://www.gitlab.com/…` and TryHackMe `Nobody001` — so it was rebuilt from the same content with those corrected. Verified: 52 link annotations, zero remaining occurrences of any of the three.
+- [x] Drive file fetched through GitHub Actions (the sandbox cannot reach Google) and committed as `my_portfolio/public/cv.pdf`; the temporary fetch workflow is gone again.
 - [x] Badge rendering is now verified end-to-end from GitHub Actions (curl + body inspection) instead of guessed — the temporary probe workflow has been removed.
+
+### Portfolio content — gaps found in the CV
+- [x] Journey timeline rewritten with the real roles instead of generic year labels: AI Security & Autonomous Systems Lead (01/2026–), INSA Cyber Talent Camp CTC-912-26 (08/2026–), Computer Vision & Full-Stack Developer (2025), Offensive Security Researcher (2023–24), IT Lab Technician & Peer Mentor (2022–24).
+- [x] **Education** block added under the timeline: Addis Ababa University (EiABC, UGR/5194/17) and Adama High School (ESSLCE 492/600).
+- [x] Five projects that were missing from the site: ETHIO-CYBERGUARD, EVOLYX, MIRROR, PHANTOM and daily-git-digest.
 
 ### Credentials
 - [x] Verified and published: **AI for Everyone: Master the Basics** (IBM · edX, 2026) and **Claude Code 101** (Claude Academy · Anthropic, 2026) — both with public verification links, in the site and the README.
