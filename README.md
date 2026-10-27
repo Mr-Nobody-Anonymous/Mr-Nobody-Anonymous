@@ -449,7 +449,7 @@ Every icon is a link — click any logo to open the official site, docs or downl
 ## 📊 GitHub stats
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&cache_seconds=86400&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268" alt="GitHub stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true&hide_border=true&rank_icon=github&cache_seconds=86400&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268" alt="GitHub stats" />
   <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous&layout=compact&langs_count=10&hide_border=true&cache_seconds=86400&bg_color=0e1116&title_color=e9a268&text_color=ede8df" alt="Most used languages" />
 </p>
 
