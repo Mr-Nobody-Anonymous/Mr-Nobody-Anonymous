@@ -4,6 +4,9 @@ on:
     paths:
       - '.github/workflows/widget-probe.yml'
   workflow_dispatch:
+permissions:
+  contents: write
+
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -42,4 +45,12 @@ jobs:
             "https://www.linkedin.com/in/bam-sintu-a47b4b281/" \
             "https://drive.google.com/drive/folders/1NrrdRGhOOkOCJf_iOr-VSZl9qkzRBmnd" ; do
             probe "$u"
-          done
+          done | tee probe-results.txt
+
+      - name: Commit results
+        run: |
+          git config user.name "probe-bot"
+          git config user.email "probe-bot@users.noreply.github.com"
+          git add probe-results.txt
+          git commit -m "chore: probe results [skip ci]"
+          git push
