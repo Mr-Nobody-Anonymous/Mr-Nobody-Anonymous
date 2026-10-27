@@ -34,8 +34,18 @@ render smoke test, not just by intent.
 - [x] "At a glance" table replaced by **🎯 What I do** — 18 rows covering penetration testing, malware analysis, Active Directory security, threat intelligence & modeling, forensics/IR, application security, web dev, app dev, backend & APIs, databases & data engineering, machine learning, computer vision, AI agents & automation, prompt engineering & LLM systems, Linux & systems, DevOps & infrastructure, hardware & IoT, and research & writing.
 
 ### Analytics
-- [x] Rebuilt the stats block on canonical endpoints: profile stats, top languages, streak, 90-day activity graph, profile summary, repos-per-language, most-commit language, productive time (UTC+3), trophies, plus follower/star/repo/profile-view badges.
+- [x] Rebuilt the stats block on canonical endpoints: profile stats, top languages, streak, contribution calendar, profile summary, repos-per-language, most-commit language, productive time (UTC+3), trophies, plus follower/star/repo/profile-view badges.
 - [x] Added `cache_seconds=86400` to the two `github-readme-stats` cards — the usual cause of "Maximum retries exceeded" blanks.
+
+### Round 3 — broken widgets, LinkedIn, CV
+- [x] `github-readme-activity-graph.vercel.app` is dead upstream (HTTP 402 `DEPLOYMENT_DISABLED`) — replaced with the live contribution calendar at `ghchart.rshah.org/e9a268/...` (verified: 200, SVG, 53.8 KB of real data).
+- [x] `github-profile-trophy.vercel.app` is dead too (402, deployment paused) — replaced with the volunteer-run mirror `trophy.ryglcloud.net`, which serves real trophy SVG for this account (verified 200 / latest run).
+- [x] `github-readme-stats` needed `include_all_commits` + `count_private` dropped — the public instance answers `Could not fetch total commits` (a 120 px "Something went wrong" card). Without them the card renders correctly (Stars 1 · Commits 485 · PRs 7 · Issues 11).
+- [x] Followers / stars badges now carry `cacheSeconds=86400`, so the count re-resolves at most once a day instead of being served stale from GitHub's image cache.
+- [x] Every LinkedIn link points at `linkedin.com/in/beamlak-sintayehu-a47b4b281` — README (3 places) and the portfolio (`portfolio.ts`, `socials.ts`, `terminal.ts`, `Footer.tsx`, `BlueprintContact.tsx`, `index.html` JSON-LD).
+- [x] **Download CV** button, top-right: floating next to the menu trigger while the hero is on screen, in the nav bar once you scroll, and in the mobile drawer. Served from `public/cv.pdf` via `CV_URL` in `BlueprintNavbar.tsx`.
+- [x] `my_portfolio/scripts/make_cv.py` generates that PDF (one page, obsidian & ember) from the same facts the site publishes — replace `public/cv.pdf` with a designed CV any time, the button keeps working.
+- [x] Badge rendering is now verified end-to-end from GitHub Actions (curl + body inspection) instead of guessed — the temporary probe workflow has been removed.
 
 ### Credentials
 - [x] Verified and published: **AI for Everyone: Master the Basics** (IBM · edX, 2026) and **Claude Code 101** (Claude Academy · Anthropic, 2026) — both with public verification links, in the site and the README.

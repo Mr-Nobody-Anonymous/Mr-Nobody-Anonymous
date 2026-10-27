@@ -75,6 +75,9 @@ src/
 - **Certifications & labs** → `src/data/credentials.ts`
 - **Journey / timeline** → `src/data/experience.ts`
 - **Contact details & socials** → `src/data/portfolio.ts`, `src/data/socials.ts`
+- **CV** → replace `public/cv.pdf`; the Download CV button (top-right) links to it
+  via `CV_URL` in `src/components/blueprint/BlueprintNavbar.tsx`. To regenerate the
+  bundled one: `cd scripts && python3 make_cv.py` (needs `pip install reportlab`).
 
 ## Deployment
 
