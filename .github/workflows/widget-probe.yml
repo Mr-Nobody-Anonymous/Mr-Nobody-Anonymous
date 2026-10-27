@@ -19,32 +19,22 @@ jobs:
             ct=$(file -b --mime-type /tmp/body 2>/dev/null || echo "?")
             size=$(wc -c < /tmp/body | tr -d ' ')
             printf '%-4s %-16s %-8s %s\n' "$code" "$ct" "$size" "$1"
+            case "$ct" in
+              text/html) printf '     HEAD>>> %s\n' "$(tr -d '\n' < /tmp/body | sed 's/  */ /g' | cut -c1-260)" ;;
+            esac
           }
           for u in \
-            "https://github-profile-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://trophy.ryglcloud.net/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://gh-trophy.cdnsoft.net/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://trophygh.kolioaris.xyz/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://github-trophies.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://github-profile-trophy-orcin-eta.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark" \
-            "https://github-readme-activity-graph.vercel.app/graph?username=Mr-Nobody-Anonymous" \
-            "https://github-activity-graph.luckylinux.dev/graph?username=Mr-Nobody-Anonymous" \
+            "https://trophy.ryglcloud.net/?username=Mr-Nobody-Anonymous&theme=onedark&column=-1&margin-w=8" \
+            "https://github-trophies.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark&column=-1&margin-w=8" \
+            "https://gh-trophy.vercel.app/?username=Mr-Nobody-Anonymous&theme=onedark" \
+            "https://github-readme-activity-graph.luckylinux.dev/graph?username=Mr-Nobody-Anonymous&theme=github-compact" \
             "https://ghchart.rshah.org/e9a268/Mr-Nobody-Anonymous" \
-            "https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous" \
-            "https://github-readme-stats.vercel.app/api/top-langs/?username=Mr-Nobody-Anonymous" \
-            "https://github-stats-extended.vercel.app/api?username=Mr-Nobody-Anonymous" \
-            "https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous" \
-            "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mr-Nobody-Anonymous" \
-            "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Mr-Nobody-Anonymous" \
-            "https://img.shields.io/github/followers/Mr-Nobody-Anonymous" \
-            "https://img.shields.io/github/stars/Mr-Nobody-Anonymous?affiliations=OWNER" \
-            "https://komarev.com/ghpvc/?username=Mr-Nobody-Anonymous" \
-            "https://capsule-render.vercel.app/api?type=waving&text=test" \
-            "https://readme-typing-svg.demolab.com?lines=test" \
-            "https://skillicons.dev/icons?i=py" \
-            "https://www.linkedin.com/in/beamlak-sintayehu-a47b4b281/" \
-            "https://www.linkedin.com/in/bam-sintu-a47b4b281/" \
-            "https://drive.google.com/drive/folders/1NrrdRGhOOkOCJf_iOr-VSZl9qkzRBmnd" ; do
+            "https://github-readme-stats.vercel.app/api?username=Mr-Nobody-Anonymous&show_icons=true" \
+            "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Mr-Nobody-Anonymous" \
+            "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Mr-Nobody-Anonymous" \
+            "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Mr-Nobody-Anonymous" \
+            "https://github-readme-streak-stats.herokuapp.com?user=Mr-Nobody-Anonymous" \
+            "https://streak-stats.demolab.com?user=Mr-Nobody-Anonymous&theme=transparent" ; do
             probe "$u"
           done | tee probe-results.txt
 
