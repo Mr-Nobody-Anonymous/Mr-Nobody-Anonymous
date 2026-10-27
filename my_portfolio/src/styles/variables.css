@@ -1,71 +1,135 @@
+/* ==========================================================================
+   DESIGN TOKENS — "Obsidian & Ember"
+   A restrained, editorial security-noir system: warm ember accent,
+   cool glacier secondary, hairline borders and generous negative space.
+   ========================================================================== */
+
 :root {
-  /* Blueprint Color Palette */
-  /* Primary Colors */
-  --bg-deep: #0a0a0a;          /* Deep Void Black (Main background) */
-  --bg-smoke: #111111;         /* Smoke Black (Secondary sections, cards) */
-  --bg-charcoal: #1a1a2e;      /* Charcoal Mist (Subtle blue undertone) */
-  --bg-surface: #111111;
-  --bg-surface-hover: #161616;
-  --bg-card: rgba(17, 17, 17, 0.85);
-  --bg-glass: rgba(17, 17, 17, 0.82);
+  /* ── Surfaces ─────────────────────────────────────────────────────────── */
+  --ink-950: #07080a;          /* page void */
+  --ink-900: #0a0c0f;          /* alternating section */
+  --ink-850: #0b0e11;          /* inset wells */
+  --ink-800: #0e1116;          /* raised card */
+  --ink-750: #12161b;          /* hover card */
+  --ink-700: #171b21;          /* track / line */
+  --ink-600: #1b1f25;          /* hairline strong */
 
-  /* Accent Colors */
-  --cyan: #00f0ff;             /* Electric Cyan (Primary identity accent) */
-  --cyan-rgb: 0, 240, 255;
-  --purple: #b400ff;           /* Neon Purple (Secondary accent) */
-  --purple-rgb: 180, 0, 255;
-  --magenta: #ff006e;          /* Hot Magenta (Tertiary / Alert / Interaction) */
-  --magenta-rgb: 255, 0, 110;
-  --ghost-white: #e0e0e0;      /* Ghost White (Body text) */
-  --dim-gray: #666666;         /* Dim Gray (Secondary text / descriptions) */
+  --bg-deep: var(--ink-950);
+  --bg-smoke: var(--ink-900);
+  --bg-charcoal: var(--ink-800);
+  --bg-surface: var(--ink-850);
+  --bg-surface-hover: var(--ink-750);
+  --bg-card: rgba(14, 17, 22, 0.72);
+  --bg-glass: rgba(10, 12, 15, 0.72);
 
-  /* Aliases for components */
-  --accent: var(--cyan);
-  --accent-rgb: var(--cyan-rgb);
-  --accent-dim: rgba(0, 240, 255, 0.12);
-  --accent-glow: rgba(0, 240, 255, 0.35);
-  --accent-contrast: #0a0a0a;
-  --signal: var(--cyan);
+  /* ── Accents ──────────────────────────────────────────────────────────── */
+  --ember: #e9a268;            /* primary — warm sand / brass */
+  --ember-rgb: 233, 162, 104;
+  --ember-soft: #f4c79b;
+  --glacier: #9fd8e4;          /* secondary — muted arctic blue */
+  --glacier-rgb: 159, 216, 228;
+  --clay: #c98b7f;             /* tertiary — alert / interaction */
+  --clay-rgb: 201, 139, 127;
 
-  /* Gradients */
-  --gradient-cyber: linear-gradient(135deg, #00f0ff 0%, #b400ff 100%);
-  --gradient-fire: linear-gradient(135deg, #ff006e 0%, #ff6600 100%);
-  --gradient-fade: linear-gradient(to bottom, transparent 0%, #0a0a0a 100%);
-  --gradient-signature: var(--gradient-cyber);
+  /* Legacy aliases kept so every existing component keeps working */
+  --cyan: var(--ember);
+  --cyan-rgb: var(--ember-rgb);
+  --purple: var(--glacier);
+  --purple-rgb: var(--glacier-rgb);
+  --magenta: var(--clay);
+  --magenta-rgb: var(--clay-rgb);
+  --ghost-white: #ede8df;
+  --dim-gray: #8a8f96;
 
-  /* Text Glows */
-  --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.5);
-  --glow-purple: 0 0 20px rgba(180, 0, 255, 0.4);
-  --glow-magenta: 0 0 20px rgba(255, 0, 110, 0.5);
+  --accent: var(--ember);
+  --accent-rgb: var(--ember-rgb);
+  --accent-dim: rgba(233, 162, 104, 0.10);
+  --accent-glow: rgba(233, 162, 104, 0.28);
+  --accent-contrast: #0a0705;
+  --signal: var(--ember);
 
-  /* Typography Colors */
-  --text-primary: #e0e0e0;
-  --text-secondary: #aaaaaa;
-  --text-muted: #666666;
+  /* ── Typography colours ───────────────────────────────────────────────── */
+  --text-primary: #ede8df;     /* warm bone */
+  --text-secondary: #b3b0a9;
+  --text-muted: #8a8f96;
+  --text-faint: #7a8088;   /* ~5:1 on ink — safe for small mono labels */
 
-  /* Typography Families */
-  --font-heading: 'Orbitron', -apple-system, sans-serif;
-  --font-subheading: 'Rajdhani', -apple-system, sans-serif;
-  --font-tech: 'Share Tech Mono', monospace;
+  /* ── Gradients ────────────────────────────────────────────────────────── */
+  --gradient-ember: linear-gradient(135deg, #f4c79b 0%, #e9a268 45%, #c9793f 100%);
+  --gradient-cyber: var(--gradient-ember);
+  --gradient-signature: var(--gradient-ember);
+  --gradient-fire: linear-gradient(135deg, #e9a268 0%, #c98b7f 100%);
+  --gradient-fade: linear-gradient(to bottom, transparent 0%, var(--ink-950) 100%);
+  --gradient-hairline: linear-gradient(90deg, transparent, rgba(233, 162, 104, 0.5), transparent);
+
+  /* ── Glow (used sparingly — light, not neon) ──────────────────────────── */
+  --glow-cyan: 0 0 24px rgba(233, 162, 104, 0.22);
+  --glow-ember: 0 0 32px rgba(233, 162, 104, 0.20);
+  --glow-purple: 0 0 24px rgba(159, 216, 228, 0.16);
+  --glow-magenta: 0 0 24px rgba(201, 139, 127, 0.16);
+
+  /* ── Elevation ────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 32px 80px -32px rgba(0, 0, 0, 0.85);
+  --shadow-lift: 0 24px 60px -24px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(233, 162, 104, 0.16);
+
+  /* ── Type ─────────────────────────────────────────────────────────────── */
+  --font-heading: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-subheading: 'Space Grotesk', 'Inter', sans-serif;
   --font-body: 'Inter', 'Space Grotesk', -apple-system, sans-serif;
-  --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, monospace;
+  --font-tech: 'JetBrains Mono', ui-monospace, monospace;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
 
-  /* Borders & Glass */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-panel: rgba(0, 240, 255, 0.18);
-  --border-cyan: rgba(0, 240, 255, 0.4);
-  --border-glow: rgba(0, 240, 255, 0.7);
-  --border-card: #222222;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.5rem, 2.4vw, 2rem);
+  --text-3xl: clamp(2rem, 3.6vw, 2.9rem);
+  --text-4xl: clamp(2.6rem, 6vw, 4.6rem);
 
-  /* Radii */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --tracking-wide: 0.14em;
+  --tracking-tight: -0.03em;
+  --leading-body: 1.75;
+
+  /* ── Borders & glass ──────────────────────────────────────────────────── */
+  --border-subtle: rgba(237, 232, 223, 0.08);
+  --border-panel: rgba(233, 162, 104, 0.16);
+  --border-accent: rgba(233, 162, 104, 0.16);
+  --border-cyan: rgba(233, 162, 104, 0.34);
+  --border-glow: rgba(233, 162, 104, 0.55);
+  --border-card: var(--ink-600);
+  --hairline: rgba(237, 232, 223, 0.08);
+
+  /* ── Radii ────────────────────────────────────────────────────────────── */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
   --radius-pill: 9999px;
 
-  /* Animation Timings */
-  --anim-micro: 180ms;
+  /* ── Spacing rhythm ───────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --section-y: clamp(5.5rem, 10vw, 9rem);
+  --shell-max: 1180px;
+
+  /* ── Motion ───────────────────────────────────────────────────────────── */
+  --anim-micro: 160ms;
   --anim-hover: 240ms;
-  --anim-card: 450ms;
+  --anim-card: 420ms;
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }

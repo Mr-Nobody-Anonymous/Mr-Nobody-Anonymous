@@ -1,281 +1,200 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { EXPERIENCE_TIMELINE } from '../../data/experience';
 
+const ease = [0.16, 1, 0.3, 1] as const;
+
 export const BlueprintTimeline: React.FC = () => {
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
-
   return (
-    <section
-      id="experience"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        background: '#111111',
-        padding: '120px 2rem',
-        overflow: 'hidden'
-      }}
-    >
-      {/* Circuit board pattern background */}
-      <div className="circuit-board-layer" aria-hidden="true" />
-
-      <div
-        style={{
-          maxWidth: '1200px',
-          width: '100%',
-          margin: '0 auto',
-          position: 'relative',
-          zIndex: 3
-        }}
-      >
-        {/* Section Header */}
-        <div style={{ textAlign: 'center', marginBottom: '4.5rem' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', color: '#00f0ff', letterSpacing: '0.1em' }}>
-            &lt; TIMELINE /&gt;
-          </span>
-          <h2
-            style={{
-              fontFamily: 'var(--font-heading, "Orbitron", sans-serif)',
-              fontSize: 'clamp(2rem, 5vw, 3rem)',
-              fontWeight: 800,
-              color: '#ffffff',
-              marginTop: '0.5rem',
-              letterSpacing: '2px'
-            }}
-          >
-            JOURNEY &amp; MILESTONES
+    <section id="experience" className="section timeline">
+      <div className="shell timeline-inner">
+        <motion.header
+          className="timeline-head"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease }}
+        >
+          <p className="eyebrow">Journey</p>
+          <h2 className="section-title timeline-title">
+            A short <em>record</em> of the work.
           </h2>
-        </div>
+          <p className="lede">
+            Four years of building, breaking and documenting — moving from systems
+            fundamentals to autonomous architectures and threat modeling.
+          </p>
+        </motion.header>
 
-        {/* Vertical Timeline Container */}
-        <div style={{ position: 'relative', maxWidth: '1000px', margin: '0 auto', minHeight: '600px' }}>
-          {/* Center Glowing Cyan Line */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '20px',
-              bottom: '40px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '2px',
-              background: 'linear-gradient(to bottom, #00f0ff, #b400ff, #00f0ff)',
-              boxShadow: '0 0 12px rgba(0, 240, 255, 0.7)',
-              zIndex: 1
-            }}
-          />
+        <ol className="timeline-list">
+          {EXPERIENCE_TIMELINE.map((item, idx) => (
+            <motion.li
+              key={`${item.year}-${item.title}`}
+              className="timeline-item"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-70px' }}
+              transition={{ duration: 0.6, delay: idx * 0.06, ease }}
+            >
+              <div className="timeline-rail" aria-hidden="true">
+                <span className={`timeline-node ${item.status === 'CURRENT' ? 'is-current' : ''}`} />
+              </div>
 
-          {/* Alternating Events */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem' }}>
-            {EXPERIENCE_TIMELINE.map((item, idx) => {
-              const isEven = idx % 2 === 0;
-              const isExpanded = expandedIdx === idx;
+              <div className="timeline-year">
+                <span className="timeline-year-value">{item.year}</span>
+                <span className={`timeline-status ${item.status === 'CURRENT' ? 'is-current' : ''}`}>
+                  {item.status === 'CURRENT' ? 'In progress' : 'Completed'}
+                </span>
+              </div>
 
-              return (
-                <div
-                  key={idx}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: isEven ? 'flex-start' : 'flex-end',
-                    position: 'relative',
-                    width: '100%'
-                  }}
-                >
-                  {/* Center Node Dot (12px cyan fill with pulsing ring) */}
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: [0, 1.3, 1] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    style={{
-                      position: 'absolute',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      width: '14px',
-                      height: '14px',
-                      borderRadius: '50%',
-                      background: '#00f0ff',
-                      boxShadow: '0 0 15px #00f0ff, 0 0 25px rgba(0,240,255,0.8)',
-                      zIndex: 5
-                    }}
-                  >
-                    <span className="pulsing-node-ring" />
-                  </motion.div>
-
-                  {/* Connecting Horizontal Line to Center */}
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: isEven ? '45%' : '50%',
-                      width: '5%',
-                      height: '1.5px',
-                      background: 'rgba(0, 240, 255, 0.4)',
-                      zIndex: 2
-                    }}
-                  />
-
-                  {/* Event Card (45% width, backdrop-blur, 3px cyan border on timeline side) */}
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                      x: isEven ? -100 : 100,
-                      rotate: isEven ? -3 : 3
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0,
-                      rotate: 0
-                    }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                    whileHover={{ translateY: -5 }}
-                    onClick={() => setExpandedIdx(isExpanded ? null : idx)}
-                    data-cursor="Expand"
-                    className="timeline-glass-card"
-                    style={{
-                      width: '45%',
-                      background: 'rgba(17, 17, 17, 0.85)',
-                      backdropFilter: 'blur(10px)',
-                      border: '1px solid #222222',
-                      borderLeft: isEven ? '1px solid #222222' : '3px solid #00f0ff',
-                      borderRight: isEven ? '3px solid #00f0ff' : '1px solid #222222',
-                      borderRadius: '8px',
-                      padding: '25px',
-                      cursor: 'pointer',
-                      position: 'relative',
-                      zIndex: 3,
-                      transition: 'border-color 0.25s, box-shadow 0.25s'
-                    }}
-                  >
-                    {/* Date Badge: Orbitron, 16px, Cyan */}
-                    <div
-                      style={{
-                        fontFamily: 'var(--font-heading, "Orbitron")',
-                        fontSize: '15px',
-                        color: '#00f0ff',
-                        fontWeight: 700,
-                        letterSpacing: '0.05em',
-                        marginBottom: '0.4rem'
-                      }}
-                    >
-                      {item.year}
-                    </div>
-
-                    {/* Title: Rajdhani, 24px, Bold White */}
-                    <h3
-                      style={{
-                        fontFamily: 'var(--font-subheading, "Rajdhani")',
-                        fontSize: '24px',
-                        fontWeight: 700,
-                        color: '#ffffff',
-                        marginBottom: '0.25rem'
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-
-                    {/* Organization / Context Tag: Inter, 14px, Dim Gray */}
-                    <div
-                      style={{
-                        fontFamily: 'var(--font-body, "Inter")',
-                        fontSize: '14px',
-                        color: '#888888',
-                        marginBottom: '0.85rem'
-                      }}
-                    >
-                      {item.tag}
-                    </div>
-
-                    {/* Description: Inter, 15px, Ghost White */}
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body, "Inter")',
-                        fontSize: '15px',
-                        color: '#e0e0e0',
-                        lineHeight: 1.6,
-                        marginBottom: '1rem'
-                      }}
-                    >
-                      {item.description}
-                    </p>
-
-                    {/* Tech Pills */}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                      {item.technologies.map((tech: string) => (
-                        <span
-                          key={tech}
-                          style={{
-                            fontFamily: 'var(--font-mono)',
-                            fontSize: '0.75rem',
-                            color: '#00f0ff',
-                            background: 'rgba(0, 240, 255, 0.08)',
-                            border: '1px solid rgba(0, 240, 255, 0.25)',
-                            padding: '0.2rem 0.6rem',
-                            borderRadius: '9999px'
-                          }}
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Expandable Extra Details */}
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        style={{
-                          marginTop: '1rem',
-                          paddingTop: '1rem',
-                          borderTop: '1px dashed #333333',
-                          fontFamily: 'var(--font-mono)',
-                          fontSize: '0.8rem',
-                          color: '#aaaaaa'
-                        }}
-                      >
-                        <div>&gt; STATUS: {item.status}</div>
-                        <div>&gt; VERIFIED COMMIT: 0x7F4B92</div>
-                      </motion.div>
-                    )}
-                  </motion.div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+              <div className="timeline-body">
+                <p className="timeline-tag">{item.tag}</p>
+                <h3 className="timeline-item-title">{item.title}</h3>
+                <p className="timeline-desc">{item.description}</p>
+                <ul className="timeline-tech">
+                  {item.technologies.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.li>
+          ))}
+        </ol>
       </div>
 
       <style>{`
-        .circuit-board-layer {
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          opacity: 0.04;
-          background-image: radial-gradient(#00f0ff 1px, transparent 1px);
-          background-size: 32px 32px;
+        .timeline {
+          position: relative;
+          background: var(--ink-950);
+          border-top: 1px solid var(--hairline);
         }
-        .pulsing-node-ring {
+        .timeline-inner { position: relative; z-index: 2; }
+
+        .timeline-head {
+          max-width: 660px;
+          margin-bottom: clamp(2.5rem, 5vw, 4rem);
+        }
+        .timeline-title { margin: 0.9rem 0 1.1rem; }
+
+        .timeline-list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .timeline-item {
+          position: relative;
+          display: grid;
+          grid-template-columns: 12px 150px minmax(0, 1fr);
+          gap: clamp(1rem, 2.5vw, 2rem);
+          padding: 0 0 clamp(2rem, 4vw, 2.75rem);
+        }
+        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-rail {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          padding-top: 0.55rem;
+        }
+        .timeline-rail::before {
+          content: '';
           position: absolute;
-          inset: -6px;
+          top: 1.3rem;
+          bottom: -1.2rem;
+          width: 1px;
+          background: linear-gradient(to bottom, rgba(237, 232, 223, 0.16), rgba(237, 232, 223, 0.04));
+        }
+        .timeline-item:last-child .timeline-rail::before { display: none; }
+
+        .timeline-node {
+          position: relative;
+          z-index: 2;
+          width: 9px; height: 9px;
           border-radius: 50%;
-          border: 1px solid #00f0ff;
-          animation: nodePulse 2s infinite;
+          background: var(--ink-950);
+          border: 1px solid rgba(237, 232, 223, 0.3);
         }
-        @keyframes nodePulse {
-          0% { transform: scale(1); opacity: 1; }
-          100% { transform: scale(2.2); opacity: 0; }
+        .timeline-node.is-current {
+          background: var(--ember);
+          border-color: var(--ember);
+          box-shadow: 0 0 0 4px rgba(233, 162, 104, 0.12), 0 0 14px rgba(233, 162, 104, 0.5);
         }
-        .timeline-glass-card:hover {
-          box-shadow: 0 0 25px rgba(0, 240, 255, 0.35) !important;
+
+        .timeline-year {
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          padding-top: 0.15rem;
         }
-        @media (max-width: 768px) {
-          .timeline-glass-card {
-            width: 85% !important;
-            border-left: 3px solid #00f0ff !important;
-            border-right: 1px solid #222222 !important;
+        .timeline-year-value {
+          font-family: var(--font-mono);
+          font-size: 0.9rem;
+          letter-spacing: 0.06em;
+          color: var(--text-primary);
+        }
+        .timeline-status {
+          font-family: var(--font-mono);
+          font-size: 0.6rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--text-faint);
+        }
+        .timeline-status.is-current { color: var(--ember); }
+
+        .timeline-body {
+          padding-bottom: 0.25rem;
+          border-bottom: 1px solid transparent;
+        }
+        .timeline-tag {
+          font-family: var(--font-mono);
+          font-size: 0.62rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--text-faint);
+          margin-bottom: 0.5rem;
+        }
+        .timeline-item-title {
+          font-size: clamp(1.12rem, 1.9vw, 1.4rem);
+          font-weight: 500;
+          letter-spacing: -0.025em;
+          color: var(--text-primary);
+          margin-bottom: 0.6rem;
+        }
+        .timeline-desc {
+          font-size: 0.92rem;
+          line-height: 1.75;
+          color: var(--text-muted);
+          max-width: 62ch;
+          margin-bottom: 1rem;
+        }
+        .timeline-tech {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          list-style: none;
+        }
+        .timeline-tech li {
+          font-family: var(--font-mono);
+          font-size: 0.64rem;
+          color: var(--text-muted);
+          border: 1px solid rgba(237, 232, 223, 0.08);
+          border-radius: var(--radius-pill);
+          padding: 0.22rem 0.6rem;
+        }
+
+        @media (max-width: 780px) {
+          .timeline-item {
+            grid-template-columns: 12px minmax(0, 1fr);
+            gap: 1rem;
           }
+          .timeline-year {
+            grid-column: 2;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 0.6rem;
+            margin-bottom: 0.35rem;
+          }
+          .timeline-body { grid-column: 2; }
         }
       `}</style>
     </section>

@@ -26,8 +26,8 @@ const getRadarColors = (t: ThemeName = 'green') => {
   switch (t) {
     case 'cyan':
       return {
-        beamStart: 'rgba(0, 240, 255, 0)',
-        beamEnd: 'rgba(0, 240, 255, 0.35)',
+        beamStart: 'rgba(233, 162, 104, 0)',
+        beamEnd: 'rgba(233, 162, 104, 0.35)',
         accent: '#00F0FF'
       };
     case 'crimson':

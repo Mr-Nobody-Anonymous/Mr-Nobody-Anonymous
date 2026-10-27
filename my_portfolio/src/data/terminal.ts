@@ -149,7 +149,7 @@ export function executeCommand(cmdStr: string, setTheme?: (t: 'green' | 'cyan' |
     case 'thm':
       return {
         type: 'info',
-        content: 'TryHackMe Profile: https://tryhackme.com/p/Nobody001'
+        content: 'TryHackMe Profile: https://tryhackme.com/p/Mr.nobody.'
       };
 
     case 'contact':

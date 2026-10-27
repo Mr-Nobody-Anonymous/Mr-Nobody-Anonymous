@@ -105,7 +105,7 @@ export const GitHubStats: React.FC = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 {/* TryHackMe Card */}
                 <a
-                  href="https://tryhackme.com/p/Nobody001"
+                  href="https://tryhackme.com/p/Mr.nobody."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -125,7 +125,7 @@ export const GitHubStats: React.FC = () => {
                       TryHackMe
                     </div>
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      Handle: Nobody001
+                      Handle: Mr.nobody.
                     </div>
                   </div>
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--accent)' }}>

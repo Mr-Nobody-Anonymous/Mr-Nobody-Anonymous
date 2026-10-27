@@ -33,7 +33,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
       return;
     }
 
-    const skipTimer = setTimeout(() => setShowSkip(true), 1000);
+    const skipTimer = setTimeout(() => setShowSkip(true), 500);
     return () => clearTimeout(skipTimer);
   }, [onComplete]);
 
@@ -47,11 +47,11 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
         const timer = setTimeout(() => {
           setTypedText((prev) => prev + line[charIdx]);
           setCharIdx((prev) => prev + 1);
-        }, line.startsWith('> ERROR') ? 22 : 32);
+        }, line.startsWith('> ERROR') ? 14 : 19);
         return () => clearTimeout(timer);
       } else {
         // Line finished, wait and move to next or trigger glitch
-        const waitTime = currentLineIdx === BOOT_LINES.length - 1 ? 400 : 320;
+        const waitTime = currentLineIdx === BOOT_LINES.length - 1 ? 260 : 220;
         const lineTimer = setTimeout(() => {
           if (currentLineIdx === BOOT_LINES.length - 1) {
             // Trigger glitch scramble
@@ -82,13 +82,13 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
         .join('');
       setGlitchText(scrambled);
 
-      if (count > 8) {
+      if (count > 5) {
         clearInterval(glitchInterval);
         setIsGlitching(false);
         // Start cracking
         triggerCrack();
       }
-    }, 55);
+    }, 40);
   };
 
   // Glass crack & shatter sequence
@@ -99,8 +99,8 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
       runShatterCanvas();
       setTimeout(() => {
         finishBoot();
-      }, 700);
-    }, 450);
+      }, 480);
+    }, 320);
   };
 
   const runShatterCanvas = () => {
@@ -113,7 +113,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
     canvas.height = window.innerHeight;
 
     const particles: { x: number; y: number; vx: number; vy: number; size: number; alpha: number; color: string }[] = [];
-    const colors = ['#00f0ff', '#ffffff', '#b400ff', 'rgba(0,240,255,0.7)'];
+    const colors = ['#E9A268', '#ffffff', '#9FD8E4', 'rgba(233,162,104,0.7)'];
 
     for (let i = 0; i < 90; i++) {
       const angle = Math.random() * Math.PI * 2;
@@ -172,7 +172,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
           position: 'fixed',
           inset: 0,
           zIndex: 99999,
-          background: '#000000',
+          background: '#07080A',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -200,7 +200,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
               maxWidth: '650px',
               width: '90%',
               padding: '2rem',
-              color: '#00f0ff',
+              color: '#E9A268',
               fontSize: 'clamp(1rem, 2.5vw, 1.35rem)',
               lineHeight: 1.8,
               position: 'relative',
@@ -212,8 +212,8 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
                 <div
                   key={idx}
                   style={{
-                    color: line.includes('ERROR') ? '#ff006e' : '#00f0ff',
-                    textShadow: line.includes('ERROR') ? '0 0 10px rgba(255,0,110,0.6)' : '0 0 10px rgba(0,240,255,0.4)',
+                    color: line.includes('ERROR') ? '#C98B7F' : '#E9A268',
+                    textShadow: line.includes('ERROR') ? '0 0 10px rgba(201,139,127,0.6)' : '0 0 10px rgba(233,162,104,0.4)',
                     marginBottom: '0.4rem'
                   }}
                 >
@@ -227,7 +227,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
                         marginLeft: '3px',
                         width: '10px',
                         height: '2px',
-                        background: '#00f0ff',
+                        background: '#E9A268',
                         verticalAlign: 'middle'
                       }}
                     >
@@ -255,11 +255,11 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
           >
             <defs>
               <filter id="crack-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#00f0ff" floodOpacity="0.8" />
+                <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#E9A268" floodOpacity="0.8" />
               </filter>
             </defs>
             {/* Radiating Crack Lines */}
-            <g stroke="#00f0ff" strokeWidth="2.5" filter="url(#crack-glow)" fill="none">
+            <g stroke="#E9A268" strokeWidth="2.5" filter="url(#crack-glow)" fill="none">
               <path d="M500,500 L440,380 L390,260 L320,110" />
               <path d="M500,500 L580,390 L680,310 L840,190" />
               <path d="M500,500 L620,530 L770,580 L920,620" />
@@ -273,7 +273,7 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
               <path d="M370,510 L330,440 L260,390" strokeWidth="1.5" />
             </g>
             {/* Center Cyan Bleed Flash */}
-            <circle cx="500" cy="500" r="45" fill="#00f0ff" opacity="0.6" filter="url(#crack-glow)" />
+            <circle cx="500" cy="500" r="45" fill="#E9A268" opacity="0.6" filter="url(#crack-glow)" />
           </svg>
         )}
 
@@ -289,9 +289,9 @@ export const CinematicBoot: React.FC<CinematicBootProps> = ({ onComplete }) => {
               bottom: '2rem',
               right: '2.5rem',
               background: 'transparent',
-              border: '1px solid rgba(0,240,255,0.3)',
+              border: '1px solid rgba(233,162,104,0.3)',
               borderRadius: '4px',
-              color: '#00f0ff',
+              color: '#E9A268',
               padding: '0.4rem 1rem',
               fontSize: '0.8rem',
               letterSpacing: '0.12em',

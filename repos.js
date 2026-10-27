@@ -148,15 +148,15 @@ async function main() {
         for (let i = 0; i < ranked.length; i += 2) {
             const first = ranked[i];
             const second = ranked[i + 1];
-            let rowHtml = `<p align="center">\n  <a href="${first.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${first.name}&theme=radical&hide_border=true" alt="${first.name}" /></a>`;
+            let rowHtml = `<p align="center">\n  <a href="${first.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${first.name}&hide_border=true&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268" alt="${first.name}" /></a>`;
             if (second) {
-                rowHtml += `\n  <a href="${second.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${second.name}&theme=radical&hide_border=true" alt="${second.name}" /></a>`;
+                rowHtml += `\n  <a href="${second.url}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${second.name}&hide_border=true&bg_color=0e1116&title_color=e9a268&text_color=ede8df&icon_color=e9a268" alt="${second.name}" /></a>`;
             }
             rowHtml += `\n</p>`;
             pinCards.push(rowHtml);
         }
 
-        const output = `### ⚡ Featured Systems & Flagship Repositories\n\n${pinCards.join("\n")}\n\n<sub>⚡ Auto-ranked & updated continuously by [repos.js](./repos.js) based on live GitHub stars, activity recency, and codebase metrics.</sub>`;
+        const output = `### ⚡ Auto-ranked, always current\n\n${pinCards.join("\n")}\n\n<p align="left"><sub>Ranked daily by <a href="./repos.js">repos.js</a> using stars, recent activity and codebase size.</sub></p>`;
 
         const readmePath = "README.md";
         const readme = fs.readFileSync(readmePath, "utf8");

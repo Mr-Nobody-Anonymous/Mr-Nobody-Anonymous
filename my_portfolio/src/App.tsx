@@ -6,7 +6,6 @@ import { CinematicBoot } from './components/cinematic/CinematicBoot';
 import { LivingCyberBackground } from './components/cinematic/LivingCyberBackground';
 import { CustomCursor } from './components/layout/CustomCursor';
 import { GrainOverlay } from './components/ui/GrainOverlay';
-import { SignalIndicator } from './components/layout/SignalIndicator';
 
 // Blueprint Sections
 import { BlueprintNavbar } from './components/blueprint/BlueprintNavbar';
@@ -15,6 +14,7 @@ import { BlueprintAbout } from './components/blueprint/BlueprintAbout';
 import { BlueprintSkills } from './components/blueprint/BlueprintSkills';
 import { BlueprintProjects } from './components/blueprint/BlueprintProjects';
 import { BlueprintTimeline } from './components/blueprint/BlueprintTimeline';
+import { BlueprintCredentials } from './components/blueprint/BlueprintCredentials';
 import { BlueprintContact } from './components/blueprint/BlueprintContact';
 import { BlueprintFooter } from './components/blueprint/BlueprintFooter';
 import { BlueprintGlobalEffects } from './components/blueprint/BlueprintGlobalEffects';
@@ -71,9 +71,6 @@ export const App: React.FC = () => {
         {/* Global Dual-Ring Custom Cursor */}
         <CustomCursor />
 
-        {/* Telemetry Signal Indicator */}
-        <SignalIndicator />
-
         {/* Global Page-Wide Effects: Micro-Glitches, Konami Code, TV Static Idle, Audio Synth */}
         <BlueprintGlobalEffects soundEnabled={soundEnabled} />
 
@@ -85,7 +82,10 @@ export const App: React.FC = () => {
 
         <main id="main-blueprint-content" tabIndex={-1}>
           {/* SECTION 1: HERO / LANDING */}
-          <BlueprintHero onScrollToAbout={handleScrollToAbout} />
+          <BlueprintHero
+            onScrollToAbout={handleScrollToAbout}
+            onOpenTerminal={() => setOverlay({ type: 'terminal' })}
+          />
 
           {/* SECTION 2: ABOUT ME */}
           <BlueprintAbout />
@@ -99,11 +99,14 @@ export const App: React.FC = () => {
           {/* SECTION 5: EXPERIENCE / JOURNEY TIMELINE */}
           <BlueprintTimeline />
 
-          {/* SECTION 6: CONTACT / GET IN TOUCH */}
+          {/* SECTION 6: CREDENTIALS & HANDS-ON LABS */}
+          <BlueprintCredentials />
+
+          {/* SECTION 7: CONTACT / GET IN TOUCH */}
           <BlueprintContact onGlitchEasterEgg={handleGlitchEasterEgg} />
         </main>
 
-        {/* SECTION 7: FOOTER */}
+        {/* SECTION 8: FOOTER */}
         <BlueprintFooter />
 
         {/* Project Case File & Terminal Overlay Dialogs */}
@@ -119,7 +122,7 @@ export const App: React.FC = () => {
               {overlay.type === 'terminal' && (
                 <>
                   <div className="terminal-modal-heading" style={{ marginBottom: '1.5rem' }}>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: '#00f0ff', letterSpacing: '0.1em' }}>
+                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: '#E9A268', letterSpacing: '0.1em' }}>
                       WELCOME TO THE OTHER SIDE
                     </p>
                     <h2 id="terminal-dialog-title" style={{ fontFamily: 'var(--font-heading)', color: '#ffffff', fontSize: '1.6rem', marginTop: '0.25rem' }}>
@@ -138,7 +141,7 @@ export const App: React.FC = () => {
                     onExit={() => setOverlay(null)}
                     autofocus
                   />
-                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#666666', marginTop: '1rem' }}>
+                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#8A8F96', marginTop: '1rem' }}>
                     A local portfolio sandbox. No commands run on your device. Press Esc to return.
                   </p>
                 </>

@@ -127,8 +127,8 @@ export const CustomCursor: React.FC = () => {
             pointerEvents: 'none',
             zIndex: 99997,
             borderRadius: '50%',
-            border: '1.5px solid #00f0ff',
-            boxShadow: '0 0 12px rgba(0, 240, 255, 0.6)'
+            border: '1.5px solid #E9A268',
+            boxShadow: '0 0 12px rgba(233, 162, 104, 0.6)'
           }}
         />
       ))}
@@ -153,9 +153,9 @@ export const CustomCursor: React.FC = () => {
             width: isClicked ? '16px' : isHovered ? '50px' : '30px',
             height: isClicked ? '16px' : isHovered ? '50px' : '30px',
             borderRadius: '50%',
-            border: isTextHover ? 'none' : '1px solid #00f0ff',
-            background: isHovered ? 'rgba(0, 240, 255, 0.10)' : 'transparent',
-            boxShadow: isHovered ? '0 0 15px rgba(0, 240, 255, 0.4)' : '0 0 8px rgba(0, 240, 255, 0.25)',
+            border: isTextHover ? 'none' : '1px solid #E9A268',
+            background: isHovered ? 'rgba(233, 162, 104, 0.10)' : 'transparent',
+            boxShadow: isHovered ? '0 0 15px rgba(233, 162, 104, 0.4)' : '0 0 8px rgba(233, 162, 104, 0.25)',
             transition: 'width 0.18s ease-out, height 0.18s ease-out, background 0.18s ease-out, border 0.18s ease-out',
             display: 'flex',
             alignItems: 'center',
@@ -167,7 +167,7 @@ export const CustomCursor: React.FC = () => {
               style={{
                 fontFamily: 'var(--font-mono, monospace)',
                 fontSize: '0.6rem',
-                color: '#00f0ff',
+                color: '#E9A268',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 pointerEvents: 'none'
@@ -199,8 +199,8 @@ export const CustomCursor: React.FC = () => {
             width: isTextHover ? '2px' : isClicked ? '4px' : '8px',
             height: isTextHover ? '16px' : isClicked ? '4px' : '8px',
             borderRadius: isTextHover ? '1px' : '50%',
-            background: '#00f0ff',
-            boxShadow: '0 0 10px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.8)',
+            background: '#E9A268',
+            boxShadow: '0 0 10px #E9A268, 0 0 20px rgba(233, 162, 104, 0.8)',
             transition: 'width 0.12s ease-out, height 0.12s ease-out, border-radius 0.12s ease-out'
           }}
         />
