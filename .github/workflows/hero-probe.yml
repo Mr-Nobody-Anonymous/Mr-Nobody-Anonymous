@@ -18,7 +18,7 @@ jobs:
             i=$((i+1))
             code=$(curl -sL -m 30 -A "Mozilla/5.0" -o /tmp/body -w "%{http_code}" "$u")
             size=$(wc -c < /tmp/body | tr -d ' ')
-            b64=$(head -c 1200 /tmp/body | base64 -w0)
+            b64=$(head -c 6000 /tmp/body | base64 -w0)
             echo "::error title=$i::$code|$size|$b64"
           done <<'URLS'
           https://capsule-render.vercel.app/api?type=waving&color=0:07080a,55:0e1116,100:e9a268&height=210&section=header&text=Beamlak%20Sintayehu&fontSize=42&fontColor=ede8df&fontAlignY=36&desc=Cybersecurity%20%C2%B7%20Offensive%20Security%20%C2%B7%20Applied%20AI&descAlignY=56&descSize=15&animation=fadeIn
