@@ -1,5 +1,8 @@
 name: widget-probe
 on:
+  push:
+    paths:
+      - '.github/workflows/widget-probe.yml'
   workflow_dispatch:
 jobs:
   probe:
