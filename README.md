@@ -6,17 +6,17 @@
   renders the pinned-repository shelf at the top of the profile.
 -->
 
+<a id="top"></a>
+
 <p align="center">
   <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/">
     <img
-      src="https://capsule-render.vercel.app/api?type=waving&color=0:07080a,55:0e1116,100:e9a268&height=210&section=header&text=Beamlak%20Sintayehu&fontSize=42&fontColor=ede8df&fontAlignY=36&desc=Cybersecurity%20%C2%B7%20Offensive%20Security%20%C2%B7%20Applied%20AI&descAlignY=56&descSize=15&animation=fadeIn"
-      alt="Beamlak Sintayehu — Cybersecurity · Offensive Security · Applied AI"
+      src="assets/profile-banner.svg"
+      alt="Beamlak Sintayehu — Cybersecurity · Offensive Security · Applied AI. Building secure systems, and studying how they break."
       width="100%"
     />
   </a>
 </p>
-
-<h3 align="center">Cybersecurity practitioner<br/>building secure systems — and studying how they break.</h3>
 
 <p align="center">
   <a href="https://mr-nobody-anonymous.github.io/Mr-Nobody-Anonymous/"><img alt="Portfolio" src="https://img.shields.io/badge/PORTFOLIO-Visit%20the%20site-e9a268?style=flat-square&labelColor=0e1116&logo=googlechrome&logoColor=e9a268" /></a>
@@ -40,15 +40,13 @@
 </p>
 
 <p align="center">
-  <sub>
-    <a href="#about">About</a> ·
-    <a href="#focus">What I do</a> ·
-    <a href="#skills">Skills</a> ·
-    <a href="#toolbox">Toolbox</a> ·
-    <a href="#certifications">Certifications</a> ·
-    <a href="#stats">Stats</a> ·
-    <a href="#connect">Connect</a>
-  </sub>
+  <a href="#about"><code>&nbsp;About&nbsp;</code></a>&nbsp;
+  <a href="#focus"><code>&nbsp;What I do&nbsp;</code></a>&nbsp;
+  <a href="#skills"><code>&nbsp;Skills&nbsp;</code></a>&nbsp;
+  <a href="#toolbox"><code>&nbsp;Toolbox&nbsp;</code></a>&nbsp;
+  <a href="#certifications"><code>&nbsp;Certifications&nbsp;</code></a>&nbsp;
+  <a href="#stats"><code>&nbsp;Stats&nbsp;</code></a>&nbsp;
+  <a href="#connect"><code>&nbsp;Connect&nbsp;</code></a>
 </p>
 
 ---
