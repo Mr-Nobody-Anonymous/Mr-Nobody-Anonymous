@@ -45,7 +45,7 @@ export const LivingCyberBackground: React.FC = () => {
 
     const handleDblClick = (e: MouseEvent) => {
       // Blueprint Easter Egg: Double-click spawns firework burst of cyan/purple particles
-      const colors = ['#00f0ff', '#b400ff', '#ff006e', '#ffffff'];
+      const colors = ['#E9A268', '#9FD8E4', '#C98B7F', '#ffffff'];
       for (let i = 0; i < 35; i++) {
         const angle = Math.random() * Math.PI * 2;
         const speed = Math.random() * 8 + 2;
@@ -170,8 +170,8 @@ export const LivingCyberBackground: React.FC = () => {
         // Draw node
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 240, 255, ${n.alpha})`;
-        ctx.shadowColor = '#00f0ff';
+        ctx.fillStyle = `rgba(233, 162, 104, ${n.alpha})`;
+        ctx.shadowColor = '#E9A268';
         ctx.shadowBlur = n.radius > 1.5 ? 6 : 0;
         ctx.fill();
         ctx.shadowBlur = 0;
@@ -188,7 +188,7 @@ export const LivingCyberBackground: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(n.x, n.y);
             ctx.lineTo(n2.x, n2.y);
-            ctx.strokeStyle = `rgba(0, 240, 255, ${lineAlpha})`;
+            ctx.strokeStyle = `rgba(233, 162, 104, ${lineAlpha})`;
             ctx.lineWidth = 0.75;
             ctx.stroke();
           }
@@ -240,7 +240,7 @@ export const LivingCyberBackground: React.FC = () => {
         zIndex: 0,
         pointerEvents: 'none',
         overflow: 'hidden',
-        background: '#0a0a0a'
+        background: 'transparent'
       }}
     >
       {/* 1. Deep Void Black Base with subtle radial vignette */}
@@ -248,7 +248,7 @@ export const LivingCyberBackground: React.FC = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse at 50% 40%, #111116 0%, #0a0a0a 75%, #050505 100%)'
+          background: 'radial-gradient(ellipse 70% 55% at 60% 20%, rgba(233, 162, 104, 0.06) 0%, transparent 65%)'
         }}
       />
 
@@ -264,7 +264,7 @@ export const LivingCyberBackground: React.FC = () => {
           maxWidth: '850px',
           maxHeight: '850px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(0, 240, 255, 0.07) 0%, rgba(180, 0, 255, 0.04) 45%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(233, 162, 104, 0.07) 0%, rgba(159, 216, 228, 0.04) 45%, transparent 70%)',
           filter: 'blur(75px)',
           willChange: 'transform'
         }}

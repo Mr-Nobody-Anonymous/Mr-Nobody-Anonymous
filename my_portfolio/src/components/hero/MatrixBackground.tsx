@@ -38,7 +38,7 @@ export const MatrixBackground: React.FC<MatrixBackgroundProps> = ({
     const getColors = (t: ThemeName) => {
       switch (t) {
         case 'cyan':
-          return { head: '#ffffff', body: '#00f0ff', dim: 'rgba(0, 240, 255, 0.35)' };
+          return { head: '#ffffff', body: '#E9A268', dim: 'rgba(233, 162, 104, 0.35)' };
         case 'crimson':
           return { head: '#ffffff', body: '#ff2a55', dim: 'rgba(255, 42, 85, 0.35)' };
         case 'green':

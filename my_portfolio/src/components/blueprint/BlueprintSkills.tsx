@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Terminal, Cpu, Network, Lock, Code } from 'lucide-react';
+import { Shield, Terminal, Cpu, Network, Lock, Code, Grid2X2, Share2 } from 'lucide-react';
 
 interface SkillItem {
   id: string;
@@ -8,579 +8,614 @@ interface SkillItem {
   category: string;
   percentage: number;
   icon: React.ElementType;
-  iconColor: string;
   description: string;
-  size: 'large' | 'medium' | 'small';
+  span: 'half' | 'quarter';
   snippet?: string;
   connectedTo?: string[];
-  x?: number;
-  y?: number;
+  x: number;
+  y: number;
 }
 
 const SKILLS_DATA: SkillItem[] = [
   {
     id: 'cybersecurity',
-    name: 'Cyber Security',
-    category: 'OFFENSIVE / DEFENSIVE',
+    name: 'Security engineering',
+    category: 'Offensive / Defensive',
     percentage: 92,
     icon: Shield,
-    iconColor: '#00f0ff',
-    description: 'Vulnerability mapping, threat vectors, STRIDE modeling, and packet protocol analysis.',
-    size: 'large',
-    snippet: `// Kernel audit & privilege boundary check\nconst boundary = verifyIsolation({\n  uid: 0,\n  capabilities: ['CAP_NET_RAW'],\n  enforceStrictSandbox: true\n});`,
+    description: 'Vulnerability mapping, attack-path analysis, STRIDE threat modeling and protocol-level verification.',
+    span: 'half',
+    snippet: `const boundary = verifyIsolation({\n  uid: 0,\n  capabilities: ['CAP_NET_RAW'],\n  enforceStrictSandbox: true\n});`,
     connectedTo: ['python', 'linux', 'networking'],
-    x: 280,
-    y: 120
+    x: 44,
+    y: 24
+  },
+  {
+    id: 'web',
+    name: 'Modern web & interfaces',
+    category: 'Frontend architecture',
+    percentage: 86,
+    icon: Code,
+    description: 'React 19, TypeScript, motion orchestration and design systems that stay fast under pressure.',
+    span: 'half',
+    snippet: `const { scrollYProgress } = useScroll();\nconst smoothX = useSpring(scrollYProgress, {\n  stiffness: 180, damping: 28\n});`,
+    connectedTo: ['python', 'cybersecurity'],
+    x: 80,
+    y: 22
   },
   {
     id: 'python',
-    name: 'Python Systems',
-    category: 'BACKEND & AUTOMATION',
-    percentage: 88,
+    name: 'Python systems',
+    category: 'Backend & automation',
+    percentage: 89,
     icon: Terminal,
-    iconColor: '#3776ab',
-    description: 'AsyncIO daemons, socket transports, OpenCV video pipelines, and automated recon scripts.',
-    size: 'medium',
+    description: 'AsyncIO daemons, socket transports, OpenCV pipelines and automated reconnaissance tooling.',
+    span: 'quarter',
     connectedTo: ['cybersecurity', 'ai', 'linux'],
-    x: 140,
-    y: 220
+    x: 22,
+    y: 46
   },
   {
     id: 'ai',
     name: 'Autonomous AI',
-    category: 'AGENTIC ARCHITECTURES',
-    percentage: 85,
+    category: 'Agentic architectures',
+    percentage: 84,
     icon: Cpu,
-    iconColor: '#b400ff',
-    description: 'Autonomous state machines, YOLO vision inference, deterministic agent tool execution loops.',
-    size: 'medium',
+    description: 'State machines, vision inference and deterministic tool-execution loops with bounded autonomy.',
+    span: 'quarter',
     connectedTo: ['python', 'cybersecurity'],
-    x: 440,
-    y: 200
+    x: 68,
+    y: 46
   },
   {
     id: 'linux',
-    name: 'Linux Kernel & Shell',
-    category: 'SYSTEMS',
+    name: 'Linux & shell',
+    category: 'Systems',
     percentage: 90,
     icon: Lock,
-    iconColor: '#f05032',
-    description: 'Systemd units, kernel namespaces, bash automation, and low-level daemon isolation.',
-    size: 'small',
+    description: 'systemd units, kernel namespaces, bash automation and low-level process isolation.',
+    span: 'quarter',
     connectedTo: ['cybersecurity', 'networking', 'python'],
-    x: 220,
-    y: 320
+    x: 34,
+    y: 72
   },
   {
     id: 'networking',
     name: 'Networking & TCP/IP',
-    category: 'INFRASTRUCTURE',
-    percentage: 86,
+    category: 'Infrastructure',
+    percentage: 87,
     icon: Network,
-    iconColor: '#00f0ff',
-    description: 'Wireshark packet dissection, encrypted tunnel routing, and protocol anomaly verification.',
-    size: 'small',
+    description: 'Packet dissection, tunnel routing and protocol anomaly analysis on real traffic.',
+    span: 'quarter',
     connectedTo: ['cybersecurity', 'linux'],
-    x: 370,
-    y: 330
-  },
-  {
-    id: 'web',
-    name: 'Modern Web & React',
-    category: 'FRONTEND ARCHITECTURE',
-    percentage: 84,
-    icon: Code,
-    iconColor: '#61dafb',
-    description: 'High-performance React 19, TypeScript, motion orchestration, and dark mode design systems.',
-    size: 'large',
-    snippet: `// Motion spring transition hook\nconst { scrollYProgress } = useScroll();\nconst smoothX = useSpring(scrollYProgress, {\n  stiffness: 180,\n  damping: 28\n});`,
-    connectedTo: ['python', 'cybersecurity'],
-    x: 520,
-    y: 110
+    x: 60,
+    y: 76
   }
 ];
 
-const CODE_RAIN_LINES = [
-  'import { verifyToken, decryptStream } from "@nobody/crypto";',
-  'const payload = await socket.recv({ timeout: 120, raw: true });',
-  'if (packet.header.flags & SYN_ACK) establishEncryptedRoute();',
-  'const yoloInference = model.predict(frameBuffer, { conf: 0.85 });',
-  'systemd.isolateProcess({ cgroups: "v2", memoryLimit: "512M" });',
-  'export const agentLoop = async (task: Task): Promise<Result> => {'
-];
+const ease = [0.16, 1, 0.3, 1] as const;
 
 export const BlueprintSkills: React.FC = () => {
-  const [viewMode, setViewMode] = useState<'grid' | 'constellation'>('grid');
-  const [hoveredSkillId, setHoveredSkillId] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'bento' | 'map'>('bento');
+  const [activeId, setActiveId] = useState<string | null>(null);
 
-  // 3D Tilt calculation
-  const [tiltMap, setTiltMap] = useState<Record<string, { rotateX: number; rotateY: number }>>({});
-
-  const handleMouseMove = (id: string, e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    const rotateX = -(y / (rect.height / 2)) * 5; // Max 5 deg
-    const rotateY = (x / (rect.width / 2)) * 5;
-    setTiltMap((prev) => ({ ...prev, [id]: { rotateX, rotateY } }));
-  };
-
-  const handleMouseLeave = (id: string) => {
-    setTiltMap((prev) => ({ ...prev, [id]: { rotateX: 0, rotateY: 0 } }));
-  };
-
-  const titleLetters = 'WHAT I WORK WITH'.split('');
+  const activeSkill = SKILLS_DATA.find((s) => s.id === activeId) ?? null;
 
   return (
-    <section
-      id="skills"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        background: '#1a1a2e',
-        padding: '120px 2rem',
-        overflow: 'hidden'
-      }}
-    >
-      {/* Floating horizontal code lines at 5-8% opacity */}
-      <div className="code-rain-layer" aria-hidden="true">
-        {CODE_RAIN_LINES.map((code, idx) => (
-          <div
-            key={idx}
-            className="code-rain-line"
-            style={{
-              top: `${idx * 16 + 5}%`,
-              animationDuration: `${18 + idx * 4}s`
-            }}
-          >
-            {code}
+    <section id="skills" className="section skills">
+      <div className="skills-halo" aria-hidden="true" />
+
+      <div className="shell skills-inner">
+        <motion.header
+          className="skills-head"
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease }}
+        >
+          <div>
+            <p className="eyebrow">Capabilities</p>
+            <h2 className="section-title skills-title">
+              What I <em>work</em> with.
+            </h2>
+            <p className="lede">
+              A working toolkit rather than a checklist — the systems, languages and
+              safeguards I reach for when a problem needs to be understood end to end.
+            </p>
           </div>
-        ))}
-      </div>
 
-      <div
-        style={{
-          maxWidth: '1200px',
-          width: '100%',
-          margin: '0 auto',
-          position: 'relative',
-          zIndex: 3
-        }}
-      >
-        {/* Section Tag: < SKILLS /> */}
-        <div
-          style={{
-            fontFamily: 'var(--font-mono, "Fira Code", monospace)',
-            fontSize: '14px',
-            color: '#00f0ff',
-            letterSpacing: '0.1em',
-            marginBottom: '0.75rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px'
-          }}
-        >
-          <span>&lt; SKILLS /&gt;</span>
-        </div>
-
-        {/* Title: WHAT I WORK WITH (Letters assemble from scattered positions) */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-            flexWrap: 'wrap',
-            gap: '1.5rem',
-            marginBottom: '3rem'
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: 'var(--font-heading, "Orbitron", sans-serif)',
-              fontSize: 'clamp(2rem, 5vw, 3rem)',
-              fontWeight: 800,
-              color: '#ffffff',
-              display: 'flex',
-              flexWrap: 'wrap'
-            }}
-          >
-            {titleLetters.map((char, idx) => (
-              <motion.span
-                key={idx}
-                initial={{
-                  opacity: 0,
-                  x: (Math.random() - 0.5) * 200,
-                  y: (Math.random() - 0.5) * 200,
-                  scale: 0.5
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  y: 0,
-                  scale: 1
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.8,
-                  delay: idx * 0.03,
-                  ease: [0.16, 1, 0.3, 1]
-                }}
-                style={{ display: 'inline-block', whiteSpace: char === ' ' ? 'pre' : 'normal' }}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </h2>
-
-          {/* View Toggle: Grid View | Constellation View */}
-          <div
-            style={{
-              display: 'inline-flex',
-              background: '#111111',
-              padding: '4px',
-              borderRadius: '8px',
-              border: '1px solid #222222'
-            }}
-          >
+          <div className="skills-toggle" role="tablist" aria-label="Skills view">
             <button
-              onClick={() => setViewMode('grid')}
-              style={{
-                padding: '0.45rem 1.1rem',
-                borderRadius: '6px',
-                border: 'none',
-                background: viewMode === 'grid' ? 'rgba(0, 240, 255, 0.15)' : 'transparent',
-                color: viewMode === 'grid' ? '#00f0ff' : '#666666',
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.8rem',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
+              type="button"
+              role="tab"
+              aria-selected={viewMode === 'bento'}
+              className={viewMode === 'bento' ? 'is-active' : ''}
+              onClick={() => setViewMode('bento')}
             >
-              Grid View
+              <Grid2X2 size={14} strokeWidth={1.7} />
+              Bento
             </button>
             <button
-              onClick={() => setViewMode('constellation')}
-              style={{
-                padding: '0.45rem 1.1rem',
-                borderRadius: '6px',
-                border: 'none',
-                background: viewMode === 'constellation' ? 'rgba(0, 240, 255, 0.15)' : 'transparent',
-                color: viewMode === 'constellation' ? '#00f0ff' : '#666666',
-                fontFamily: 'var(--font-mono)',
-                fontSize: '0.8rem',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
+              type="button"
+              role="tab"
+              aria-selected={viewMode === 'map'}
+              className={viewMode === 'map' ? 'is-active' : ''}
+              onClick={() => setViewMode('map')}
             >
-              Constellation View
+              <Share2 size={14} strokeWidth={1.7} />
+              Map
             </button>
           </div>
-        </div>
+        </motion.header>
 
-        {/* View 1: Bento Grid */}
         <AnimatePresence mode="wait">
-          {viewMode === 'grid' ? (
+          {viewMode === 'bento' ? (
             <motion.div
-              key="grid"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(12, 1fr)',
-                gap: '1.5rem'
-              }}
+              key="bento"
+              className="skill-grid"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease }}
             >
-              {SKILLS_DATA.map((skill) => {
-                const IconComponent = skill.icon;
-                const tilt = tiltMap[skill.id] || { rotateX: 0, rotateY: 0 };
-                const isHovered = hoveredSkillId === skill.id;
-
-                const colSpan = skill.size === 'large' ? 'span 6' : skill.size === 'medium' ? 'span 3' : 'span 3';
-
+              {SKILLS_DATA.map((skill, idx) => {
+                const Icon = skill.icon;
                 return (
-                  <div
+                  <motion.article
                     key={skill.id}
-                    onMouseMove={(e) => handleMouseMove(skill.id, e)}
-                    onMouseEnter={() => setHoveredSkillId(skill.id)}
-                    onMouseLeave={() => {
-                      handleMouseLeave(skill.id);
-                      setHoveredSkillId(null);
-                    }}
-                    style={{
-                      gridColumn: colSpan,
-                      perspective: 800
-                    }}
+                    className={`skill-card skill-card--${skill.span}`}
+                    initial={{ opacity: 0, y: 22 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.6, delay: idx * 0.05, ease }}
                   >
-                    <motion.div
-                      className="bento-skill-card"
-                      style={{
-                        background: '#111111',
-                        border: isHovered ? '1px solid #00f0ff' : '1px solid #222222',
-                        borderRadius: '12px',
-                        padding: '30px',
-                        height: '100%',
-                        position: 'relative',
-                        transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) translateY(${isHovered ? '-10px' : '0px'})`,
-                        transition: 'transform 0.15s ease-out, border-color 0.25s ease, box-shadow 0.25s ease',
-                        boxShadow: isHovered ? '0 15px 35px rgba(0, 240, 255, 0.25), 0 0 15px rgba(0,240,255,0.1)' : 'none',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between'
-                      }}
-                    >
-                      <div>
-                        {/* Header: Icon + Category */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
-                          <div
-                            style={{
-                              width: '42px',
-                              height: '42px',
-                              borderRadius: '8px',
-                              border: '1px solid rgba(255,255,255,0.1)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              color: isHovered ? skill.iconColor : '#ffffff',
-                              background: isHovered ? 'rgba(255,255,255,0.05)' : 'transparent',
-                              transition: 'all 0.25s ease'
-                            }}
-                          >
-                            <IconComponent size={22} strokeWidth={1.5} />
-                          </div>
-                          <span
-                            style={{
-                              fontFamily: 'var(--font-mono)',
-                              fontSize: '0.7rem',
-                              color: '#666666',
-                              letterSpacing: '0.08em'
-                            }}
-                          >
-                            {skill.category}
-                          </span>
-                        </div>
+                    <div className="skill-card-top">
+                      <span className="skill-icon" aria-hidden="true">
+                        <Icon size={18} strokeWidth={1.6} />
+                      </span>
+                      <span className="skill-category">{skill.category}</span>
+                    </div>
 
-                        {/* Skill Name */}
-                        <h3
-                          style={{
-                            fontFamily: 'var(--font-subheading, "Rajdhani", sans-serif)',
-                            fontSize: '22px',
-                            fontWeight: 700,
-                            color: '#ffffff',
-                            marginBottom: '0.5rem'
-                          }}
-                        >
-                          {skill.name}
-                        </h3>
+                    <h3 className="skill-name">{skill.name}</h3>
+                    <p className="skill-desc">{skill.description}</p>
 
-                        {/* Description */}
-                        <p
-                          style={{
-                            fontFamily: 'var(--font-body, "Inter", sans-serif)',
-                            fontSize: '14px',
-                            color: '#666666',
-                            lineHeight: 1.6,
-                            marginBottom: '1.5rem'
-                          }}
-                        >
-                          {skill.description}
-                        </p>
+                    {skill.snippet && (
+                      <pre className="skill-snippet">{skill.snippet}</pre>
+                    )}
 
-                        {/* Code Snippet for Large Cards */}
-                        {skill.snippet && (
-                          <div
-                            style={{
-                              background: '#0a0a0e',
-                              border: '1px solid #1f1f2e',
-                              borderRadius: '6px',
-                              padding: '0.85rem',
-                              fontFamily: 'var(--font-mono, monospace)',
-                              fontSize: '0.75rem',
-                              color: '#a0a0b0',
-                              lineHeight: 1.5,
-                              whiteSpace: 'pre-wrap',
-                              marginBottom: '1.5rem',
-                              overflowX: 'auto'
-                            }}
-                          >
-                            {skill.snippet}
-                          </div>
-                        )}
+                    <div className="skill-meter">
+                      <div className="skill-meter-head">
+                        <span>Proficiency</span>
+                        <span className="skill-meter-value">{skill.percentage}%</span>
                       </div>
-
-                      {/* Proficiency Bar with Shimmer */}
-                      <div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem', fontFamily: 'var(--font-mono)', fontSize: '0.75rem' }}>
-                          <span style={{ color: '#888888' }}>PROFICIENCY</span>
-                          <span style={{ color: '#00f0ff', fontWeight: 600 }}>{skill.percentage}%</span>
-                        </div>
-                        <div
-                          style={{
-                            width: '100%',
-                            height: '6px',
-                            background: '#1a1a1a',
-                            borderRadius: '3px',
-                            overflow: 'hidden',
-                            position: 'relative'
-                          }}
-                        >
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.percentage}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.2, ease: 'easeOut' }}
-                            style={{
-                              height: '100%',
-                              background: 'linear-gradient(90deg, #00f0ff 0%, #b400ff 100%)',
-                              position: 'relative'
-                            }}
-                          >
-                            <div className="shimmer-bar" />
-                          </motion.div>
-                        </div>
+                      <div className="skill-meter-track">
+                        <motion.div
+                          className="skill-meter-fill"
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.percentage}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.1, delay: 0.15, ease: 'easeOut' }}
+                        />
                       </div>
-                    </motion.div>
-                  </div>
+                    </div>
+                  </motion.article>
                 );
               })}
             </motion.div>
           ) : (
-            /* View 2: Constellation Node-Graph */
             <motion.div
-              key="constellation"
+              key="map"
+              className="skill-map"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                width: '100%',
-                height: '520px',
-                background: '#0d0d18',
-                borderRadius: '16px',
-                border: '1px solid rgba(0, 240, 255, 0.2)',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
+              transition={{ duration: 0.35 }}
             >
-              {/* SVG Connecting lines */}
-              <svg width="100%" height="100%" style={{ position: 'absolute', inset: 0 }}>
-                {SKILLS_DATA.map((skill) =>
-                  skill.connectedTo?.map((targetId) => {
-                    const target = SKILLS_DATA.find((s) => s.id === targetId);
-                    if (!target || !skill.x || !skill.y || !target.x || !target.y) return null;
+              <div className="skill-map-canvas">
+                <svg className="skill-map-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  {SKILLS_DATA.flatMap((skill) =>
+                    (skill.connectedTo ?? []).map((targetId) => {
+                      const target = SKILLS_DATA.find((s) => s.id === targetId);
+                      if (!target || skill.id > target.id) return null;
+                      const highlighted =
+                        activeId === skill.id || activeId === target.id;
+                      return (
+                        <line
+                          key={`${skill.id}-${targetId}`}
+                          x1={skill.x}
+                          y1={skill.y}
+                          x2={target.x}
+                          y2={target.y}
+                          className={highlighted ? 'is-active' : ''}
+                          vectorEffect="non-scaling-stroke"
+                        />
+                      );
+                    })
+                  )}
+                </svg>
 
-                    const isHighlight =
-                      hoveredSkillId === skill.id || hoveredSkillId === target.id;
+                {SKILLS_DATA.map((skill) => {
+                  const isActive = activeId === skill.id;
+                  const isDimmed =
+                    activeId !== null &&
+                    activeId !== skill.id &&
+                    !(skill.connectedTo ?? []).includes(activeId) &&
+                    !(SKILLS_DATA.find((s) => s.id === activeId)?.connectedTo ?? []).includes(skill.id);
 
-                    return (
-                      <line
-                        key={`${skill.id}-${targetId}`}
-                        x1={skill.x}
-                        y1={skill.y}
-                        x2={target.x}
-                        y2={target.y}
-                        stroke={isHighlight ? '#00f0ff' : 'rgba(255,255,255,0.12)'}
-                        strokeWidth={isHighlight ? 2 : 1}
-                        strokeDasharray={isHighlight ? 'none' : '3 3'}
-                        style={{ transition: 'stroke 0.3s, stroke-width 0.3s' }}
-                      />
-                    );
-                  })
-                )}
-              </svg>
-
-              {/* Interactive Draggable Skill Nodes */}
-              {SKILLS_DATA.map((skill) => {
-                const isHovered = hoveredSkillId === skill.id;
-                const isDimmed =
-                  hoveredSkillId !== null &&
-                  hoveredSkillId !== skill.id &&
-                  !skill.connectedTo?.includes(hoveredSkillId);
-
-                return (
-                  <motion.div
-                    key={skill.id}
-                    drag
-                    dragConstraints={{ left: 50, right: 650, top: 50, bottom: 420 }}
-                    onMouseEnter={() => setHoveredSkillId(skill.id)}
-                    onMouseLeave={() => setHoveredSkillId(null)}
-                    style={{
-                      position: 'absolute',
-                      left: skill.x,
-                      top: skill.y,
-                      transform: 'translate(-50%, -50%)',
-                      opacity: isDimmed ? 0.25 : 1,
-                      cursor: 'grab',
-                      transition: 'opacity 0.3s ease',
-                      zIndex: isHovered ? 10 : 5
-                    }}
-                  >
-                    <div
-                      style={{
-                        padding: '0.65rem 1.25rem',
-                        background: '#111111',
-                        border: isHovered ? '2px solid #00f0ff' : '1px solid #333333',
-                        borderRadius: '30px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        boxShadow: isHovered ? '0 0 20px rgba(0, 240, 255, 0.6)' : 'none',
-                        fontFamily: 'var(--font-subheading, "Rajdhani")',
-                        fontSize: '1rem',
-                        fontWeight: 700,
-                        color: isHovered ? '#00f0ff' : '#ffffff'
-                      }}
+                  return (
+                    <button
+                      key={skill.id}
+                      type="button"
+                      className={`skill-node ${isActive ? 'is-active' : ''} ${isDimmed ? 'is-dimmed' : ''}`}
+                      style={{ left: `${skill.x}%`, top: `${skill.y}%` }}
+                      onMouseEnter={() => setActiveId(skill.id)}
+                      onFocus={() => setActiveId(skill.id)}
+                      onMouseLeave={() => setActiveId(null)}
+                      onBlur={() => setActiveId(null)}
+                      aria-label={`${skill.name} — ${skill.description}`}
                     >
-                      <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: skill.iconColor }} />
+                      <span className="skill-node-dot" aria-hidden="true" />
                       {skill.name}
+                    </button>
+                  );
+                })}
+
+                <div className="skill-map-caption" aria-hidden="true">
+                  <span>Hover a node to trace its relationships</span>
+                </div>
+              </div>
+
+              <aside className="skill-map-detail" aria-live="polite">
+                <p className="eyebrow is-muted">Node detail</p>
+                {activeSkill ? (
+                  <>
+                    <h3>{activeSkill.name}</h3>
+                    <p className="skill-map-category">{activeSkill.category}</p>
+                    <p className="skill-map-desc">{activeSkill.description}</p>
+                    <div className="skill-map-meter">
+                      <span>{activeSkill.percentage}%</span>
+                      <div className="skill-meter-track">
+                        <div
+                          className="skill-meter-fill"
+                          style={{ width: `${activeSkill.percentage}%` }}
+                        />
+                      </div>
                     </div>
-                  </motion.div>
-                );
-              })}
+                  </>
+                ) : (
+                  <p className="skill-map-empty">
+                    Select any node in the graph to inspect its role, related
+                    disciplines and working depth.
+                  </p>
+                )}
+              </aside>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
       <style>{`
-        .code-rain-layer {
+        .skills {
+          position: relative;
+          background: var(--ink-950);
+          border-top: 1px solid var(--hairline);
+        }
+        .skills-halo {
           position: absolute;
           inset: 0;
           pointer-events: none;
+          background: radial-gradient(ellipse 60% 45% at 15% 0%, rgba(159, 216, 228, 0.05) 0%, transparent 65%);
+        }
+        .skills-inner { position: relative; z-index: 2; }
+
+        .skills-head {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 2rem;
+          flex-wrap: wrap;
+          margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+        }
+        .skills-title { margin: 0.9rem 0 1rem; }
+        .skills-head .lede { max-width: 54ch; }
+
+        .skills-toggle {
+          display: inline-flex;
+          padding: 4px;
+          gap: 2px;
+          border-radius: var(--radius-pill);
+          border: 1px solid var(--hairline);
+          background: rgba(237, 232, 223, 0.03);
+        }
+        .skills-toggle button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.48rem 1rem;
+          border-radius: var(--radius-pill);
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--text-muted);
+          transition: color var(--transition-fast), background var(--transition-fast);
+        }
+        .skills-toggle button:hover { color: var(--text-primary); }
+        .skills-toggle button.is-active {
+          background: rgba(233, 162, 104, 0.12);
+          color: var(--ember);
+        }
+
+        /* ── Bento grid ───────────────────────────────────────────── */
+        .skill-grid {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 1rem;
+        }
+        .skill-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          padding: clamp(1.35rem, 2.4vw, 1.85rem);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--hairline);
+          background:
+            linear-gradient(180deg, rgba(237, 232, 223, 0.03) 0%, transparent 55%),
+            var(--ink-800);
           overflow: hidden;
-          opacity: 0.06;
+          transition:
+            border-color var(--transition-smooth),
+            transform var(--transition-smooth),
+            box-shadow var(--transition-smooth);
         }
-        .code-rain-line {
+        .skill-card::after {
+          content: '';
           position: absolute;
-          left: -10%;
-          font-family: var(--font-mono, monospace);
-          font-size: 0.9rem;
-          color: #ffffff;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0;
+          background: radial-gradient(circle at 20% 0%, rgba(233, 162, 104, 0.10), transparent 55%);
+          transition: opacity var(--transition-smooth);
+        }
+        .skill-card:hover {
+          border-color: rgba(233, 162, 104, 0.3);
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-lift);
+        }
+        .skill-card:hover::after { opacity: 1; }
+
+        .skill-card--half { grid-column: span 2; }
+        .skill-card--quarter { grid-column: span 1; }
+
+        .skill-card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.75rem;
+          margin-bottom: 1.35rem;
+        }
+        .skill-icon {
+          display: grid;
+          place-items: center;
+          width: 34px; height: 34px;
+          border-radius: 10px;
+          border: 1px solid rgba(233, 162, 104, 0.22);
+          background: rgba(233, 162, 104, 0.06);
+          color: var(--ember);
+        }
+        .skill-category {
+          font-family: var(--font-mono);
+          font-size: 0.6rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--text-faint);
+          text-align: right;
+        }
+
+        .skill-name {
+          font-size: 1.12rem;
+          font-weight: 500;
+          letter-spacing: -0.022em;
+          color: var(--text-primary);
+          margin-bottom: 0.55rem;
+        }
+        .skill-desc {
+          font-size: 0.88rem;
+          line-height: 1.65;
+          color: var(--text-muted);
+          margin-bottom: 1.25rem;
+          max-width: 46ch;
+        }
+
+        .skill-snippet {
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          line-height: 1.65;
+          color: var(--text-secondary);
+          background: var(--ink-850);
+          border: 1px solid rgba(237, 232, 223, 0.06);
+          border-radius: var(--radius-sm);
+          padding: 0.85rem 0.95rem;
+          margin-bottom: 1.4rem;
+          overflow-x: auto;
+          white-space: pre;
+          tab-size: 2;
+        }
+
+        .skill-meter { margin-top: auto; }
+        .skill-meter-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          margin-bottom: 0.5rem;
+          font-family: var(--font-mono);
+          font-size: 0.62rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--text-faint);
+        }
+        .skill-meter-value { color: var(--ember); letter-spacing: 0.06em; }
+        .skill-meter-track {
+          position: relative;
+          height: 3px;
+          border-radius: 99px;
+          background: rgba(237, 232, 223, 0.08);
+          overflow: hidden;
+        }
+        .skill-meter-fill {
+          height: 100%;
+          border-radius: 99px;
+          background: linear-gradient(90deg, rgba(233, 162, 104, 0.55) 0%, var(--ember) 100%);
+        }
+
+        /* ── Map view ─────────────────────────────────────────────── */
+        .skill-map {
+          display: grid;
+          grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+          gap: 1rem;
+        }
+        .skill-map-canvas {
+          position: relative;
+          min-height: clamp(380px, 46vw, 480px);
+          border-radius: var(--radius-xl);
+          border: 1px solid var(--hairline);
+          background:
+            radial-gradient(circle at 50% 40%, rgba(233, 162, 104, 0.05), transparent 60%),
+            var(--ink-900);
+          overflow: hidden;
+        }
+        .skill-map-lines {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .skill-map-lines line {
+          stroke: rgba(237, 232, 223, 0.13);
+          stroke-width: 1;
+          stroke-dasharray: 4 4;
+          transition: stroke var(--transition-smooth);
+        }
+        .skill-map-lines line.is-active {
+          stroke: var(--ember);
+          stroke-dasharray: none;
+        }
+
+        .skill-node {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.55rem 1rem;
+          border-radius: var(--radius-pill);
+          border: 1px solid var(--hairline);
+          background: var(--ink-800);
+          font-family: var(--font-heading);
+          font-size: 0.82rem;
+          color: var(--text-secondary);
           white-space: nowrap;
-          animation: codeFloat linear infinite;
+          transition:
+            color var(--transition-fast),
+            border-color var(--transition-fast),
+            background var(--transition-fast),
+            opacity var(--transition-fast),
+            box-shadow var(--transition-fast);
         }
-        @keyframes codeFloat {
-          0% { transform: translateX(-5%); }
-          100% { transform: translateX(110%); }
+        .skill-node-dot {
+          width: 5px; height: 5px;
+          border-radius: 50%;
+          background: var(--text-faint);
+          transition: background var(--transition-fast), box-shadow var(--transition-fast);
         }
-        .shimmer-bar {
+        .skill-node:hover,
+        .skill-node:focus-visible,
+        .skill-node.is-active {
+          color: var(--text-primary);
+          border-color: rgba(233, 162, 104, 0.45);
+          background: rgba(233, 162, 104, 0.09);
+          outline: none;
+        }
+        .skill-node.is-active .skill-node-dot,
+        .skill-node:hover .skill-node-dot {
+          background: var(--ember);
+          box-shadow: 0 0 10px rgba(233, 162, 104, 0.9);
+        }
+        .skill-node.is-dimmed { opacity: 0.32; }
+
+        .skill-map-caption {
           position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          width: 30px;
-          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-          animation: shimmerSweep 2.5s infinite;
+          left: 1.25rem;
+          bottom: 1rem;
+          font-family: var(--font-mono);
+          font-size: 0.6rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--text-faint);
         }
-        @keyframes shimmerSweep {
-          0% { transform: translateX(-30px); }
-          100% { transform: translateX(350px); }
+
+        .skill-map-detail {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+          padding: clamp(1.35rem, 2.4vw, 1.85rem);
+          border-radius: var(--radius-xl);
+          border: 1px solid var(--hairline);
+          background:
+            linear-gradient(180deg, rgba(237, 232, 223, 0.035) 0%, transparent 55%),
+            var(--ink-800);
         }
-        @media (max-width: 900px) {
-          .bento-skill-card {
-            grid-column: span 12 !important;
-          }
+        .skill-map-detail h3 {
+          font-size: 1.25rem;
+          font-weight: 500;
+          letter-spacing: -0.025em;
+          margin-top: 0.35rem;
+        }
+        .skill-map-category {
+          font-family: var(--font-mono);
+          font-size: 0.62rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--ember);
+        }
+        .skill-map-desc {
+          font-size: 0.88rem;
+          line-height: 1.7;
+          color: var(--text-muted);
+        }
+        .skill-map-empty {
+          font-size: 0.88rem;
+          line-height: 1.7;
+          color: var(--text-muted);
+          margin-top: 0.5rem;
+        }
+        .skill-map-meter {
+          margin-top: auto;
+          padding-top: 1.25rem;
+          border-top: 1px solid var(--hairline);
+        }
+        .skill-map-meter > span {
+          display: block;
+          font-family: var(--font-mono);
+          font-size: 0.7rem;
+          color: var(--ember);
+          margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 1080px) {
+          .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .skill-card--half, .skill-card--quarter { grid-column: span 2; }
+          .skill-card--quarter { grid-column: span 1; }
+        }
+        @media (max-width: 860px) {
+          .skill-map { grid-template-columns: 1fr; }
+          .skill-map-canvas { min-height: 420px; }
+          .skill-node { font-size: 0.72rem; padding: 0.45rem 0.75rem; }
+        }
+        @media (max-width: 620px) {
+          .skill-grid { grid-template-columns: 1fr; }
+          .skill-card--half, .skill-card--quarter { grid-column: span 1; }
+          .skills-toggle { width: 100%; justify-content: space-between; }
         }
       `}</style>
     </section>

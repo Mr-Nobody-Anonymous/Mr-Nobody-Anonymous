@@ -30,10 +30,10 @@ export const SystemStatus: React.FC = () => {
             fontFamily: 'var(--font-mono)',
             fontSize: '0.65rem',
             color: 'var(--color-cyan)',
-            border: '1px solid rgba(0, 240, 255, 0.3)',
+            border: '1px solid rgba(233, 162, 104, 0.3)',
             padding: '0.1rem 0.4rem',
             borderRadius: '2px',
-            background: 'rgba(0, 240, 255, 0.08)'
+            background: 'rgba(233, 162, 104, 0.08)'
           }}
         >
           [SIMULATION / PORTFOLIO HUD]

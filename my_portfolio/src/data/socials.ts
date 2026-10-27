@@ -21,9 +21,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     name: 'TryHackMe',
-    url: 'https://tryhackme.com/p/Nobody001',
+    url: 'https://tryhackme.com/p/Mr.nobody.',
     iconName: 'shield',
-    label: 'tryhackme.com/p/Nobody001'
+    label: 'tryhackme.com/p/Mr.nobody.'
   },
   {
     name: 'HackTheBox',
