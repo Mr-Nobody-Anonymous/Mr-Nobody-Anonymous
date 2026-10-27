@@ -6,7 +6,7 @@ render smoke test, not just by intent.
 ## Done
 
 ### README (profile repository)
-- [x] Rebuilt the hierarchy: Hero → At a glance → About → Focus → Skills → Toolbox → Certifications → Repositories → Stats → Connect.
+- [x] Rebuilt the hierarchy: Hero → About → What I do → Skills → Toolbox → Certifications → Stats → Connect. The "At a glance" card table was removed in favour of the fuller discipline list.
 - [x] Fixed section order: **Socials no longer sits inside the Skills block**; contact links now live in one place (`Connect`).
 - [x] Normalised every skill group (`💻 Languages`, `🌐 Frontend & Backend`, `🗄️ Databases`, `📊 Data Science & ML`, `📱 Mobile`, `🚀 DevOps, Platforms & Hardware`, `🛡️ Security`, `💻 Extra Languages & Shells`, `📚 Certifications & Hands-on Labs`) to consistent `###` headings with equal icon heights.
 - [x] Removed duplicate links: one primary email row, one portfolio CTA pair (top + footer), one socials row.
@@ -26,10 +26,12 @@ render smoke test, not just by intent.
 - [x] Accessibility pass: dialog focus trapping, visible focus rings, ARIA labels, 4.5:1+ text contrast, reduced-motion support.
 
 ### Skills & toolbox
-- [x] Every logo is now its own `<a>` link to the official site/docs/download — previously the whole row was one `skillicons.dev` sprite, so nothing was clickable.
-- [x] Expanded to **157 linked icons**: Languages (16), Frontend & Backend (16), Databases (13), Data Science & ML (15), Mobile (8), DevOps/Platforms/Hardware (21).
-- [x] New **Security & Active Directory** group with 35 linked tools (BloodHound, SharpHound, Mimikatz, Rubeus, Impacket, NetExec, CrackMapExec, Certipy, Kerbrute, Responder, Evil-WinRM, PowerView, bloodyAD, ldapsearch, enum4linux-ng, Hashcat, John, Hydra, sqlmap, ffuf, Gobuster, Subfinder, Nuclei, Amass, Burp, ZAP, Nmap, Wireshark, tcpdump, Metasploit, Ghidra, Radare2, CyberChef, OWASP, Kali).
-- [x] New **AI & Agent Tooling** group with 24 linked tools (PyTorch → ONNX, plus LangChain, LlamaIndex, Ollama, vLLM, Hugging Face, Claude Code, Cursor, FAISS, Pinecone, ChromaDB, MLflow, W&B, DVC, Streamlit, Gradio).
+- [x] Every logo is its own `<a>` link to the official site/docs/download — previously the whole row was one `skillicons.dev` sprite, so nothing was clickable.
+- [x] **260 linked icons, no duplicates across groups**: Languages (23), Frontend & Backend (29), Databases (22), Data Science & ML (24), Mobile (14), DevOps/Platforms/Hardware (33), Security & Active Directory (20), Web & Network Exploitation (31), Malware Analysis & Forensics (18), AI & Agent Tooling (35), Extra Languages & Shells (11).
+- [x] Toolbox split into four working benches: **Security & Active Directory**, **Web & Network Exploitation**, **Malware Analysis & Forensics**, **AI & Agent Tooling** — plus the shell/format catch-all.
+
+### Disciplines
+- [x] "At a glance" table replaced by **🎯 What I do** — 18 rows covering penetration testing, malware analysis, Active Directory security, threat intelligence & modeling, forensics/IR, application security, web dev, app dev, backend & APIs, databases & data engineering, machine learning, computer vision, AI agents & automation, prompt engineering & LLM systems, Linux & systems, DevOps & infrastructure, hardware & IoT, and research & writing.
 
 ### Analytics
 - [x] Rebuilt the stats block on canonical endpoints: profile stats, top languages, streak, 90-day activity graph, profile summary, repos-per-language, most-commit language, productive time (UTC+3), trophies, plus follower/star/repo/profile-view badges.
